@@ -705,72 +705,82 @@
   <!-- ============================================ -->
   <!-- FOOTER                                       -->
   <!-- ============================================ -->
-  <footer class="bg-[#3D2B1F] text-white">
-    <div class="max-w-7xl mx-auto px-4 py-16">
+  <footer class="text-white">
+    <div class="bg-[#3D2B1F]">
+      <div class="max-w-7xl mx-auto px-4 py-16">
 
-      <!-- Donate Section -->
-      <div class="text-center mb-12">
-        <h3 class="text-2xl font-bold mb-4" data-i18n="footer.donate.title">Support Our Work</h3>
-        <a href="https://gifteddreamers.org/GRUHP" target="_blank" rel="noopener noreferrer" class="inline-block px-8 py-4 bg-[#F5A623] hover:bg-[#D4911E] text-[#1A1A1A] text-lg font-bold rounded-lg transition-colors shadow-lg" data-i18n="donate.button">Donate Now</a>
-        <p class="text-gray-400 text-sm mt-4" data-i18n="footer.donate.desc">All donations go 100% to mutual aid</p>
-      </div>
+        <!-- Donate CTA -->
+        <div class="max-w-3xl mx-auto text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold text-white mb-4" data-i18n="donate.title">
+            Support Our Community
+          </h2>
+          <p class="text-white/90 text-base mb-8" data-i18n="donate.desc">
+            All donations go 100% to mutual aid through Gifted Dreamers, Inc., a Texas-based 501(c)(3).
+          </p>
+          <div class="flex justify-center">
+            <a href="https://gifteddreamers.org/GRUHP" target="_blank" rel="noopener noreferrer" class="inline-block px-8 py-4 bg-[#F5A623] hover:bg-[#D4911E] text-[#1A1A1A] text-lg font-bold rounded-lg transition-colors shadow-lg" data-i18n="donate.button">Donate Now</a>
+          </div>
+        </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
 
         <!-- Anonymous Contact Form -->
         <div>
           <h3 class="text-2xl font-bold mb-2" data-i18n="footer.contact.title">Share a Resource or Send a Message</h3>
-          <p class="text-gray-400 text-sm mb-6" data-i18n="footer.contact.desc">Only message is required. All other fields are optional.</p>
+          <p class="text-white/80 text-sm mb-6" data-i18n="footer.contact.desc">Only message is required. All other fields are optional.</p>
           <form id="contact-form" onsubmit="submitContactForm(event)">
             <textarea
               id="contact-message"
               rows="4"
               placeholder="Paste a URL, share a resource, or send a message..."
-              data-i18n-placeholder="form.message.placeholder"
               required
               class="w-full rounded-lg bg-white/10 border border-white/20 text-white placeholder-gray-400 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#F5A623] focus:border-transparent resize-y"
               aria-label="Your message"
+              data-i18n-placeholder="form.message.placeholder"
             ></textarea>
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-3">
               <div>
-                <label for="contact-name" class="text-gray-400 text-sm">Name <span class="text-gray-500">(optional)</span></label>
+                <label for="contact-name" class="text-white/80 text-sm">Name <span class="text-white/60">(optional)</span></label>
                 <input
                   type="text"
                   id="contact-name"
                   placeholder="Your name"
                   class="w-full mt-1 bg-white/10 border border-white/20 text-white placeholder-gray-400 px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#F5A623] focus:border-transparent"
                   aria-label="Your name (optional)"
+                  data-i18n-placeholder="form.name.placeholder"
                 />
               </div>
               <div>
-                <label for="contact-email" class="text-gray-400 text-sm">Email <span class="text-gray-500">(optional)</span></label>
+                <label for="contact-email" class="text-white/80 text-sm">Email <span class="text-white/60">(optional)</span></label>
                 <input
                   type="email"
                   id="contact-email"
                   placeholder="Your email"
                   class="w-full mt-1 bg-white/10 border border-white/20 text-white placeholder-gray-400 px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#F5A623] focus:border-transparent"
                   aria-label="Your email (optional)"
+                  data-i18n-placeholder="form.email.placeholder"
                 />
               </div>
             </div>
             <div class="mt-3">
-              <label for="contact-url" class="text-gray-400 text-sm">URL <span class="text-gray-500">(optional)</span></label>
+              <label for="contact-url" class="text-white/80 text-sm">URL <span class="text-white/60">(optional)</span></label>
               <input
                 type="url"
                 id="contact-url"
                 placeholder="URL to submit for addition"
                 class="w-full mt-1 bg-white/10 border border-white/20 text-white placeholder-gray-400 px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#F5A623] focus:border-transparent"
                 aria-label="URL to submit (optional)"
+                data-i18n-placeholder="form.url.placeholder"
               />
             </div>
             <div class="mt-3">
-              <label for="contact-category" class="text-gray-400 text-sm">Category / Section <span class="text-gray-500">(optional)</span></label>
+              <label for="contact-category" class="text-white/80 text-sm">Category / Section <span class="text-white/60">(optional)</span></label>
               <select
                 id="contact-category"
                 class="w-full mt-1 bg-white/10 border border-white/20 text-white placeholder-gray-400 px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#F5A623] focus:border-transparent"
                 aria-label="Category or section (optional)"
               >
-                <option value="" class="bg-[#3D2B1F]">Select a category...</option>
+                <option value="" class="bg-[#3D2B1F]" data-i18n="form.category.select">Select a category...</option>
                 <option value="General" class="bg-[#3D2B1F]">General</option>
                 <option value="Immigrant Resources" class="bg-[#3D2B1F]">Immigrant Resources</option>
                 <option value="Know Your Rights" class="bg-[#3D2B1F]">Know Your Rights</option>
@@ -780,7 +790,7 @@
               </select>
             </div>
             <button type="submit"
-                    class="mt-3 bg-[#F5A623] text-white px-6 py-2.5 rounded-full font-semibold hover:bg-opacity-90 hover:shadow-md transition-all" data-i18n="form.submit">
+                    class="mt-3 bg-[#F5A623] text-white px-6 py-2.5 rounded-full font-semibold hover:bg-[#D4911E] hover:shadow-md transition-all" data-i18n="form.submit">
               Submit
             </button>
             <div id="form-status" class="mt-3 text-sm" role="status" aria-live="polite"></div>
@@ -790,39 +800,43 @@
         <!-- About / Info Column -->
         <div class="flex flex-col justify-between">
           <div>
-            <h3 class="text-2xl font-bold mb-4">About justNICE</h3>
-            <p class="text-gray-400 leading-relaxed mb-6">
+            <h3 class="text-2xl font-bold mb-4" data-i18n="footer.about.title">About justNICE</h3>
+            <p class="text-white/80 leading-relaxed mb-6" data-i18n="footer.about.desc">
               justNICE provides free, community-sourced immigrant resources and Know Your Rights training guides.
               We believe preparation is power and that every person deserves access to information that protects their rights.
             </p>
             <div class="flex items-center gap-4">
-              <a href="/immigrant-resources.html" class="text-[#F5A623] hover:text-[#D4911E] transition-colors font-medium">Resources</a>
-              <span class="text-gray-600">|</span>
-              <a href="/kyr-ice-training.html" class="text-[#F5A623] hover:text-[#D4911E] transition-colors font-medium">KYR Training</a>
-              <span class="text-gray-600">|</span>
+              <a href="/immigrant-resources.html" class="text-[#F5A623] hover:text-[#D4911E] transition-colors font-medium" data-i18n="resources.link">Resources</a>
+              <span class="text-white/30">|</span>
+              <a href="/kyr-ice-training.html" class="text-[#F5A623] hover:text-[#D4911E] transition-colors font-medium" data-i18n="kyr.link">KYR Training</a>
+              <span class="text-white/30">|</span>
               <a href="/blog.html" class="text-[#F5A623] hover:text-[#D4911E] transition-colors font-medium">Blog</a>
-              <span class="text-gray-600">|</span>
+              <span class="text-white/30">|</span>
               <a href="https://gifteddreamers.org/GRUHP" target="_blank" rel="noopener noreferrer" class="text-[#F5A623] hover:text-[#D4911E] transition-colors font-medium">Donate</a>
             </div>
           </div>
         </div>
 
       </div>
+      </div>
+    </div>
 
-      <!-- Copyright -->
-      <div class="border-t border-white/10 mt-12 pt-8 text-center">
+    <!-- Copyright bar (burgundy) -->
+    <div class="bg-maroon">
+      <div class="max-w-7xl mx-auto px-4 py-6 text-center">
         <div class="flex items-center justify-center gap-4 mb-3">
-          <a href="https://justnice.us" class="text-gray-400 hover:text-white text-sm transition-colors">justnice.us</a>
-          <span class="text-gray-600">|</span>
-          <a href="https://github.com/Gifted-Dreamers/justnice.us" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition-colors" aria-label="View source on GitHub">
+          <a href="https://justnice.us" class="text-white/80 hover:text-white text-sm transition-colors">justnice.us</a>
+          <span class="text-white/30">|</span>
+          <a href="https://github.com/Gifted-Dreamers/justnice.us" target="_blank" rel="noopener noreferrer" class="text-white/80 hover:text-white transition-colors" aria-label="View source on GitHub">
             <svg class="w-5 h-5 inline-block" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
             <span class="text-sm ml-1" data-i18n="footer.opensource">Open Source</span>
           </a>
         </div>
-        <p class="text-gray-400 text-sm">
-          &copy; 2026
+        <p class="text-white/80 text-sm">
+          Made with care by
           <a href="https://gifteddreamers.org/GRUHP" target="_blank" rel="noopener noreferrer" class="text-[#F5A623] hover:text-[#D4911E] transition-colors"><img src="/assets/gifted-dreamers-icon.png" alt="Gifted Dreamers" class="inline-block w-5 h-5 mr-1 align-text-bottom" loading="lazy" width="20" height="20"> Gifted Dreamers, Inc.</a>
-          Texas-based 501(c)(3) EIN 39-3863796
+          &middot; Texas-based 501(c)(3) EIN 39-3863796 &middot;
+          <a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank" rel="noopener noreferrer" class="text-white/60 hover:text-white transition-colors underline underline-offset-2">CC0 1.0 Public Domain</a>
         </p>
       </div>
     </div>
