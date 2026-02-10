@@ -18,6 +18,7 @@ var JUSTNICE_TRANSLATIONS = {
   'nav.kyr':                { en: 'Know Your Rights',      es: 'Conoce Tus Derechos' },
   'nav.blog':               { en: 'Blog',                  es: 'Blog' },
   'nav.map':                { en: 'Resource Map',          es: 'Mapa de Recursos' },
+  'nav.gear':               { en: 'NICE Gear',             es: 'Merch NICE' },
   'nav.donate':             { en: 'Donate',                es: 'Donar' },
 
   // ── Landing Page Hero ──────────────────────────────
