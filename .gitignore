@@ -12,20 +12,8 @@ env.js
 # ProtonDrive edit conflict files
 *Edit conflict*
 
-# Planning docs (local reference only)
-/IMPLEMENTATION-PLAN.md
-/AI-surveillance.md
-/AI-surveillance1.md
-
-# Source images at root (not for web — optimized copies live in assets/)
-/BEE-ICON.png
-/BEE-transparent.png
-/Bee-NICE-LOGO-transparent.png
-/Bee-NICE-LOGO.png
-
-# Markdown source files
-/immigrant-resources.md
-/kyr-ice-training.md
+# Local docs — planning, source images, markdown sources
+/docs/
 
 # Unused optimized variants
 /assets/Bee-NICE-LOGO-360.webp
