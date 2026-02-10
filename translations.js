@@ -98,8 +98,8 @@ var JUSTNICE_TRANSLATIONS = {
 
   // ── Donate Section ─────────────────────────────────
   'donate.title':           { en: 'Support Our Community',  es: 'Apoya a Nuestra Comunidad' },
-  'donate.desc':            { en: 'All donations go 100% to mutual aid through Gifted Dreamers, Inc., a Texas-based 501(c)(3).',
-                              es: 'Todas las donaciones van 100% a ayuda mutua a través de Gifted Dreamers, Inc., una organización 501(c)(3) de Texas.' },
+  'donate.desc':            { en: 'All donations go 100% to mutual aid through Gifted Dreamers, Inc., an Austin, Texas-based 501(c)(3).',
+                              es: 'Todas las donaciones van 100% a ayuda mutua a través de Gifted Dreamers, Inc., una organización 501(c)(3) con sede en Austin, Texas.' },
   'donate.button':         { en: 'Donate Now',              es: 'Donar Ahora' },
 
   // ── Footer ─────────────────────────────────────────
@@ -114,8 +114,8 @@ var JUSTNICE_TRANSLATIONS = {
   'footer.donate.desc':     { en: 'All donations go 100% to mutual aid.',
                               es: 'Todas las donaciones van 100% a ayuda mutua.' },
   'footer.copyright.org':   { en: 'Gifted Dreamers, Inc.', es: 'Gifted Dreamers, Inc.' },
-  'footer.copyright.info':  { en: 'Texas-based 501(c)(3) EIN 39-3863796',
-                              es: 'Organización 501(c)(3) de Texas EIN 39-3863796' },
+  'footer.copyright.info':  { en: 'Austin, Texas-based 501(c)(3) EIN 39-3863796',
+                              es: 'Organización 501(c)(3) con sede en Austin, Texas EIN 39-3863796' },
   'footer.opensource':       { en: 'Open Source',            es: 'Código Abierto' },
 
   // ── Contact Form ───────────────────────────────────
