@@ -1,0 +1,352 @@
+[
+  {
+    "name": "United We Dream",
+    "type": "hotline",
+    "lat": 38.9072,
+    "lng": -77.0369,
+    "address": "Washington, DC",
+    "phone": "1-844-363-1423",
+    "url": "https://unitedwedream.org",
+    "description": "National immigration emergency hotline and largest immigrant youth-led network"
+  },
+  {
+    "name": "RAICES (Refugee and Immigrant Center for Education and Legal Services)",
+    "type": "legal",
+    "lat": 29.4241,
+    "lng": -98.4936,
+    "address": "San Antonio, TX",
+    "phone": "",
+    "url": "https://raicestexas.org",
+    "description": "Free legal services, bond fund ($20M+ paid, 2,000+ freed), asylum representation"
+  },
+  {
+    "name": "National Immigrant Justice Center (NIJC)",
+    "type": "legal",
+    "lat": 41.8827,
+    "lng": -87.6233,
+    "address": "Chicago, IL",
+    "phone": "312-660-1370",
+    "url": "https://immigrantjustice.org",
+    "description": "Free legal services for detained immigrants; asylum, VAWA, trafficking cases"
+  },
+  {
+    "name": "Immigrant Defense Project",
+    "type": "legal",
+    "lat": 40.7128,
+    "lng": -74.0060,
+    "address": "New York, NY",
+    "phone": "212-725-6422",
+    "url": "https://www.immigrantdefenseproject.org",
+    "description": "Know Your Rights, ICE raid response, legal hotline"
+  },
+  {
+    "name": "FIEL Houston",
+    "type": "hotline",
+    "lat": 29.7604,
+    "lng": -95.3698,
+    "address": "Houston, TX",
+    "phone": "1-713-364-3435",
+    "url": "https://www.fielhouston.org",
+    "description": "Houston-based immigrant rights organization and rapid response hotline"
+  },
+  {
+    "name": "Houston Immigration Legal Services Collaborative (HILSC)",
+    "type": "legal",
+    "lat": 29.7604,
+    "lng": -95.3598,
+    "address": "Houston, TX",
+    "phone": "833-468-4664",
+    "url": "https://houstonimmigration.org",
+    "description": "Legal services fund for Houston-area immigrants"
+  },
+  {
+    "name": "Americans for Immigrant Justice",
+    "type": "legal",
+    "lat": 25.7617,
+    "lng": -80.1918,
+    "address": "Miami, FL",
+    "phone": "305-573-1106",
+    "url": "https://aijustice.org",
+    "description": "Legal services and advocacy for immigrants in South Florida"
+  },
+  {
+    "name": "CASA Hotline",
+    "type": "hotline",
+    "lat": 39.2904,
+    "lng": -76.6122,
+    "address": "Baltimore, MD",
+    "phone": "1-855-678-2272",
+    "url": "https://wearecasa.org",
+    "description": "Immigration hotline serving Baltimore/DC area"
+  },
+  {
+    "name": "Colorado Rapid Response Network",
+    "type": "hotline",
+    "lat": 39.7392,
+    "lng": -104.9903,
+    "address": "Denver, CO",
+    "phone": "1-844-864-8341",
+    "url": "https://www.coloradoimmigrant.org",
+    "description": "Rapid response network for immigration enforcement activity in Colorado"
+  },
+  {
+    "name": "New Sanctuary Movement",
+    "type": "mutual_aid",
+    "lat": 39.9526,
+    "lng": -75.1652,
+    "address": "Philadelphia, PA",
+    "phone": "1-267-333-9530",
+    "url": "https://sanctuaryphiladelphia.org",
+    "description": "Immigrant rights coalition and mutual aid network in Philadelphia"
+  },
+  {
+    "name": "Freedom for Immigrants",
+    "type": "bond_fund",
+    "lat": 34.0522,
+    "lng": -118.2437,
+    "address": "Los Angeles, CA",
+    "phone": "",
+    "url": "https://www.freedomforimmigrants.org",
+    "description": "National detention hotline, visitation program, and bond assistance"
+  },
+  {
+    "name": "HIAS",
+    "type": "legal",
+    "lat": 38.9101,
+    "lng": -77.0147,
+    "address": "Washington, DC",
+    "phone": "",
+    "url": "https://hias.org",
+    "description": "Pro bono legal program, accompaniment to hearings, Welcome Circles"
+  },
+  {
+    "name": "Immigration Equality",
+    "type": "legal",
+    "lat": 40.7411,
+    "lng": -73.9897,
+    "address": "New York, NY",
+    "phone": "",
+    "url": "https://www.immigrationequality.org",
+    "description": "Legal resources for LGBTQ+ and/or HIV-positive immigrants"
+  },
+  {
+    "name": "Kids in Need of Defense (KIND)",
+    "type": "legal",
+    "lat": 38.9005,
+    "lng": -77.0316,
+    "address": "Washington, DC",
+    "phone": "",
+    "url": "https://supportkind.org",
+    "description": "Legal services for unaccompanied immigrant children"
+  },
+  {
+    "name": "No More Deaths / No Más Muertes",
+    "type": "mutual_aid",
+    "lat": 32.2226,
+    "lng": -110.9747,
+    "address": "Tucson, AZ",
+    "phone": "",
+    "url": "https://nomoredeaths.org",
+    "description": "Direct aid to migrants in the US-Mexico borderlands"
+  },
+  {
+    "name": "RAICES Bond Fund",
+    "type": "bond_fund",
+    "lat": 29.4341,
+    "lng": -98.4836,
+    "address": "San Antonio, TX",
+    "phone": "",
+    "url": "https://raicestexas.org/bond",
+    "description": "Immigration bond fund — $20M+ paid, 2,000+ people freed from detention"
+  },
+  {
+    "name": "Black Immigrants Bail Fund",
+    "type": "bond_fund",
+    "lat": 40.6782,
+    "lng": -73.9442,
+    "address": "Brooklyn, NY",
+    "phone": "",
+    "url": "https://www.blackimmigrantsbailfund.org",
+    "description": "Bond fund specifically supporting Black immigrants in detention"
+  },
+  {
+    "name": "LGBTQ Freedom Fund",
+    "type": "bond_fund",
+    "lat": 40.7484,
+    "lng": -73.9857,
+    "address": "New York, NY",
+    "phone": "",
+    "url": "https://www.lgbtqfreedomfund.org",
+    "description": "Bond fund for LGBTQ+ individuals in immigration and criminal detention"
+  },
+  {
+    "name": "Mutual Aid Hub",
+    "type": "mutual_aid",
+    "lat": 40.7128,
+    "lng": -74.0160,
+    "address": "New York, NY (national directory)",
+    "phone": "",
+    "url": "https://www.mutualaidhub.org",
+    "description": "Searchable map/directory of mutual aid networks across the US"
+  },
+  {
+    "name": "No Kings Coalition — Eyes on ICE Training",
+    "type": "training",
+    "lat": 38.9072,
+    "lng": -77.0269,
+    "address": "National (Virtual)",
+    "phone": "",
+    "url": "https://www.nokings.org/trainings",
+    "description": "National virtual observer trainings — 200,000+ trained. Ongoing sessions."
+  },
+  {
+    "name": "Immigrant Defense Network — Constitutional Observer Training",
+    "type": "training",
+    "lat": 44.9778,
+    "lng": -93.2650,
+    "address": "Minneapolis, MN",
+    "phone": "",
+    "url": "https://immigrantdefensenetwork.org",
+    "description": "Originator of constitutional observer model — 30,000+ Minnesotans trained"
+  },
+  {
+    "name": "ACLU of Alaska — KYR Training",
+    "type": "training",
+    "lat": 61.2181,
+    "lng": -149.9003,
+    "address": "Anchorage, AK (Virtual)",
+    "phone": "",
+    "url": "https://www.acluak.org/events/",
+    "description": "Know Your Responsibilities and Immigration Bystander trainings"
+  },
+  {
+    "name": "NY Attorney General Legal Observation Project",
+    "type": "training",
+    "lat": 40.7484,
+    "lng": -73.9757,
+    "address": "New York, NY",
+    "phone": "",
+    "url": "https://ag.ny.gov/press-release/2026/attorney-general-james-launches-legal-observation-project-monitor-federal",
+    "description": "State-run program sending trained OAG observers in purple vests to monitor enforcement"
+  },
+  {
+    "name": "California Rapid Response Network",
+    "type": "hotline",
+    "lat": 36.7783,
+    "lng": -119.4179,
+    "address": "Statewide, CA",
+    "phone": "1-844-878-7801",
+    "url": "https://www.ccijustice.org/carrn",
+    "description": "Statewide rapid response network with local hotlines across California"
+  },
+  {
+    "name": "Los Angeles Rapid Response",
+    "type": "hotline",
+    "lat": 34.0522,
+    "lng": -118.2537,
+    "address": "Los Angeles, CA",
+    "phone": "888-624-4752",
+    "url": "https://www.ccijustice.org/carrn",
+    "description": "Los Angeles area rapid response hotline for immigration enforcement"
+  },
+  {
+    "name": "San Francisco Rapid Response",
+    "type": "hotline",
+    "lat": 37.7749,
+    "lng": -122.4194,
+    "address": "San Francisco, CA",
+    "phone": "415-200-1548",
+    "url": "https://www.ccijustice.org/carrn",
+    "description": "San Francisco rapid response hotline for immigration enforcement"
+  },
+  {
+    "name": "San Diego Rapid Response",
+    "type": "hotline",
+    "lat": 32.7157,
+    "lng": -117.1611,
+    "address": "San Diego, CA",
+    "phone": "619-536-0823",
+    "url": "https://www.ccijustice.org/carrn",
+    "description": "San Diego rapid response hotline for immigration enforcement"
+  },
+  {
+    "name": "ActionNYC",
+    "type": "hotline",
+    "lat": 40.7580,
+    "lng": -73.9855,
+    "address": "New York, NY",
+    "phone": "1-800-354-0365",
+    "url": "https://www.nyc.gov/actionnyc",
+    "description": "Mayor's Office of Immigrant Affairs — free immigration legal help"
+  },
+  {
+    "name": "IL Coalition for Immigrant & Refugee Rights",
+    "type": "hotline",
+    "lat": 41.8781,
+    "lng": -87.6298,
+    "address": "Chicago, IL",
+    "phone": "1-855-435-7693",
+    "url": "https://www.icirr.org",
+    "description": "Illinois immigration hotline — 1-855-HELP-MY-FAMILY"
+  },
+  {
+    "name": "Seattle Raid Report Hotline",
+    "type": "hotline",
+    "lat": 47.6062,
+    "lng": -122.3321,
+    "address": "Seattle, WA",
+    "phone": "1-844-724-3737",
+    "url": "",
+    "description": "Raid reporting hotline — 6 AM to 9 PM daily"
+  },
+  {
+    "name": "ACLU FL Rapid Response Alliance",
+    "type": "hotline",
+    "lat": 25.7617,
+    "lng": -80.2018,
+    "address": "Miami, FL",
+    "phone": "1-888-600-5762",
+    "url": "https://www.aclufl.org/rapid-response-alliance-immigrant-safety-and-empowerment-hotline/",
+    "description": "Florida statewide rapid response hotline for immigrant safety"
+  },
+  {
+    "name": "Colorado Freedom Fund",
+    "type": "bond_fund",
+    "lat": 39.7392,
+    "lng": -104.9803,
+    "address": "Denver, CO",
+    "phone": "",
+    "url": "https://www.coloradofreedomfund.org",
+    "description": "Immigration and criminal bond fund serving Colorado"
+  },
+  {
+    "name": "DMV Immigration Crisis Hotline",
+    "type": "hotline",
+    "lat": 38.9072,
+    "lng": -77.0469,
+    "address": "Washington, DC",
+    "phone": "202-335-1183",
+    "url": "",
+    "description": "DC/Maryland/Virginia immigration crisis hotline"
+  },
+  {
+    "name": "COPAL MN — Constitutional Observer Training",
+    "type": "training",
+    "lat": 44.9778,
+    "lng": -93.2750,
+    "address": "Minneapolis, MN",
+    "phone": "",
+    "url": "https://copalmn.org/the-handbook-for-constitutional-observers/",
+    "description": "De facto national standard for constitutional observer training — handbook and resources"
+  },
+  {
+    "name": "National Lawyers Guild — Legal Observer Program",
+    "type": "training",
+    "lat": 40.7128,
+    "lng": -74.0260,
+    "address": "New York, NY (chapters nationwide)",
+    "phone": "",
+    "url": "https://www.nlg.org/massdefenseprogram/los/",
+    "description": "Established 1968 — legal observer training chapters nationwide"
+  }
+]

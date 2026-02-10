@@ -1,0 +1,32 @@
+.DS_Store
+*.swp
+*.swo
+*~
+.env
+.env.local
+node_modules/
+
+# Config with secrets (use env.example.js as template)
+env.js
+
+# ProtonDrive edit conflict files
+*Edit conflict*
+
+# Planning docs (local reference only)
+/IMPLEMENTATION-PLAN.md
+/AI-surveillance.md
+/AI-surveillance1.md
+
+# Source images at root (not for web — optimized copies live in assets/)
+/BEE-ICON.png
+/BEE-transparent.png
+/Bee-NICE-LOGO-transparent.png
+/Bee-NICE-LOGO.png
+
+# Markdown source files
+/immigrant-resources.md
+/kyr-ice-training.md
+
+# Unused optimized variants
+/assets/Bee-NICE-LOGO-360.webp
+/assets/Bee-NICE-LOGO-transparent-240.png

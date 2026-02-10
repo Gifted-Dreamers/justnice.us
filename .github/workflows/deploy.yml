@@ -1,0 +1,27 @@
+name: Deploy to AWS Lightsail
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: deploy-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Deploy static files
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: ${{ secrets.AWS_HOST }}
+          username: ${{ secrets.AWS_USER }}
+          key: ${{ secrets.AWS_SSH_KEY }}
+          source: "index.html,immigrant-resources.html,kyr-ice-training.html,blog.html,blog/*,resources.json,translations.js,assets/*,robots.txt,sitemap.xml,nginx.conf,env.example.js,CONTRIBUTING.md"
+          target: "/home/admin/commoncloud/sites/justnice.us"
