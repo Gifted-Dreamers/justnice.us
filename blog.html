@@ -141,10 +141,23 @@
   <!-- ============================================ -->
   <section class="py-16 md:py-20 bg-gray-50">
     <div class="max-w-5xl mx-auto px-4">
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <!-- Category + keyword filters -->
+      <div class="flex flex-col sm:flex-row gap-4 mb-10">
+        <label for="blog-category" class="sr-only">Filter by category</label>
+        <select id="blog-category" class="rounded-lg border border-gray-300 bg-white px-4 py-2.5 text-gray-900 shadow-sm focus:border-[#F5A623] focus:outline-none focus:ring-2 focus:ring-[#F5A623]/30 font-medium" aria-label="Filter blog posts by category">
+          <option value="">All categories</option>
+          <option value="Technology & Privacy">Technology &amp; Privacy</option>
+          <option value="Community & Policy">Community &amp; Policy</option>
+          <option value="Research & Frameworks">Research &amp; Frameworks</option>
+        </select>
+        <label for="blog-search" class="sr-only">Search by keyword</label>
+        <input type="search" id="blog-search" placeholder="Search by keyword…" class="flex-1 min-w-0 rounded-lg border border-gray-300 bg-white px-4 py-2.5 text-gray-900 placeholder-gray-500 shadow-sm focus:border-[#F5A623] focus:outline-none focus:ring-2 focus:ring-[#F5A623]/30" aria-label="Search blog posts by keyword" autocomplete="off">
+      </div>
+
+      <div id="blog-cards-container" class="grid grid-cols-1 md:grid-cols-2 gap-8">
 
         <!-- Card 1: Defeating Facial Recognition -->
-        <article class="bg-white rounded-lg shadow hover:shadow-lg transition-shadow p-6 flex flex-col">
+        <article class="blog-card bg-white rounded-lg shadow hover:shadow-lg transition-shadow p-6 flex flex-col" data-category="Technology & Privacy" data-search="defeating facial recognition in an ai surveillance era the proliferation of ai-powered surveillance has created an urgent need for counter-surveillance tools. a comprehensive breakdown of existing countermeasures, innovations, and concepts that don't yet exist but could prove critical.">
           <div class="mb-4">
             <span class="inline-block bg-[#F5A623] text-white text-xs font-semibold px-3 py-1 rounded-full" data-i18n="blog.category.tech">Technology &amp; Privacy</span>
           </div>
@@ -165,7 +178,7 @@
         </article>
 
         <!-- Card 2: Anti-Surveillance Market Analysis -->
-        <article class="bg-white rounded-lg shadow hover:shadow-lg transition-shadow p-6 flex flex-col">
+        <article class="blog-card bg-white rounded-lg shadow hover:shadow-lg transition-shadow p-6 flex flex-col" data-category="Technology & Privacy" data-search="anti-surveillance technology wearables market analysis in-depth look at the surveillance landscape, market sizes, key players, regulatory impact, and strategic opportunities in the growing counter-surveillance industry.">
           <div class="mb-4">
             <span class="inline-block bg-[#F5A623] text-white text-xs font-semibold px-3 py-1 rounded-full" data-i18n="blog.category.tech">Technology &amp; Privacy</span>
           </div>
@@ -186,7 +199,7 @@
         </article>
 
         <!-- Card 3: ICE Activity Near Austin -->
-        <article class="bg-white rounded-lg shadow hover:shadow-lg transition-shadow p-6 flex flex-col">
+        <article class="blog-card bg-white rounded-lg shadow hover:shadow-lg transition-shadow p-6 flex flex-col" data-category="Community & Policy" data-search="ice activity within a 2-hour radius of austin tx comprehensive timeline of ice operations, community protests, policy changes, and legal developments in and around austin, texas from january 10 to february 10, 2026.">
           <div class="mb-4">
             <span class="inline-block bg-[#F5A623] text-white text-xs font-semibold px-3 py-1 rounded-full" data-i18n="blog.category.community">Community &amp; Policy</span>
           </div>
@@ -207,7 +220,7 @@
         </article>
 
         <!-- Card 4: ICE Activity in Minneapolis -->
-        <article class="bg-white rounded-lg shadow hover:shadow-lg transition-shadow p-6 flex flex-col">
+        <article class="blog-card bg-white rounded-lg shadow hover:shadow-lg transition-shadow p-6 flex flex-col" data-category="Community & Policy" data-search="ice activity in minneapolis operation metro surge comprehensive account of operation metro surge — the largest dhs enforcement operation in u.s. history — including fatal shootings, mass protests, legal battles, and community impact in minneapolis from january to february 2026.">
           <div class="mb-4">
             <span class="inline-block bg-[#F5A623] text-white text-xs font-semibold px-3 py-1 rounded-full" data-i18n="blog.category.community">Community &amp; Policy</span>
           </div>
@@ -228,7 +241,7 @@
         </article>
 
         <!-- Card 5: Rebuilding Resilience -->
-        <article class="bg-white rounded-lg shadow hover:shadow-lg transition-shadow p-6 flex flex-col">
+        <article class="blog-card bg-white rounded-lg shadow hover:shadow-lg transition-shadow p-6 flex flex-col" data-category="Research & Frameworks" data-search="rebuilding resilience frameworks for personal and community recovery annotated research compilation of academic frameworks, validated metrics, and practical models for understanding and measuring both personal psychological resilience and community-level resilience.">
           <div class="mb-4">
             <span class="inline-block bg-[#F5A623] text-white text-xs font-semibold px-3 py-1 rounded-full" data-i18n="blog.category.research">Research &amp; Frameworks</span>
           </div>
@@ -249,7 +262,7 @@
         </article>
 
         <!-- Card 6: Fifth-Generation Warfare Research -->
-        <article class="bg-white rounded-lg shadow hover:shadow-lg transition-shadow p-6 flex flex-col">
+        <article class="blog-card bg-white rounded-lg shadow hover:shadow-lg transition-shadow p-6 flex flex-col" data-category="Research & Frameworks" data-search="fifth-generation warfare the invisible war already underway comprehensive guide to how nations are fighting — and losing — wars you can't see. covering cognitive warfare, deepfakes, cyber sabotage, nato's response, and the emerging 5gw paradigm.">
           <div class="mb-4">
             <span class="inline-block bg-[#F5A623] text-white text-xs font-semibold px-3 py-1 rounded-full" data-i18n="blog.category.research">Research &amp; Frameworks</span>
           </div>
@@ -270,6 +283,7 @@
         </article>
 
       </div>
+      <p id="blog-no-results" class="hidden text-center text-gray-500 py-8" role="status">No posts match this category or keyword. Try a different filter or search term.</p>
     </div>
   </section>
 
@@ -390,6 +404,41 @@
         menuBtn.setAttribute('aria-expanded', 'false');
       });
     });
+  </script>
+
+  <!-- Blog category + keyword filter -->
+  <script>
+    (function () {
+      var categorySelect = document.getElementById('blog-category');
+      var searchInput = document.getElementById('blog-search');
+      var cards = document.querySelectorAll('.blog-card');
+
+      function filterBlogCards() {
+        var category = (categorySelect && categorySelect.value) ? categorySelect.value.trim() : '';
+        var query = (searchInput && searchInput.value) ? searchInput.value.trim().toLowerCase() : '';
+        var visible = 0;
+
+        cards.forEach(function (card) {
+          var cardCategory = (card.getAttribute('data-category') || '').trim();
+          var searchText = (card.getAttribute('data-search') || '').toLowerCase();
+          var matchCategory = !category || cardCategory === category;
+          var matchSearch = !query || searchText.indexOf(query) !== -1;
+          var show = matchCategory && matchSearch;
+
+          card.style.display = show ? '' : 'none';
+          if (show) visible++;
+        });
+
+        var noResults = document.getElementById('blog-no-results');
+        if (noResults) noResults.classList.toggle('hidden', visible > 0);
+      }
+
+      if (categorySelect) categorySelect.addEventListener('change', filterBlogCards);
+      if (searchInput) {
+        searchInput.addEventListener('input', filterBlogCards);
+        searchInput.addEventListener('keyup', filterBlogCards);
+      }
+    })();
   </script>
 
   <!-- Anonymous Contact Form Submission -->
