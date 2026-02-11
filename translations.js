@@ -164,6 +164,16 @@ var JUSTNICE_TRANSLATIONS = {
                                es: 'La proliferación de la vigilancia con IA ha creado una necesidad urgente de herramientas contra la vigilancia. Un análisis de las contramedidas existentes, innovaciones y conceptos que aún no existen pero podrían ser críticos.' },
   'blog.market.desc':       { en: 'An in-depth look at the surveillance landscape, market sizes, key players, regulatory impact, and strategic opportunities in the growing counter-surveillance industry.',
                               es: 'Una mirada profunda al panorama de la vigilancia, tamaños de mercado, actores clave, impacto regulatorio y oportunidades estratégicas en la industria creciente de contra-vigilancia.' },
+  'blog.ice.title':           { en: 'ICE Activity Within a 2-Hour Radius of Austin, TX',
+                               es: 'Actividad de ICE en un Radio de 2 Horas de Austin, TX' },
+  'blog.ice.desc':            { en: 'A comprehensive timeline of ICE operations, community protests, policy changes, and legal developments in and around Austin, Texas from January 10 to February 10, 2026.',
+                               es: 'Una cronología completa de las operaciones de ICE, protestas comunitarias, cambios de política y desarrollos legales en y alrededor de Austin, Texas del 10 de enero al 10 de febrero de 2026.' },
+  'blog.resilience.title':    { en: 'Rebuilding Resilience: Frameworks for Personal and Community Recovery',
+                               es: 'Reconstruyendo la Resiliencia: Marcos para la Recuperación Personal y Comunitaria' },
+  'blog.resilience.desc':     { en: 'An annotated research compilation of academic frameworks, validated metrics, and practical models for understanding and measuring both personal psychological resilience and community-level resilience.',
+                               es: 'Una compilación de investigación anotada de marcos académicos, métricas validadas y modelos prácticos para entender y medir tanto la resiliencia psicológica personal como la resiliencia a nivel comunitario.' },
+  'blog.category.community':  { en: 'Community & Policy', es: 'Comunidad y Política' },
+  'blog.category.research':   { en: 'Research & Frameworks', es: 'Investigación y Marcos' },
   'blog.read_more':          { en: 'Read more →', es: 'Leer más →' },
 
   // ── Immigrant Resources page ──────────────────────
