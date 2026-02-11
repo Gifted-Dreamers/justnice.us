@@ -118,6 +118,13 @@ var JUSTNICE_TRANSLATIONS = {
   'footer.copyright.info':  { en: 'Austin, Texas-based 501(c)(3) EIN 39-3863796',
                               es: 'Organización 501(c)(3) con sede en Austin, Texas EIN 39-3863796' },
   'footer.opensource':       { en: 'Open Source',            es: 'Código Abierto' },
+  'footer.link.downloads':   { en: 'Downloads',              es: 'Descargas' },
+  'footer.link.contact':     { en: 'Contact',                es: 'Contacto' },
+  'footer.link.justnice':    { en: 'justnice.us',            es: 'justnice.us' },
+  'footer.link.email':      { en: 'BEE@justNICE.us',        es: 'BEE@justNICE.us' },
+  'footer.license':          { en: 'CC0 1.0 Public Domain',   es: 'CC0 1.0 Dominio Público' },
+  'footer.madewith':         { en: 'Made with care by',      es: 'Hecho con cuidado por' },
+  'footer.github_aria':      { en: 'View source on GitHub',  es: 'Ver código en GitHub' },
 
   // ── Contact Form ───────────────────────────────────
   'form.message.label':     { en: 'Your message',          es: 'Tu mensaje' },
