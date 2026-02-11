@@ -25,6 +25,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://justnice.us/downloads.html</loc>
+    <lastmod>2026-02-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://justnice.us/blog/ai-surveillance-countermeasures.html</loc>
     <lastmod>2026-02-11</lastmod>
     <changefreq>monthly</changefreq>
