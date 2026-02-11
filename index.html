@@ -221,12 +221,12 @@
           <div class="mt-6 flex flex-col sm:flex-row items-center md:items-start gap-3 text-white/90">
             <span class="text-sm font-medium uppercase tracking-wide" data-i18n="hero.mutualaid.label">MN Mutual Aid:</span>
             <a href="https://linktr.ee/mplsmutualaid" target="_blank" rel="noopener noreferrer"
-               class="text-[#F5A623] hover:text-white text-sm font-semibold underline underline-offset-2 transition-colors">
+               class="text-[#F5A623] hover:text-white text-sm font-semibold underline underline-offset-2 transition-colors" data-i18n="home.mutualaid.link1">
               MPLS Mutual Aid
             </a>
             <span class="hidden sm:inline text-white/40">|</span>
             <a href="https://standwithminnesota.com" target="_blank" rel="noopener noreferrer"
-               class="text-[#F5A623] hover:text-white text-sm font-semibold underline underline-offset-2 transition-colors">
+               class="text-[#F5A623] hover:text-white text-sm font-semibold underline underline-offset-2 transition-colors" data-i18n="home.mutualaid.link2">
               Stand With Minnesota
             </a>
           </div>
@@ -477,7 +477,7 @@
             ></textarea>
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-3">
               <div>
-                <label for="contact-name" class="text-white/80 text-sm">Name <span class="text-white/60">(optional)</span></label>
+                <label for="contact-name" class="text-white/80 text-sm"><span data-i18n="form.name.label">Name</span> <span class="text-white/60" data-i18n="form.optional">(optional)</span></label>
                 <input
                   type="text"
                   id="contact-name"
@@ -488,7 +488,7 @@
                 />
               </div>
               <div>
-                <label for="contact-email" class="text-white/80 text-sm">Email <span class="text-white/60">(optional)</span></label>
+                <label for="contact-email" class="text-white/80 text-sm"><span data-i18n="form.email.label">Email</span> <span class="text-white/60" data-i18n="form.optional">(optional)</span></label>
                 <input
                   type="email"
                   id="contact-email"
@@ -500,7 +500,7 @@
               </div>
             </div>
             <div class="mt-3">
-              <label for="contact-url" class="text-white/80 text-sm">URL <span class="text-white/60">(optional)</span></label>
+              <label for="contact-url" class="text-white/80 text-sm"><span data-i18n="form.url.label">URL</span> <span class="text-white/60" data-i18n="form.optional">(optional)</span></label>
               <input
                 type="url"
                 id="contact-url"
@@ -511,19 +511,19 @@
               />
             </div>
             <div class="mt-3">
-              <label for="contact-category" class="text-white/80 text-sm">Category / Section <span class="text-white/60">(optional)</span></label>
+              <label for="contact-category" class="text-white/80 text-sm"><span data-i18n="form.category.label">Category / Section</span> <span class="text-white/60" data-i18n="form.optional">(optional)</span></label>
               <select
                 id="contact-category"
                 class="w-full mt-1 bg-white/10 border border-white/20 text-white placeholder-gray-400 px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#F5A623] focus:border-transparent"
                 aria-label="Category or section (optional)"
               >
                 <option value="" class="bg-[#3D2B1F]" data-i18n="form.category.select">Select a category...</option>
-                <option value="General" class="bg-[#3D2B1F]">General</option>
-                <option value="Immigrant Resources" class="bg-[#3D2B1F]">Immigrant Resources</option>
-                <option value="Know Your Rights" class="bg-[#3D2B1F]">Know Your Rights</option>
-                <option value="Blog" class="bg-[#3D2B1F]">Blog</option>
-                <option value="Resource Map" class="bg-[#3D2B1F]">Resource Map</option>
-                <option value="Other" class="bg-[#3D2B1F]">Other</option>
+                <option value="General" class="bg-[#3D2B1F]" data-i18n="form.category.general">General</option>
+                <option value="Immigrant Resources" class="bg-[#3D2B1F]" data-i18n="form.category.resources">Immigrant Resources</option>
+                <option value="Know Your Rights" class="bg-[#3D2B1F]" data-i18n="form.category.kyr">Know Your Rights</option>
+                <option value="Blog" class="bg-[#3D2B1F]" data-i18n="form.category.blog">Blog</option>
+                <option value="Resource Map" class="bg-[#3D2B1F]" data-i18n="form.category.map">Resource Map</option>
+                <option value="Other" class="bg-[#3D2B1F]" data-i18n="form.category.other">Other</option>
               </select>
             </div>
             <button type="submit"
@@ -549,7 +549,7 @@
               <span class="text-white/30">|</span>
               <a href="https://www.bonfire.com/store/gifteddreamers/" target="_blank" rel="noopener noreferrer" class="text-[#F5A623] hover:text-[#D4911E] transition-colors font-medium" data-i18n="nav.gear">NICE Gear</a>
               <span class="text-white/30">|</span>
-              <a href="https://gifteddreamers.org/GRUHP" target="_blank" rel="noopener noreferrer" class="text-[#F5A623] hover:text-[#D4911E] transition-colors font-medium">Donate</a>
+              <a href="https://gifteddreamers.org/GRUHP" target="_blank" rel="noopener noreferrer" class="text-[#F5A623] hover:text-[#D4911E] transition-colors font-medium" data-i18n="nav.donate">Donate</a>
             </div>
           </div>
         </div>
@@ -570,10 +570,10 @@
           </a>
         </div>
         <p class="text-white/80 text-sm">
-          Made with care by
-          <a href="https://gifteddreamers.org/GRUHP" target="_blank" rel="noopener noreferrer" class="text-[#F5A623] hover:text-[#D4911E] transition-colors"><img src="/assets/gifted-dreamers-icon.png" alt="Gifted Dreamers" class="inline-block w-5 h-5 mr-1 align-text-bottom" loading="lazy" width="20" height="20"> Gifted Dreamers, Inc.</a>
-          &middot; Austin, Texas-based 501(c)(3) EIN 39-3863796 &middot;
-          <a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank" rel="noopener noreferrer" class="text-white/60 hover:text-white transition-colors underline underline-offset-2">CC0 1.0 Public Domain</a>
+          <span data-i18n="footer.madewith">Made with care by</span>
+          <a href="https://gifteddreamers.org/GRUHP" target="_blank" rel="noopener noreferrer" class="text-[#F5A623] hover:text-[#D4911E] transition-colors" data-i18n="footer.copyright.org"><img src="/assets/gifted-dreamers-icon.png" alt="Gifted Dreamers" class="inline-block w-5 h-5 mr-1 align-text-bottom" loading="lazy" width="20" height="20"> Gifted Dreamers, Inc.</a>
+          &middot; <span data-i18n="footer.copyright.info">Austin, Texas-based 501(c)(3) EIN 39-3863796</span> &middot;
+          <a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank" rel="noopener noreferrer" class="text-white/60 hover:text-white transition-colors underline underline-offset-2" data-i18n="footer.license">CC0 1.0 Public Domain</a>
         </p>
       </div>
     </div>

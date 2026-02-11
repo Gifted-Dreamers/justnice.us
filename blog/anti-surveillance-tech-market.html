@@ -347,36 +347,36 @@
       <!-- Section 1: The Surveillance Context -->
       <h2 id="section-1">1. The Surveillance Context</h2>
 
-      <p>Facial recognition and AI-enhanced video surveillance have moved from niche tools to default infrastructure in many cities and war zones. The global facial recognition market is projected to grow from about <strong>$9.3B in 2025</strong> to <strong>$36.75B by 2035</strong> (~14.7% CAGR), driven by security, finance, retail, and government use cases. AI in video surveillance is smaller in absolute size but growing faster, from <strong>$3.9B in 2024</strong> to <strong>$12.46B by 2030</strong> (~21.3% CAGR).<a href="#fn1" id="fnref1" class="fn-ref">[1]</a><a href="#fn2" id="fnref2" class="fn-ref">[2]</a><a href="#fn3" id="fnref3" class="fn-ref">[3]</a></p>
+      <p data-i18n="blog.market.p1">Facial recognition and AI-enhanced video surveillance have moved from niche tools to default infrastructure in many cities and war zones. The global facial recognition market is projected to grow from about <strong>$9.3B in 2025</strong> to <strong>$36.75B by 2035</strong> (~14.7% CAGR), driven by security, finance, retail, and government use cases. AI in video surveillance is smaller in absolute size but growing faster, from <strong>$3.9B in 2024</strong> to <strong>$12.46B by 2030</strong> (~21.3% CAGR).<a href="#fn1" id="fnref1" class="fn-ref">[1]</a><a href="#fn2" id="fnref2" class="fn-ref">[2]</a><a href="#fn3" id="fnref3" class="fn-ref">[3]</a></p>
 
-      <p>Surveillance cameras themselves form a massive installed base: the global surveillance camera market was around <strong>$43.56B in 2025</strong> and is forecast to exceed <strong>$62B by 2029</strong>, reflecting both new deployments and upgrades to higher-resolution, AI-capable devices. Military drone markets, increasingly integrating computer vision and biometrics, are estimated at roughly <strong>$47B in 2025</strong> and projected to grow at high single-digit CAGRs through 2030.<a href="#fn4" id="fnref4" class="fn-ref">[4]</a><a href="#fn5" id="fnref5" class="fn-ref">[5]</a><a href="#fn6" id="fnref6" class="fn-ref">[6]</a><a href="#fn7" id="fnref7" class="fn-ref">[7]</a></p>
+      <p data-i18n="blog.market.p2">Surveillance cameras themselves form a massive installed base: the global surveillance camera market was around <strong>$43.56B in 2025</strong> and is forecast to exceed <strong>$62B by 2029</strong>, reflecting both new deployments and upgrades to higher-resolution, AI-capable devices. Military drone markets, increasingly integrating computer vision and biometrics, are estimated at roughly <strong>$47B in 2025</strong> and projected to grow at high single-digit CAGRs through 2030.<a href="#fn4" id="fnref4" class="fn-ref">[4]</a><a href="#fn5" id="fnref5" class="fn-ref">[5]</a><a href="#fn6" id="fnref6" class="fn-ref">[6]</a><a href="#fn7" id="fnref7" class="fn-ref">[7]</a></p>
 
-      <p>This growth creates a corresponding need for <strong>counter-surveillance</strong> tools -- especially in conflict zones (e.g., Gaza, Ukraine) where drones, checkpoints, and mass camera deployments are used to track and target individuals.<a href="#fn8" id="fnref8" class="fn-ref">[8]</a><a href="#fn9" id="fnref9" class="fn-ref">[9]</a><a href="#fn10" id="fnref10" class="fn-ref">[10]</a></p>
+      <p data-i18n="blog.market.p3">This growth creates a corresponding need for <strong>counter-surveillance</strong> tools -- especially in conflict zones (e.g., Gaza, Ukraine) where drones, checkpoints, and mass camera deployments are used to track and target individuals.<a href="#fn8" id="fnref8" class="fn-ref">[8]</a><a href="#fn9" id="fnref9" class="fn-ref">[9]</a><a href="#fn10" id="fnref10" class="fn-ref">[10]</a></p>
 
       <hr>
 
       <!-- Section 2: How Facial Recognition Works -->
       <h2 id="section-2">2. How Facial Recognition Works (and Where It Can Be Broken)</h2>
 
-      <p>Modern facial recognition typically follows three steps:</p>
+      <p data-i18n="blog.market.p4">Modern facial recognition typically follows three steps:</p>
 
       <ol>
-        <li><strong>Detection</strong> -- Determine that a face is present in an image or video.</li>
-        <li><strong>Feature extraction</strong> -- Convert facial landmarks (eye distance, jawline, nose, etc.) into a numerical representation or "embedding."</li>
-        <li><strong>Matching</strong> -- Compare that embedding to a database of known faces.</li>
+        <li data-i18n="blog.market.li1"><strong>Detection</strong> -- Determine that a face is present in an image or video.</li>
+        <li data-i18n="blog.market.li2"><strong>Feature extraction</strong> -- Convert facial landmarks (eye distance, jawline, nose, etc.) into a numerical representation or "embedding."</li>
+        <li data-i18n="blog.market.li3"><strong>Matching</strong> -- Compare that embedding to a database of known faces.</li>
       </ol>
 
-      <p>Most consumer and city-scale systems use RGB + near-IR cameras, often with IR illuminators for night vision; some (like Face ID) use structured light or depth sensors, and higher-end military systems may also incorporate thermal imagery.<a href="#fn11" id="fnref11" class="fn-ref">[11]</a><a href="#fn12" id="fnref12" class="fn-ref">[12]</a></p>
+      <p data-i18n="blog.market.p5">Most consumer and city-scale systems use RGB + near-IR cameras, often with IR illuminators for night vision; some (like Face ID) use structured light or depth sensors, and higher-end military systems may also incorporate thermal imagery.<a href="#fn11" id="fnref11" class="fn-ref">[11]</a><a href="#fn12" id="fnref12" class="fn-ref">[12]</a></p>
 
-      <p>Countermeasures work by:</p>
+      <p data-i18n="blog.market.p6">Countermeasures work by:</p>
 
       <ul>
-        <li>Preventing <strong>detection</strong> (camera fails to see a face at all).</li>
-        <li>Corrupting <strong>feature extraction</strong> (geometry/texture appears non-human or heavily distorted).</li>
-        <li>Confusing <strong>matching</strong> (embedding no longer matches any enrollment images).</li>
+        <li data-i18n="blog.market.li4">Preventing <strong>detection</strong> (camera fails to see a face at all).</li>
+        <li data-i18n="blog.market.li5">Corrupting <strong>feature extraction</strong> (geometry/texture appears non-human or heavily distorted).</li>
+        <li data-i18n="blog.market.li6">Confusing <strong>matching</strong> (embedding no longer matches any enrollment images).</li>
       </ul>
 
-      <p>Because algorithms and sensors vary, <strong>no single defense works everywhere</strong>; the most realistic approach is layered and context-specific.</p>
+      <p data-i18n="blog.market.p7">Because algorithms and sensors vary, <strong>no single defense works everywhere</strong>; the most realistic approach is layered and context-specific.</p>
 
       <hr>
 
@@ -386,80 +386,80 @@
       <!-- 3.1 -->
       <h3 id="section-3-1">3.1 Makeup and Face Art (CV Dazzle)</h3>
 
-      <p><strong>CV Dazzle</strong>, created by artist Adam Harvey, is a style of makeup and hairstyling designed to break face detection (not just recognition). It uses:</p>
+      <p data-i18n="blog.market.p8"><strong>CV Dazzle</strong>, created by artist Adam Harvey, is a style of makeup and hairstyling designed to break face detection (not just recognition). It uses:</p>
 
       <ul>
-        <li>High-contrast shapes (light vs dark) applied asymmetrically.</li>
-        <li>Heavy blocking of the <strong>nose bridge</strong> and one eye region.</li>
-        <li>Straight lines and geometric fragments that disrupt the normal face contour.<a href="#fn13" id="fnref13" class="fn-ref">[13]</a><a href="#fn14" id="fnref14" class="fn-ref">[14]</a></li>
+        <li data-i18n="blog.market.li7">High-contrast shapes (light vs dark) applied asymmetrically.</li>
+        <li data-i18n="blog.market.li8">Heavy blocking of the <strong>nose bridge</strong> and one eye region.</li>
+        <li data-i18n="blog.market.li9">Straight lines and geometric fragments that disrupt the normal face contour.<a href="#fn13" id="fnref13" class="fn-ref">[13]</a><a href="#fn14" id="fnref14" class="fn-ref">[14]</a></li>
       </ul>
 
-      <p>These designs can prevent older detectors (like Haar cascades in OpenCV) from registering a face at all. However:</p>
+      <p data-i18n="blog.market.p9">These designs can prevent older detectors (like Haar cascades in OpenCV) from registering a face at all. However:</p>
 
       <ul>
-        <li>Modern deep-learning detectors are more robust, and some can still detect faces under heavy makeup.</li>
-        <li>CV Dazzle is visually extreme and may attract human attention in sensitive contexts.<a href="#fn15" id="fnref15" class="fn-ref">[15]</a><a href="#fn13b" class="fn-ref">[13]</a></li>
+        <li data-i18n="blog.market.li10">Modern deep-learning detectors are more robust, and some can still detect faces under heavy makeup.</li>
+        <li data-i18n="blog.market.li11">CV Dazzle is visually extreme and may attract human attention in sensitive contexts.<a href="#fn15" id="fnref15" class="fn-ref">[15]</a><a href="#fn13b" class="fn-ref">[13]</a></li>
       </ul>
 
-      <p><strong>Use cases</strong>: Protests, artistic/cultural events, situations where standing out visually is acceptable.</p>
+      <p data-i18n="blog.market.p10"><strong>Use cases</strong>: Protests, artistic/cultural events, situations where standing out visually is acceptable.</p>
 
       <hr>
 
       <!-- 3.2 -->
       <h3 id="section-3-2">3.2 Adversarial Clothing and Patterns</h3>
 
-      <p>Adversarial fashion embeds patterns that exploit weaknesses in computer vision models, especially object/person detectors like YOLO.</p>
+      <p data-i18n="blog.market.p11">Adversarial fashion embeds patterns that exploit weaknesses in computer vision models, especially object/person detectors like YOLO.</p>
 
       <h4 id="capable">Cap_able (Italy)</h4>
 
-      <p>Cap_able produces knitted sweaters, pants, dresses, and now printed T-shirts with patterns generated by adversarial algorithms.<a href="#fn16" id="fnref16" class="fn-ref">[16]</a><a href="#fn17" id="fnref17" class="fn-ref">[17]</a></p>
+      <p data-i18n="blog.market.p12">Cap_able produces knitted sweaters, pants, dresses, and now printed T-shirts with patterns generated by adversarial algorithms.<a href="#fn16" id="fnref16" class="fn-ref">[16]</a><a href="#fn17" id="fnref17" class="fn-ref">[17]</a></p>
 
       <ul>
-        <li>Patterns are designed so YOLO (a popular detection model) classifies the wearer as an animal (e.g., dog, zebra) instead of "person."<a href="#fn18" id="fnref18" class="fn-ref">[18]</a><a href="#fn16b" class="fn-ref">[16]</a></li>
-        <li>Garment designs are tested against YOLO and adjusted to maximize "misclassification confidence."<a href="#fn16c" class="fn-ref">[16]</a></li>
-        <li>Patterns operate at the <strong>pixel level</strong>, and the team emphasizes that they work regardless of skin tone, addressing bias in FRT.<a href="#fn19" id="fnref19" class="fn-ref">[19]</a><a href="#fn16d" class="fn-ref">[16]</a></li>
+        <li data-i18n="blog.market.li12">Patterns are designed so YOLO (a popular detection model) classifies the wearer as an animal (e.g., dog, zebra) instead of "person."<a href="#fn18" id="fnref18" class="fn-ref">[18]</a><a href="#fn16b" class="fn-ref">[16]</a></li>
+        <li data-i18n="blog.market.li13">Garment designs are tested against YOLO and adjusted to maximize "misclassification confidence."<a href="#fn16c" class="fn-ref">[16]</a></li>
+        <li data-i18n="blog.market.li14">Patterns operate at the <strong>pixel level</strong>, and the team emphasizes that they work regardless of skin tone, addressing bias in FRT.<a href="#fn19" id="fnref19" class="fn-ref">[19]</a><a href="#fn16d" class="fn-ref">[16]</a></li>
       </ul>
 
-      <p>Limitations:</p>
+      <p data-i18n="blog.market.p13">Limitations:</p>
 
       <ul>
-        <li>Protection is strongest when the <strong>whole body</strong> is visible; if only the face is framed, recognition can still occur.<a href="#fn16e" class="fn-ref">[16]</a></li>
-        <li>Independent tests by biometric vendors (e.g., NTechLab) have shown that some production FRT systems can still detect faces wearing Cap_able garments.<a href="#fn20" id="fnref20" class="fn-ref">[20]</a></li>
-        <li>Effectiveness is model-specific and may degrade as algorithms evolve.</li>
+        <li data-i18n="blog.market.li15">Protection is strongest when the <strong>whole body</strong> is visible; if only the face is framed, recognition can still occur.<a href="#fn16e" class="fn-ref">[16]</a></li>
+        <li data-i18n="blog.market.li16">Independent tests by biometric vendors (e.g., NTechLab) have shown that some production FRT systems can still detect faces wearing Cap_able garments.<a href="#fn20" id="fnref20" class="fn-ref">[20]</a></li>
+        <li data-i18n="blog.market.li17">Effectiveness is model-specific and may degrade as algorithms evolve.</li>
       </ul>
 
-      <p>Mozilla's 2025 review of antisurveillance fashion confirms that Cap_able's garments can evade specific camera detection setups but not all pose-detection systems.<a href="#fn21" id="fnref21" class="fn-ref">[21]</a></p>
+      <p data-i18n="blog.market.p14">Mozilla's 2025 review of antisurveillance fashion confirms that Cap_able's garments can evade specific camera detection setups but not all pose-detection systems.<a href="#fn21" id="fnref21" class="fn-ref">[21]</a></p>
 
       <h4 id="antiai">AntiAI Clothing &amp; Yelo Pomelo</h4>
 
-      <p>Mozilla tested multiple off-the-shelf adversarial garments from <strong>AntiAI Clothing</strong> and <strong>Yelo Pomelo</strong> (sold via Etsy) using an Imou consumer security camera configured to send "human detected" alerts.<a href="#fn22" id="fnref22" class="fn-ref">[22]</a><a href="#fn21b" class="fn-ref">[21]</a></p>
+      <p data-i18n="blog.market.p15">Mozilla tested multiple off-the-shelf adversarial garments from <strong>AntiAI Clothing</strong> and <strong>Yelo Pomelo</strong> (sold via Etsy) using an Imou consumer security camera configured to send "human detected" alerts.<a href="#fn22" id="fnref22" class="fn-ref">[22]</a><a href="#fn21b" class="fn-ref">[21]</a></p>
 
       <ul>
-        <li>All AntiAI and Yelo Pomelo garments tested successfully prevented the camera from triggering a human-detection alert when the wearer walked across the field of view.<a href="#fn21c" class="fn-ref">[21]</a></li>
-        <li>However, the same garments did not fool a separate ML model trained for pose estimation via Google's Teachable Machine.<a href="#fn21d" class="fn-ref">[21]</a></li>
+        <li data-i18n="blog.market.li18">All AntiAI and Yelo Pomelo garments tested successfully prevented the camera from triggering a human-detection alert when the wearer walked across the field of view.<a href="#fn21c" class="fn-ref">[21]</a></li>
+        <li data-i18n="blog.market.li19">However, the same garments did not fool a separate ML model trained for pose estimation via Google's Teachable Machine.<a href="#fn21d" class="fn-ref">[21]</a></li>
       </ul>
 
-      <p>This highlights the <strong>model-specific</strong> nature of adversarial defenses: a T-shirt can fool one AI camera but not another with different training data or objectives.</p>
+      <p data-i18n="blog.market.p16">This highlights the <strong>model-specific</strong> nature of adversarial defenses: a T-shirt can fool one AI camera but not another with different training data or objectives.</p>
 
       <hr>
 
       <!-- 3.3 -->
       <h3 id="section-3-3">3.3 IR LED Hats, Hoodies, and "Privacy Visors"</h3>
 
-      <p>Infrared-based defenses exploit the fact that many cameras use near-IR light for night vision and facial mapping.</p>
+      <p data-i18n="blog.market.p17">Infrared-based defenses exploit the fact that many cameras use near-IR light for night vision and facial mapping.</p>
 
       <ul>
-        <li><strong>Unidentified Halo</strong>: A baseball cap lined with 22 near-IR LEDs that project a halo of IR light around the wearer's head. Tests with Google Cloud Vision showed that faces became undetectable when the cap was on; without it, standard face detection and even emotion recognition worked normally.<a href="#fn23" id="fnref23" class="fn-ref">[23]</a></li>
-        <li><strong>Camera Shy Hoodie</strong> (Mac Pierce): A hoodie with high-power IR LEDs embedded around the hood and shoulders. When powered, the LEDs overwhelm camera sensors at night, causing the face/upper body to appear as bright flare or to disappear entirely, while remaining invisible to the human eye.<a href="#fn24" id="fnref24" class="fn-ref">[24]</a></li>
-        <li>Japanese research prototypes of <strong>privacy visors</strong> use low-power IR LEDs around the frame to wash out the eye region in camera images while remaining unobtrusive to people.<a href="#fn11b" class="fn-ref">[11]</a></li>
+        <li data-i18n="blog.market.li20"><strong>Unidentified Halo</strong>: A baseball cap lined with 22 near-IR LEDs that project a halo of IR light around the wearer's head. Tests with Google Cloud Vision showed that faces became undetectable when the cap was on; without it, standard face detection and even emotion recognition worked normally.<a href="#fn23" id="fnref23" class="fn-ref">[23]</a></li>
+        <li data-i18n="blog.market.li21"><strong>Camera Shy Hoodie</strong> (Mac Pierce): A hoodie with high-power IR LEDs embedded around the hood and shoulders. When powered, the LEDs overwhelm camera sensors at night, causing the face/upper body to appear as bright flare or to disappear entirely, while remaining invisible to the human eye.<a href="#fn24" id="fnref24" class="fn-ref">[24]</a></li>
+        <li data-i18n="blog.market.li22">Japanese research prototypes of <strong>privacy visors</strong> use low-power IR LEDs around the frame to wash out the eye region in camera images while remaining unobtrusive to people.<a href="#fn11b" class="fn-ref">[11]</a></li>
       </ul>
 
-      <p>Constraints:</p>
+      <p data-i18n="blog.market.p18">Constraints:</p>
 
       <ul>
-        <li>Many daytime cameras include IR-cut filters, reducing the impact of IR flooding in bright conditions.</li>
-        <li>Power/battery life and heat management can be issues for wearable IR arrays.</li>
-        <li>In some jurisdictions, actively interfering with cameras might have legal implications.</li>
+        <li data-i18n="blog.market.li23">Many daytime cameras include IR-cut filters, reducing the impact of IR flooding in bright conditions.</li>
+        <li data-i18n="blog.market.li24">Power/battery life and heat management can be issues for wearable IR arrays.</li>
+        <li data-i18n="blog.market.li25">In some jurisdictions, actively interfering with cameras might have legal implications.</li>
       </ul>
 
       <hr>
@@ -467,48 +467,48 @@
       <!-- 3.4 -->
       <h3 id="section-3-4">3.4 Reflective / IR-Blocking Glasses</h3>
 
-      <p><strong>Reflectacles</strong> and <strong>Zenni ID Guard</strong> exemplify anti-FRT eyewear.</p>
+      <p data-i18n="blog.market.p19"><strong>Reflectacles</strong> and <strong>Zenni ID Guard</strong> exemplify anti-FRT eyewear.</p>
 
       <h4 id="reflectacles">Reflectacles</h4>
 
-      <p>Reflectacles frames use retroreflective materials and IR-absorbing or IR-reflective lenses.<a href="#fn25" id="fnref25" class="fn-ref">[25]</a><a href="#fn26" id="fnref26" class="fn-ref">[26]</a></p>
+      <p data-i18n="blog.market.p20">Reflectacles frames use retroreflective materials and IR-absorbing or IR-reflective lenses.<a href="#fn25" id="fnref25" class="fn-ref">[25]</a><a href="#fn26" id="fnref26" class="fn-ref">[26]</a></p>
 
       <ul>
-        <li>Tests reported by PCMag and Mozilla show that Reflectacles can prevent <strong>Face ID</strong> and Windows Hello from successfully authenticating, and block some FRT systems from capturing usable eye-region data.<a href="#fn27" id="fnref27" class="fn-ref">[27]</a><a href="#fn21e" class="fn-ref">[21]</a></li>
-        <li>In Mozilla's Imou camera tests, Reflectacles did <strong>not</strong> prevent the camera from sending a "human detected" alert -- but they did disable phone/computer biometric logins.<a href="#fn21f" class="fn-ref">[21]</a></li>
+        <li data-i18n="blog.market.li26">Tests reported by PCMag and Mozilla show that Reflectacles can prevent <strong>Face ID</strong> and Windows Hello from successfully authenticating, and block some FRT systems from capturing usable eye-region data.<a href="#fn27" id="fnref27" class="fn-ref">[27]</a><a href="#fn21e" class="fn-ref">[21]</a></li>
+        <li data-i18n="blog.market.li27">In Mozilla's Imou camera tests, Reflectacles did <strong>not</strong> prevent the camera from sending a "human detected" alert -- but they did disable phone/computer biometric logins.<a href="#fn21f" class="fn-ref">[21]</a></li>
       </ul>
 
-      <p>These glasses are effective at <strong>protecting biometric authentication</strong> (phone/PC login, some ID gates) rather than hiding the entire body from detection.</p>
+      <p data-i18n="blog.market.p21">These glasses are effective at <strong>protecting biometric authentication</strong> (phone/PC login, some ID gates) rather than hiding the entire body from detection.</p>
 
       <h4 id="zenni">Zenni ID Guard</h4>
 
-      <p>In July 2025, Zenni Optical launched <strong>ID Guard</strong>, a near-IR-reflecting lens coating available on standard prescription lenses and EyeQLenz.<a href="#fn28" id="fnref28" class="fn-ref">[28]</a><a href="#fn29" id="fnref29" class="fn-ref">[29]</a><a href="#fn30" id="fnref30" class="fn-ref">[30]</a></p>
+      <p data-i18n="blog.market.p22">In July 2025, Zenni Optical launched <strong>ID Guard</strong>, a near-IR-reflecting lens coating available on standard prescription lenses and EyeQLenz.<a href="#fn28" id="fnref28" class="fn-ref">[28]</a><a href="#fn29" id="fnref29" class="fn-ref">[29]</a><a href="#fn30" id="fnref30" class="fn-ref">[30]</a></p>
 
       <ul>
-        <li>ID Guard reflects <strong>up to ~80%</strong> of near-infrared light in the 700--1,000 nm range, the same band used by many facial recognition systems and IR illuminators.<a href="#fn29b" class="fn-ref">[29]</a><a href="#fn30b" class="fn-ref">[30]</a><a href="#fn28b" class="fn-ref">[28]</a></li>
-        <li>The coating shows as a subtle iridescent pink sheen but maintains optical clarity.<a href="#fn28c" class="fn-ref">[28]</a></li>
-        <li>Zenni warns that the coating may interfere with consumer-facing IR-based systems like Apple Face ID and Windows Hello, which is effectively proof that it disrupts IR mapping.<a href="#fn29c" class="fn-ref">[29]</a><a href="#fn28d" class="fn-ref">[28]</a></li>
+        <li data-i18n="blog.market.li28">ID Guard reflects <strong>up to ~80%</strong> of near-infrared light in the 700--1,000 nm range, the same band used by many facial recognition systems and IR illuminators.<a href="#fn29b" class="fn-ref">[29]</a><a href="#fn30b" class="fn-ref">[30]</a><a href="#fn28b" class="fn-ref">[28]</a></li>
+        <li data-i18n="blog.market.li29">The coating shows as a subtle iridescent pink sheen but maintains optical clarity.<a href="#fn28c" class="fn-ref">[28]</a></li>
+        <li data-i18n="blog.market.li30">Zenni warns that the coating may interfere with consumer-facing IR-based systems like Apple Face ID and Windows Hello, which is effectively proof that it disrupts IR mapping.<a href="#fn29c" class="fn-ref">[29]</a><a href="#fn28d" class="fn-ref">[28]</a></li>
       </ul>
 
-      <p>This is a key mainstream signal: anti-surveillance features are now being embedded into mass-market eyewear, with pricing similar to other premium coatings.</p>
+      <p data-i18n="blog.market.p23">This is a key mainstream signal: anti-surveillance features are now being embedded into mass-market eyewear, with pricing similar to other premium coatings.</p>
 
       <hr>
 
       <!-- 3.5 -->
       <h3 id="section-3-5">3.5 Anti-Flash / Anti-Paparazzi Scarves</h3>
 
-      <p>The <strong>ISHU</strong> scarf uses a matrix of hemispherical glass crystals (retroreflective microbeads) that bounce flash and IR light back into camera sensors.<a href="#fn31" id="fnref31" class="fn-ref">[31]</a><a href="#fn32" id="fnref32" class="fn-ref">[32]</a><a href="#fn33" id="fnref33" class="fn-ref">[33]</a></p>
+      <p data-i18n="blog.market.p24">The <strong>ISHU</strong> scarf uses a matrix of hemispherical glass crystals (retroreflective microbeads) that bounce flash and IR light back into camera sensors.<a href="#fn31" id="fnref31" class="fn-ref">[31]</a><a href="#fn32" id="fnref32" class="fn-ref">[32]</a><a href="#fn33" id="fnref33" class="fn-ref">[33]</a></p>
 
       <ul>
-        <li>With flash photography, the wearer's face appears dark while the scarf area is overexposed, rendering the person unidentifiable in many cases.<a href="#fn33b" class="fn-ref">[33]</a></li>
-        <li>It also affects some IR-based night shots where IR illumination is used.</li>
+        <li data-i18n="blog.market.li31">With flash photography, the wearer's face appears dark while the scarf area is overexposed, rendering the person unidentifiable in many cases.<a href="#fn33b" class="fn-ref">[33]</a></li>
+        <li data-i18n="blog.market.li32">It also affects some IR-based night shots where IR illumination is used.</li>
       </ul>
 
-      <p>Limitations:</p>
+      <p data-i18n="blog.market.p25">Limitations:</p>
 
       <ul>
-        <li>Least effective in daylight or when flash/IR illuminators aren't used.</li>
-        <li>Positioned today as a luxury fashion item rather than a scalable security product.</li>
+        <li data-i18n="blog.market.li33">Least effective in daylight or when flash/IR illuminators aren't used.</li>
+        <li data-i18n="blog.market.li34">Positioned today as a luxury fashion item rather than a scalable security product.</li>
       </ul>
 
       <hr>
@@ -517,60 +517,60 @@
       <h3 id="section-3-6">3.6 Physical Masks and Identity Obfuscation</h3>
 
       <ul>
-        <li><strong>URME Surveillance Mask</strong>: An artist-made, realistic 3D mask of Leo Selvaggio's face, which was shown to cause Facebook's automatic tagging to identify the wearer as Selvaggio. This effectively performs "identity substitution" rather than invisibility.<a href="#fn34" id="fnref34" class="fn-ref">[34]</a><a href="#fn35" id="fnref35" class="fn-ref">[35]</a></li>
-        <li><strong>Simple medical masks + sunglasses</strong>: Studies and vendor reports show that surgical masks can reduce FRT accuracy from ~95% to ~70%, though specialized algorithms have improved masked-face recognition significantly.<a href="#fn36" id="fnref36" class="fn-ref">[36]</a><a href="#fn37" id="fnref37" class="fn-ref">[37]</a></li>
+        <li data-i18n="blog.market.li35"><strong>URME Surveillance Mask</strong>: An artist-made, realistic 3D mask of Leo Selvaggio's face, which was shown to cause Facebook's automatic tagging to identify the wearer as Selvaggio. This effectively performs "identity substitution" rather than invisibility.<a href="#fn34" id="fnref34" class="fn-ref">[34]</a><a href="#fn35" id="fnref35" class="fn-ref">[35]</a></li>
+        <li data-i18n="blog.market.li36"><strong>Simple medical masks + sunglasses</strong>: Studies and vendor reports show that surgical masks can reduce FRT accuracy from ~95% to ~70%, though specialized algorithms have improved masked-face recognition significantly.<a href="#fn36" id="fnref36" class="fn-ref">[36]</a><a href="#fn37" id="fnref37" class="fn-ref">[37]</a></li>
       </ul>
 
-      <p>In some conflict regions, widespread mask wearing or culturally normal face coverings (e.g., scarves, niqab) create large pockets where FRT is less reliable but still not fully defeated.</p>
+      <p data-i18n="blog.market.p26">In some conflict regions, widespread mask wearing or culturally normal face coverings (e.g., scarves, niqab) create large pockets where FRT is less reliable but still not fully defeated.</p>
 
       <hr>
 
       <!-- 3.7 -->
       <h3 id="section-3-7">3.7 Anti-Thermal / Anti-Drone Garments</h3>
 
-      <p>Thermal cameras detect heat, not visible features, and are widely used on drones and border surveillance.</p>
+      <p data-i18n="blog.market.p27">Thermal cameras detect heat, not visible features, and are widely used on drones and border surveillance.</p>
 
       <ul>
-        <li><strong>Stealth Wear</strong> (Adam Harvey): Prototypes of silver-coated, metallized fabric hoodies and burqas that reflect body heat, making the wearer significantly less visible to thermal imaging.<a href="#fn38" id="fnref38" class="fn-ref">[38]</a><a href="#fn11c" class="fn-ref">[11]</a></li>
-        <li><strong>Intermat Defense "Phantom of War"</strong> and similar ghillie suits: Military multispectral camo that reduces visibility across near-IR, SWIR, MWIR, and LWIR bands, specifically to defeat drone and sniper thermal optics.<a href="#fn39" id="fnref39" class="fn-ref">[39]</a></li>
-        <li><strong>Commercial anti-thermal suits</strong> (e.g., Detective Store, ProApto): Specialized cloaks and suits designed to reduce thermal signature below human baseline.<a href="#fn40" id="fnref40" class="fn-ref">[40]</a><a href="#fn41" id="fnref41" class="fn-ref">[41]</a></li>
+        <li data-i18n="blog.market.li37"><strong>Stealth Wear</strong> (Adam Harvey): Prototypes of silver-coated, metallized fabric hoodies and burqas that reflect body heat, making the wearer significantly less visible to thermal imaging.<a href="#fn38" id="fnref38" class="fn-ref">[38]</a><a href="#fn11c" class="fn-ref">[11]</a></li>
+        <li data-i18n="blog.market.li38"><strong>Intermat Defense "Phantom of War"</strong> and similar ghillie suits: Military multispectral camo that reduces visibility across near-IR, SWIR, MWIR, and LWIR bands, specifically to defeat drone and sniper thermal optics.<a href="#fn39" id="fnref39" class="fn-ref">[39]</a></li>
+        <li data-i18n="blog.market.li39"><strong>Commercial anti-thermal suits</strong> (e.g., Detective Store, ProApto): Specialized cloaks and suits designed to reduce thermal signature below human baseline.<a href="#fn40" id="fnref40" class="fn-ref">[40]</a><a href="#fn41" id="fnref41" class="fn-ref">[41]</a></li>
       </ul>
 
-      <p>These products remain expensive and heavy, and are targeted at military and professional users rather than civilians.</p>
+      <p data-i18n="blog.market.p28">These products remain expensive and heavy, and are targeted at military and professional users rather than civilians.</p>
 
       <hr>
 
       <!-- Section 4: Gaps and Future Concepts -->
       <h2 id="section-4">4. Gaps and Future Concepts</h2>
 
-      <p>Several powerful anti-surveillance concepts are not yet widely commercialized:</p>
+      <p data-i18n="blog.market.p29">Several powerful anti-surveillance concepts are not yet widely commercialized:</p>
 
       <ol>
-        <li>
+        <li data-i18n="blog.market.li40">
           <strong>Anti-gait recognition footwear</strong><br>
           Gait recognition can identify individuals based on walking patterns, which are hard to disguise. No mainstream product alters gait signatures deliberately. A shoe or insole that introduces controlled randomness into stride length, heel strike, and cadence could disrupt gait models.<a href="#fn42" id="fnref42" class="fn-ref">[42]</a>
         </li>
-        <li>
+        <li data-i18n="blog.market.li41">
           <strong>Dynamic adversarial fabrics</strong><br>
           Current adversarial patterns are static (printed or knitted). E-ink or flexible OLED textiles that change patterns in real time based on detected cameras or lighting conditions could adapt to new algorithms on the fly.
         </li>
-        <li>
+        <li data-i18n="blog.market.li42">
           <strong>Ear/face-shape spoofing accessories</strong><br>
           Some forensic/biometric systems use ear shape and skull contours as identifiers. Over-ear shells or headbands with irregular 3D geometries could perturb these measurements but no dedicated consumer product exists.<a href="#fn43" id="fnref43" class="fn-ref">[43]</a>
         </li>
-        <li>
+        <li data-i18n="blog.market.li43">
           <strong>Active thermal signature shaping</strong><br>
           Most anti-thermal clothing is passive (insulation/reflective layers). Wearables with small heating elements could project decoy patterns, making a person appear as multiple non-human heat sources, confusing drone targeting models.
         </li>
-        <li>
+        <li data-i18n="blog.market.li44">
           <strong>Integrated multi-spectral "privacy armor"</strong><br>
           A consumer-grade jacket or poncho combining: adversarial visual patterns, IR LEDs, retroreflective zones, and thermal masking layers doesn't exist yet but would be highly valuable for journalists and activists.
         </li>
-        <li>
+        <li data-i18n="blog.market.li45">
           <strong>Voice and audio biometric jammers</strong><br>
           As systems increasingly combine facial recognition with voiceprints, a neckband or wearable microphone array that injects ultrasonic or shaped noise into recorded audio could prevent voice identification without audibly disturbing nearby people.
         </li>
-        <li>
+        <li data-i18n="blog.market.li46">
           <strong>Faceprint poisoning services</strong><br>
           Tools like <strong>Fawkes</strong> and <strong>Glaze</strong> perturb images before upload so they poison training data; Fawkes has garnered hundreds of thousands of downloads and academic coverage. A commercial, user-friendly service that automates this across all social platforms is an obvious opportunity.<a href="#fn44" id="fnref44" class="fn-ref">[44]</a><a href="#fn45" id="fnref45" class="fn-ref">[45]</a><a href="#fn46" id="fnref46" class="fn-ref">[46]</a>
         </li>
@@ -583,16 +583,16 @@
 
       <h3 id="section-5-1">5.1 Market Sizes and Growth</h3>
 
-      <p>Key related markets:</p>
+      <p data-i18n="blog.market.p30">Key related markets:</p>
 
       <ul>
-        <li><strong>Wearable technology</strong>: ~$84.5B in 2025, projected to <strong>$176.77B by 2030</strong> (~15.9% CAGR), including smartwatches, AR glasses, and fitness trackers.<a href="#fn47" id="fnref47" class="fn-ref">[47]</a><a href="#fn48" id="fnref48" class="fn-ref">[48]</a><a href="#fn49" id="fnref49" class="fn-ref">[49]</a></li>
-        <li><strong>Counter-surveillance market</strong>: ~$6.48B in 2024, projected to about <strong>$12B by 2033</strong> (8.1% CAGR), dominated by TSCM equipment and corporate/government services.<a href="#fn50" id="fnref50" class="fn-ref">[50]</a><a href="#fn51" id="fnref51" class="fn-ref">[51]</a></li>
-        <li><strong>AI in video surveillance</strong>: $3.9B (2024) &rarr; $12.46B (2030), fastest growing segment at 21.3% CAGR.<a href="#fn2b" class="fn-ref">[2]</a><a href="#fn52" id="fnref52" class="fn-ref">[52]</a></li>
-        <li><strong>Military drones</strong>: tens of billions annually, with continued growth through 2030.<a href="#fn6b" class="fn-ref">[6]</a><a href="#fn53" id="fnref53" class="fn-ref">[53]</a></li>
+        <li data-i18n="blog.market.li47"><strong>Wearable technology</strong>: ~$84.5B in 2025, projected to <strong>$176.77B by 2030</strong> (~15.9% CAGR), including smartwatches, AR glasses, and fitness trackers.<a href="#fn47" id="fnref47" class="fn-ref">[47]</a><a href="#fn48" id="fnref48" class="fn-ref">[48]</a><a href="#fn49" id="fnref49" class="fn-ref">[49]</a></li>
+        <li data-i18n="blog.market.li48"><strong>Counter-surveillance market</strong>: ~$6.48B in 2024, projected to about <strong>$12B by 2033</strong> (8.1% CAGR), dominated by TSCM equipment and corporate/government services.<a href="#fn50" id="fnref50" class="fn-ref">[50]</a><a href="#fn51" id="fnref51" class="fn-ref">[51]</a></li>
+        <li data-i18n="blog.market.li49"><strong>AI in video surveillance</strong>: $3.9B (2024) &rarr; $12.46B (2030), fastest growing segment at 21.3% CAGR.<a href="#fn2b" class="fn-ref">[2]</a><a href="#fn52" id="fnref52" class="fn-ref">[52]</a></li>
+        <li data-i18n="blog.market.li50"><strong>Military drones</strong>: tens of billions annually, with continued growth through 2030.<a href="#fn6b" class="fn-ref">[6]</a><a href="#fn53" id="fnref53" class="fn-ref">[53]</a></li>
       </ul>
 
-      <p>There is <strong>no standalone line item</strong> yet for "anti-facial-recognition wearables" in major research reports. Given the underlying markets, even a 0.5--1% penetration into the broader wearable tech space would represent several hundred million dollars annually by 2030.</p>
+      <p data-i18n="blog.market.p31">There is <strong>no standalone line item</strong> yet for "anti-facial-recognition wearables" in major research reports. Given the underlying markets, even a 0.5--1% penetration into the broader wearable tech space would represent several hundred million dollars annually by 2030.</p>
 
       <hr>
 
