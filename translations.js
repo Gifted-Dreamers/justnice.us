@@ -28,6 +28,7 @@ var JUSTNICE_TRANSLATIONS = {
                               es: 'Recursos gratuitos, guías legales y capacitación en defensa comunitaria — porque la preparación es poder.' },
   'hero.cta.resources':     { en: 'Immigrant Resources',   es: 'Recursos para Inmigrantes' },
   'hero.cta.kyr':           { en: 'Know Your Rights',      es: 'Conoce Tus Derechos' },
+  'hero.mutualaid.label':   { en: 'MN Mutual Aid:',        es: 'Ayuda Mutua MN:' },
 
   // ── Landing Page Cards ─────────────────────────────
   'card.resources.title':   { en: 'Immigrant Resources',   es: 'Recursos para Inmigrantes' },
