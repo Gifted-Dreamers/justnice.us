@@ -1,6 +1,6 @@
 # Immigrant Resources: Legal Aid, Mutual Aid & Emergency Preparedness
 
-> **Last Updated:** February 9, 2026
+> **Last Updated:** February 11, 2026
 > A comprehensive directory of free and low-cost legal services, mutual aid networks, bond funds, rapid response hotlines, family preparedness tools, and community support for immigrants in the United States.
 
 ---
@@ -305,4 +305,4 @@ These are "meta-resources" that aggregate many of the above into one place:
 
 ---
 
-*This page was compiled on February 9, 2026 from live web sources. Check individual organization websites for the most current information and resources.*
+*This page was compiled on February 11, 2026 from live web sources. Check individual organization websites for the most current information and resources.*

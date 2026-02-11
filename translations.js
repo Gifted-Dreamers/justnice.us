@@ -181,8 +181,8 @@ var JUSTNICE_TRANSLATIONS = {
                                es: 'Guerra de Quinta Generación: La Guerra Invisible que Ya Está en Marcha' },
   'blog.5gw.desc':             { en: 'A comprehensive guide to how nations are fighting — and losing — wars you can\'t see. Covering cognitive warfare, deepfakes, cyber sabotage, NATO\'s response, and the emerging 5GW paradigm.',
                                es: 'Una guía completa sobre cómo las naciones están luchando — y perdiendo — guerras que no puedes ver. Cubriendo guerra cognitiva, deepfakes, sabotaje cibernético, la respuesta de la OTAN y el paradigma emergente de la 5GW.' },
-  'blog.dataprivacy.title':    { en: 'Data Privacy & Sovereignty Best Practices (Jan 2026)',
-                               es: 'Mejores prácticas de privacidad de datos y soberanía (ene 2026)' },
+  'blog.dataprivacy.title':    { en: 'Data Privacy & Sovereignty Best Practices (Feb 2026)',
+                               es: 'Mejores prácticas de privacidad de datos y soberanía (feb 2026)' },
   'blog.dataprivacy.desc':     { en: 'Practical steps for data privacy, minimization, encryption, and sovereignty to protect against surveillance capitalism.',
                                es: 'Pasos prácticos para privacidad de datos, minimización, cifrado y soberanía para protegerse del capitalismo de vigilancia.' },
   'blog.preparedness.title':   { en: 'Comprehensive Emergency Preparedness Guide for 2026',
@@ -564,10 +564,11 @@ var JUSTNICE_TRANSLATIONS = {
   'res.reminders.4':      { en: 'Do not carry a foreign passport — it can accelerate deportation', es: 'No lleves pasaporte extranjero — puede acelerar la deportación' },
   'res.reminders.5':      { en: 'Preparation is power — complete a family preparedness plan and store it with a trusted person today', es: 'La preparación es poder — completa un plan de preparación familiar y guárdalo con una persona de confianza hoy' },
   'res.reminders.6':      { en: 'Save your local rapid response hotline in your phone now, before an emergency', es: 'Guarda la línea de respuesta rápida local en tu teléfono ahora, antes de una emergencia' },
-  'res.reminders.footer': { en: 'This page was compiled on February 9, 2026 from live web sources. Check individual organization websites for the most current information and resources.', es: 'Esta página se compiló el 9 de febrero de 2026 a partir de fuentes web en vivo. Consulta los sitios de cada organización para la información y recursos más actuales.' },
-  'res.last_updated':    { en: 'Last Updated: February 9, 2026', es: 'Última actualización: 9 de febrero de 2026' },
+  'res.reminders.footer': { en: 'This page was compiled on February 11, 2026 from live web sources. Check individual organization websites for the most current information and resources.', es: 'Esta página se compiló el 11 de febrero de 2026 a partir de fuentes web en vivo. Consulta los sitios de cada organización para la información y recursos más actuales.' },
+  'res.last_updated':    { en: 'Last Updated: February 11, 2026', es: 'Última actualización: 11 de febrero de 2026' },
 
   // ── KYR Training page ──────────────────────────────
+  'kyr.last_updated':      { en: 'Last Updated: February 11, 2026', es: 'Última actualización: 11 de febrero de 2026' },
   'kyr.intro':             { en: 'A comprehensive resource guide for Know Your Rights (KYR) trainings, Legal/Constitutional Observer trainings, and related resources in response to escalating U.S. immigration enforcement.',
                               es: 'Una guía completa de recursos para capacitaciones Conoce Tus Derechos (CTD), capacitaciones de Observadores Legales/Constitucionales y recursos relacionados ante el aumento de la aplicación de leyes de inmigración en EE. UU.' },
   'kyr.toc.context':       { en: 'Current Context', es: 'Contexto Actual' },
@@ -667,7 +668,7 @@ var JUSTNICE_TRANSLATIONS = {
   'kyr.th.organizer':     { en: 'Organizer', es: 'Organizador' },
   'kyr.th.details_short':  { en: 'Details', es: 'Detalles' },
   'kyr.p1.sessions_title': { en: 'Upcoming & Active KYR Training Sessions', es: 'Próximas y Activas Sesiones de Capacitación CDT' },
-  'kyr.p1.sessions_as_of': { en: '(as of Feb 9, 2026)', es: '(al 9 de feb de 2026)' },
+  'kyr.p1.sessions_as_of': { en: '(as of Feb 11, 2026)', es: '(al 11 de feb de 2026)' },
   'kyr.p1.copal_title':   { en: 'The COPAL MN Constitutional Observer Handbook', es: 'El Manual de Observador Constitucional de COPAL MN' },
   'kyr.p1.copal.p':       { en: 'This has become the de facto national standard for observer trainings. It was developed by COPAL MN and the Immigrant Defense Network and is referenced by training sessions run by the Minnesota DFL, Indivisible chapters, and groups in Iowa, Wisconsin, North Dakota, and beyond.', es: 'Se ha convertido en el estándar nacional de hecho para las capacitaciones de observadores. Fue desarrollado por COPAL MN y la Red de Defensa del Inmigrante y es referenciado por sesiones de capacitación del DFL de Minnesota, capítulos de Indivisible y grupos en Iowa, Wisconsin, Dakota del Norte y más.' },
 
@@ -695,7 +696,7 @@ var JUSTNICE_TRANSLATIONS = {
   'kyr.p4.th.source':      { en: 'Source', es: 'Fuente' },
   'kyr.p4.takeaway_title': { en: 'Key Takeaway', es: 'Mensaje Clave' },
   'kyr.p4.takeaway.p':     { en: 'The core message across all programs is consistent: know your constitutional rights, document everything, never interfere, and stay safe. Whether you are an immigrant seeking to understand your protections or a community member wanting to serve as an observer, multiple organizations — from the ACLU and NLG to local grassroots groups — are actively offering free training, with new sessions being added weekly.', es: 'El mensaje central en todos los programas es consistente: conoce tus derechos constitucionales, documenta todo, nunca interfieras y mantente seguro. Ya seas un inmigrante que busca entender tus protecciones o un miembro de la comunidad que quiere servir como observador, múltiples organizaciones — desde la ACLU y NLG hasta grupos de base locales — ofrecen activamente capacitación gratuita, con nuevas sesiones cada semana.' },
-  'kyr.compiled_footer':   { en: 'This page was compiled on February 9, 2026 from live web sources. Check individual organization websites for the most current schedules and registration links.', es: 'Esta página se compiló el 9 de febrero de 2026 a partir de fuentes web en vivo. Consulta los sitios de cada organización para los horarios y enlaces de registro más actuales.' },
+  'kyr.compiled_footer':   { en: 'This page was compiled on February 11, 2026 from live web sources. Check individual organization websites for the most current schedules and registration links.', es: 'Esta página se compiló el 11 de febrero de 2026 a partir de fuentes web en vivo. Consulta los sitios de cada organización para los horarios y enlaces de registro más actuales.' },
 
   // ── Breadcrumb ─────────────────────────────────────
   'breadcrumb.home':        { en: 'Home',                  es: 'Inicio' },
