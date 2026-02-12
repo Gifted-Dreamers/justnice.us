@@ -140,11 +140,38 @@
       margin-bottom: 0.75rem;
     }
 
-    /* TOC active link */
+    /* Sidebar TOC */
+    .toc-link {
+      display: block;
+      padding: 0.25rem 0;
+      color: #374151;
+      font-size: 0.875rem;
+      text-decoration: none;
+      transition: color 0.15s;
+    }
+
+    .toc-link:hover {
+      color: #F5A623;
+    }
+
     .toc-link.active {
       color: #8B1A2B;
       font-weight: 600;
-      border-left-color: #8B1A2B;
+    }
+
+    .toc-link.sub {
+      padding-left: 1rem;
+      font-size: 0.8125rem;
+      color: #6b7280;
+    }
+
+    .toc-link.sub:hover {
+      color: #F5A623;
+    }
+
+    /* Scroll margin for anchors */
+    [id] {
+      scroll-margin-top: 5rem;
     }
 
     /* Smooth scrolling */
@@ -153,8 +180,14 @@
     }
 
     /* Mobile TOC toggle */
-    #toc-content.hidden {
-      display: none;
+    .toc-mobile-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+    }
+
+    .toc-mobile-content.open {
+      max-height: 800px;
     }
   </style>
 </head>
@@ -268,51 +301,98 @@
 
     <!-- LEFT SIDEBAR: Table of Contents -->
     <aside class="lg:w-64 flex-shrink-0 mb-8 lg:mb-0">
-      <div class="lg:sticky lg:top-24">
-        <!-- Mobile TOC Toggle -->
+      <!-- Mobile TOC Toggle -->
+      <div class="lg:hidden mb-4">
         <button id="toc-toggle"
-          class="lg:hidden w-full flex items-center justify-between bg-gray-100 px-4 py-3 rounded-lg font-semibold text-maroon mb-4">
+          class="w-full flex items-center justify-between bg-gray-100 hover:bg-gray-200 transition-colors px-4 py-3 rounded-lg text-sm font-semibold text-gray-700">
           <span data-i18n="toc.title">Table of Contents</span>
-          <svg class="w-5 h-5 transform transition-transform" id="toc-chevron" fill="none" stroke="currentColor"
+          <svg id="toc-chevron" class="w-5 h-5 transform transition-transform" fill="none" stroke="currentColor"
             viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
           </svg>
         </button>
+        <div id="toc-mobile-content" class="toc-mobile-content bg-gray-50 rounded-b-lg px-4">
+          <nav class="py-3">
+            <a href="#part-1" class="toc-link font-semibold mt-2 block" data-i18n="res.toc.part1">Part 1: Emergency
+              Hotlines</a>
+            <a href="#national-hotlines" class="toc-link sub" data-i18n="res.toc.p1.national">National Hotlines</a>
+            <a href="#regional-hotlines" class="toc-link sub" data-i18n="res.toc.p1.regional">Regional Hotlines</a>
+            <a href="#california-hotlines" class="toc-link sub" data-i18n="res.toc.p1.california">California
+              Hotlines</a>
+            <a href="#part-2" class="toc-link font-semibold mt-2 block" data-i18n="res.toc.part2">Part 2: Legal
+              Services</a>
+            <a href="#legal-directories" class="toc-link sub" data-i18n="res.toc.p2.directories">National Legal
+              Directories</a>
+            <a href="#legal-organizations" class="toc-link sub" data-i18n="res.toc.p2.organizations">Key Legal
+              Organizations</a>
+            <a href="#avoid-scams" class="toc-link sub" data-i18n="res.toc.p2.scams">Avoid Immigration Scams</a>
+            <a href="#part-3" class="toc-link font-semibold mt-2 block" data-i18n="res.toc.part3">Part 3: Bond Funds</a>
+            <a href="#national-bond-funds" class="toc-link sub" data-i18n="res.toc.p3.national">National Bond Funds</a>
+            <a href="#regional-bond-funds" class="toc-link sub" data-i18n="res.toc.p3.regional">State &amp; Regional
+              Funds</a>
+            <a href="#part-4" class="toc-link font-semibold mt-2 block" data-i18n="res.toc.part4">Part 4: Finding a
+              Detained Loved One</a>
+            <a href="#part-5" class="toc-link font-semibold mt-2 block" data-i18n="res.toc.part5">Part 5: Family
+              Preparedness</a>
+            <a href="#preparedness-templates" class="toc-link sub" data-i18n="res.toc.p5.templates">Plan Templates</a>
+            <a href="#family-plan-steps" class="toc-link sub" data-i18n="res.toc.p5.steps">Key Steps</a>
+            <a href="#part-6" class="toc-link font-semibold mt-2 block" data-i18n="res.toc.part6">Part 6: Mutual Aid
+              Networks</a>
+            <a href="#find-mutual-aid" class="toc-link sub" data-i18n="res.toc.p6.find">Find or Start a Network</a>
+            <a href="#mutual-aid-types" class="toc-link sub" data-i18n="res.toc.p6.types">Types of Mutual Aid</a>
+            <a href="#mutual-aid-orgs" class="toc-link sub" data-i18n="res.toc.p6.orgs">National Organizations</a>
+            <a href="#part-7" class="toc-link font-semibold mt-2 block" data-i18n="res.toc.part7">Part 7: Worker
+              Rights</a>
+            <a href="#part-8" class="toc-link font-semibold mt-2 block" data-i18n="res.toc.part8">Part 8: Resource
+              Hubs</a>
+            <a href="#kyr-cards" class="toc-link font-semibold mt-2 block"
+              data-i18n="res.toc.kyr_cards">Quick-Reference: KYR Cards</a>
+            <a href="#key-reminders" class="toc-link font-semibold mt-2 block" data-i18n="res.toc.reminders">Key
+              Reminders</a>
+          </nav>
+        </div>
+      </div>
 
-        <nav id="toc-content" class="hidden lg:block">
-          <h2 class="text-sm font-bold text-gray-500 uppercase tracking-wider mb-3" data-i18n="toc.title">Contents</h2>
-          <ul class="space-y-1 text-sm">
-            <li><a href="#part-1"
-                class="toc-link block py-1.5 pl-3 border-l-2 border-gray-200 text-gray-600 hover:text-maroon hover:border-maroon transition-colors"
-                data-i18n="res.toc.part1">Part 1: Emergency Hotlines</a></li>
-            <li><a href="#part-2"
-                class="toc-link block py-1.5 pl-3 border-l-2 border-gray-200 text-gray-600 hover:text-maroon hover:border-maroon transition-colors"
-                data-i18n="res.toc.part2">Part 2: Legal Services</a></li>
-            <li><a href="#part-3"
-                class="toc-link block py-1.5 pl-3 border-l-2 border-gray-200 text-gray-600 hover:text-maroon hover:border-maroon transition-colors"
-                data-i18n="res.toc.part3">Part 3: Bond Funds</a></li>
-            <li><a href="#part-4"
-                class="toc-link block py-1.5 pl-3 border-l-2 border-gray-200 text-gray-600 hover:text-maroon hover:border-maroon transition-colors"
-                data-i18n="res.toc.part4">Part 4: Finding a Detained Loved One</a></li>
-            <li><a href="#part-5"
-                class="toc-link block py-1.5 pl-3 border-l-2 border-gray-200 text-gray-600 hover:text-maroon hover:border-maroon transition-colors"
-                data-i18n="res.toc.part5">Part 5: Family Preparedness</a></li>
-            <li><a href="#part-6"
-                class="toc-link block py-1.5 pl-3 border-l-2 border-gray-200 text-gray-600 hover:text-maroon hover:border-maroon transition-colors"
-                data-i18n="res.toc.part6">Part 6: Mutual Aid Networks</a></li>
-            <li><a href="#part-7"
-                class="toc-link block py-1.5 pl-3 border-l-2 border-gray-200 text-gray-600 hover:text-maroon hover:border-maroon transition-colors"
-                data-i18n="res.toc.part7">Part 7: Worker Rights</a></li>
-            <li><a href="#part-8"
-                class="toc-link block py-1.5 pl-3 border-l-2 border-gray-200 text-gray-600 hover:text-maroon hover:border-maroon transition-colors"
-                data-i18n="res.toc.part8">Part 8: Resource Hubs</a></li>
-            <li><a href="#kyr-cards"
-                class="toc-link block py-1.5 pl-3 border-l-2 border-gray-200 text-gray-600 hover:text-maroon hover:border-maroon transition-colors"
-                data-i18n="res.toc.kyr_cards">Quick-Reference: KYR Cards</a></li>
-            <li><a href="#key-reminders"
-                class="toc-link block py-1.5 pl-3 border-l-2 border-gray-200 text-gray-600 hover:text-maroon hover:border-maroon transition-colors"
-                data-i18n="res.toc.reminders">Key Reminders</a></li>
-          </ul>
+      <!-- Desktop TOC (sticky) -->
+      <div class="hidden lg:block sticky top-24">
+        <h2 class="text-sm font-bold text-maroon uppercase tracking-wider mb-3" data-i18n="toc.title">Table of Contents
+        </h2>
+        <nav class="space-y-0.5 border-l-2 border-gray-200 pl-3">
+          <a href="#part-1" class="toc-link font-semibold mt-2 block" data-i18n="res.toc.part1">Part 1: Emergency
+            Hotlines</a>
+          <a href="#national-hotlines" class="toc-link sub" data-i18n="res.toc.p1.national">National Hotlines</a>
+          <a href="#regional-hotlines" class="toc-link sub" data-i18n="res.toc.p1.regional">Regional Hotlines</a>
+          <a href="#california-hotlines" class="toc-link sub" data-i18n="res.toc.p1.california">California Hotlines</a>
+          <a href="#part-2" class="toc-link font-semibold mt-2 block" data-i18n="res.toc.part2">Part 2: Legal
+            Services</a>
+          <a href="#legal-directories" class="toc-link sub" data-i18n="res.toc.p2.directories">National Legal
+            Directories</a>
+          <a href="#legal-organizations" class="toc-link sub" data-i18n="res.toc.p2.organizations">Key Legal
+            Organizations</a>
+          <a href="#avoid-scams" class="toc-link sub" data-i18n="res.toc.p2.scams">Avoid Immigration Scams</a>
+          <a href="#part-3" class="toc-link font-semibold mt-2 block" data-i18n="res.toc.part3">Part 3: Bond Funds</a>
+          <a href="#national-bond-funds" class="toc-link sub" data-i18n="res.toc.p3.national">National Bond Funds</a>
+          <a href="#regional-bond-funds" class="toc-link sub" data-i18n="res.toc.p3.regional">State &amp; Regional
+            Funds</a>
+          <a href="#part-4" class="toc-link font-semibold mt-2 block" data-i18n="res.toc.part4">Part 4: Finding a
+            Detained Loved One</a>
+          <a href="#part-5" class="toc-link font-semibold mt-2 block" data-i18n="res.toc.part5">Part 5: Family
+            Preparedness</a>
+          <a href="#preparedness-templates" class="toc-link sub" data-i18n="res.toc.p5.templates">Plan Templates</a>
+          <a href="#family-plan-steps" class="toc-link sub" data-i18n="res.toc.p5.steps">Key Steps</a>
+          <a href="#part-6" class="toc-link font-semibold mt-2 block" data-i18n="res.toc.part6">Part 6: Mutual Aid
+            Networks</a>
+          <a href="#find-mutual-aid" class="toc-link sub" data-i18n="res.toc.p6.find">Find or Start a Network</a>
+          <a href="#mutual-aid-types" class="toc-link sub" data-i18n="res.toc.p6.types">Types of Mutual Aid</a>
+          <a href="#mutual-aid-orgs" class="toc-link sub" data-i18n="res.toc.p6.orgs">National Organizations</a>
+          <a href="#part-7" class="toc-link font-semibold mt-2 block" data-i18n="res.toc.part7">Part 7: Worker
+            Rights</a>
+          <a href="#part-8" class="toc-link font-semibold mt-2 block" data-i18n="res.toc.part8">Part 8: Resource
+            Hubs</a>
+          <a href="#kyr-cards" class="toc-link font-semibold mt-2 block" data-i18n="res.toc.kyr_cards">Quick-Reference:
+            KYR Cards</a>
+          <a href="#key-reminders" class="toc-link font-semibold mt-2 block" data-i18n="res.toc.reminders">Key
+            Reminders</a>
         </nav>
       </div>
     </aside>
@@ -332,7 +412,8 @@
         <h2 class="text-2xl font-bold text-maroon flex items-center gap-2">&#x1F4DE; <span data-i18n="res.p1.title">Part
             1: Emergency Hotlines &amp; Rapid Response Networks</span></h2>
 
-        <h3 class="text-xl font-semibold text-gray-800" data-i18n="res.p1.national">National Hotlines</h3>
+        <h3 id="national-hotlines" class="text-xl font-semibold text-gray-800" data-i18n="res.p1.national">National
+          Hotlines</h3>
         <div class="overflow-x-auto">
           <table>
             <thead>
@@ -402,7 +483,8 @@
           </table>
         </div>
 
-        <h3 class="text-xl font-semibold text-gray-800" data-i18n="res.p1.regional">Regional Hotlines by City/State</h3>
+        <h3 id="regional-hotlines" class="text-xl font-semibold text-gray-800" data-i18n="res.p1.regional">Regional
+          Hotlines by City/State</h3>
         <div class="overflow-x-auto">
           <table>
             <thead>
@@ -508,7 +590,8 @@
           </table>
         </div>
 
-        <h3 class="text-xl font-semibold text-gray-800" data-i18n="res.p1.california">California Rapid Response Network
+        <h3 id="california-hotlines" class="text-xl font-semibold text-gray-800" data-i18n="res.p1.california">
+          California Rapid Response Network
           Hotlines</h3>
         <div class="overflow-x-auto">
           <table>
@@ -624,7 +707,8 @@
         <h2 class="text-2xl font-bold text-maroon flex items-center gap-2">&#x2696;&#xFE0F; <span
             data-i18n="res.p2.title">Part 2: Free &amp; Low-Cost Legal Services</span></h2>
 
-        <h3 class="text-xl font-semibold text-gray-800" data-i18n="res.p2.national_dir">National Legal Directories</h3>
+        <h3 id="legal-directories" class="text-xl font-semibold text-gray-800" data-i18n="res.p2.national_dir">National
+          Legal Directories</h3>
         <div class="overflow-x-auto">
           <table>
             <thead>
@@ -687,7 +771,8 @@
           </table>
         </div>
 
-        <h3 class="text-xl font-semibold text-gray-800" data-i18n="res.p2.key_orgs">Key National Legal Organizations
+        <h3 id="legal-organizations" class="text-xl font-semibold text-gray-800" data-i18n="res.p2.key_orgs">Key
+          National Legal Organizations
         </h3>
         <div class="overflow-x-auto">
           <table>
@@ -806,7 +891,8 @@
           </table>
         </div>
 
-        <h3 class="text-xl font-semibold text-gray-800" data-i18n="res.p2.scams">How to Avoid Immigration Scams</h3>
+        <h3 id="avoid-scams" class="text-xl font-semibold text-gray-800" data-i18n="res.p2.scams">How to Avoid
+          Immigration Scams</h3>
         <p class="mb-2"><span data-i18n="res.p2.scam.from_prefix">From </span><a
             href="https://usahello.org/immigration/your-rights/legal-help-for-immigrants/" target="_blank"
             rel="noopener noreferrer">USAHello</a>:</p>
@@ -840,7 +926,8 @@
           bond. Bond amounts have <strong>no maximum cap</strong> and can range from $1,500 to $80,000+. These
           organizations help pay bonds for people who cannot afford them.</p>
 
-        <h3 class="text-xl font-semibold text-gray-800" data-i18n="res.p3.national">National Bond Funds</h3>
+        <h3 id="national-bond-funds" class="text-xl font-semibold text-gray-800" data-i18n="res.p3.national">National
+          Bond Funds</h3>
         <div class="overflow-x-auto">
           <table>
             <thead>
@@ -890,7 +977,8 @@
           </table>
         </div>
 
-        <h3 class="text-xl font-semibold text-gray-800" data-i18n="res.p3.state">State &amp; Regional Bond Funds</h3>
+        <h3 id="regional-bond-funds" class="text-xl font-semibold text-gray-800" data-i18n="res.p3.state">State &amp;
+          Regional Bond Funds</h3>
         <p class="mb-3 text-sm text-gray-700"><span data-i18n="res.p3.state.directory_intro_prefix">For website and
             contact information for the funds listed below, see the </span><a
             href="https://soinformed.substack.com/p/nationwide-bail-funds-and-immigration" target="_blank"
@@ -1087,7 +1175,8 @@
         <h2 class="text-2xl font-bold text-maroon flex items-center gap-2">&#x1F4CB; <span data-i18n="res.p5.title">Part
             5: Family Emergency Preparedness</span></h2>
 
-        <h3 class="text-xl font-semibold text-gray-800" data-i18n="res.p5.templates">Preparedness Plan Templates</h3>
+        <h3 id="preparedness-templates" class="text-xl font-semibold text-gray-800" data-i18n="res.p5.templates">
+          Preparedness Plan Templates</h3>
         <div class="overflow-x-auto">
           <table>
             <thead>
@@ -1152,7 +1241,8 @@
           </table>
         </div>
 
-        <h3 class="text-xl font-semibold text-gray-800" data-i18n="res.p5.key_steps">Key Steps for Your Family Plan</h3>
+        <h3 id="family-plan-steps" class="text-xl font-semibold text-gray-800" data-i18n="res.p5.key_steps">Key Steps
+          for Your Family Plan</h3>
         <ol>
           <li data-i18n="res.p5.step.1"><strong>Designate a trusted guardian</strong> for your children in case of
             detention/deportation</li>
@@ -1179,7 +1269,8 @@
         <h2 class="text-2xl font-bold text-maroon flex items-center gap-2">&#x1F91D; <span data-i18n="res.p6.title">Part
             6: Mutual Aid Networks &amp; Community Support</span></h2>
 
-        <h3 class="text-xl font-semibold text-gray-800" data-i18n="res.p6.how_to_find">How to Find or Start a Mutual Aid
+        <h3 id="find-mutual-aid" class="text-xl font-semibold text-gray-800" data-i18n="res.p6.how_to_find">How to Find
+          or Start a Mutual Aid
           Network</h3>
         <div class="overflow-x-auto">
           <table>
@@ -1224,7 +1315,8 @@
           </table>
         </div>
 
-        <h3 class="text-xl font-semibold text-gray-800" data-i18n="res.p6.types_title">Types of Mutual Aid You Can
+        <h3 id="mutual-aid-types" class="text-xl font-semibold text-gray-800" data-i18n="res.p6.types_title">Types of
+          Mutual Aid You Can
           Organize</h3>
         <ul>
           <li data-i18n="res.p6.types.1"><strong>Grocery shopping &amp; supply delivery</strong> for families afraid to
@@ -1244,7 +1336,8 @@
             enforcement activity in neighborhoods</li>
         </ul>
 
-        <h3 class="text-xl font-semibold text-gray-800" data-i18n="res.p6.national_orgs">National Mutual Aid &amp;
+        <h3 id="mutual-aid-orgs" class="text-xl font-semibold text-gray-800" data-i18n="res.p6.national_orgs">National
+          Mutual Aid &amp;
           Advocacy Organizations</h3>
         <div class="overflow-x-auto">
           <table>
@@ -1706,12 +1799,11 @@
   <script>
     (function () {
       var tocToggle = document.getElementById('toc-toggle');
-      var tocContent = document.getElementById('toc-content');
+      var tocMobile = document.getElementById('toc-mobile-content');
       var tocChevron = document.getElementById('toc-chevron');
 
       tocToggle.addEventListener('click', function () {
-        tocContent.classList.toggle('hidden');
-        tocContent.classList.toggle('lg:block');
+        tocMobile.classList.toggle('open');
         tocChevron.classList.toggle('rotate-180');
       });
     })();
