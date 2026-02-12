@@ -171,6 +171,31 @@ var JUSTNICE_TRANSLATIONS = {
   'blog.surveillance.desc':  { en: 'The proliferation of AI-powered surveillance has created an urgent need for counter-surveillance tools. A comprehensive breakdown of existing countermeasures, innovations, and concepts that don\'t yet exist but could prove critical.',
                                es: 'La proliferación de la vigilancia con IA ha creado una necesidad urgente de herramientas contra la vigilancia. Un análisis de las contramedidas existentes, innovaciones y conceptos que aún no existen pero podrían ser críticos.' },
   // AI Surveillance / Facial Recognition article body (blog.surv.*) — inline <strong>/<em> preserved for formatting
+  // Section headings (h2)
+  'blog.surv.h2_1':          { en: 'How Facial Recognition Works &mdash; and Where It Breaks', es: 'Cómo funciona el reconocimiento facial — y dónde falla' },
+  'blog.surv.h2_2':          { en: 'Existing Innovations and Products', es: 'Innovaciones y productos existentes' },
+  'blog.surv.h2_3':          { en: 'The Layered Defense Strategy', es: 'La estrategia de defensa en capas' },
+  'blog.surv.h2_4':          { en: 'What Doesn\'t Exist Yet (But Should)', es: 'Lo que aún no existe (pero debería)' },
+  'blog.surv.h2_5':          { en: 'Important Caveats', es: 'Advertencias importantes' },
+  // Subsection headings (h3) — Existing Innovations
+  'blog.surv.h3_1':          { en: '1. CV Dazzle Makeup and Face Painting', es: '1. Maquillaje y pintura facial CV Dazzle' },
+  'blog.surv.h3_2':          { en: '2. Adversarial Pattern Clothing', es: '2. Ropa con patrones adversariales' },
+  'blog.surv.h3_3':          { en: '3. HyperFace &mdash; Flooding with False Faces', es: '3. HyperFace — Inundación con rostros falsos' },
+  'blog.surv.h3_4':          { en: '4. Infrared (IR) LED Hats, Hoodies, and Visors', es: '4. Gorros, capuchas y viseras con LED infrarrojo (IR)' },
+  'blog.surv.h3_5':          { en: '5. Reflective and IR-Blocking Glasses', es: '5. Gafas reflectantes y bloqueadoras de IR' },
+  'blog.surv.h3_6':          { en: '6. Anti-Flash / Anti-Paparazzi Scarves', es: '6. Bufandas anti-flash / anti-paparazzi' },
+  'blog.surv.h3_7':          { en: '7. Physical Face Masks and Prosthetics', es: '7. Máscaras faciales físicas y prótesis' },
+  'blog.surv.h3_8':          { en: '8. Anti-Thermal / Anti-Drone Clothing', es: '8. Ropa anti-térmica / anti-drones' },
+  // Subsection headings (h3) — What Doesn't Exist Yet
+  'blog.surv.h3_9':          { en: '1. Anti-Gait Recognition Footwear', es: '1. Calzado anti-reconocimiento de marcha' },
+  'blog.surv.h3_10':         { en: '2. Real-Time Adaptive Adversarial Displays', es: '2. Pantallas adversariales adaptativas en tiempo real' },
+  'blog.surv.h3_11':         { en: '3. Anti-Ear and Anti-Bone-Structure Recognition', es: '3. Anti-reconocimiento de orejas y estructura ósea' },
+  'blog.surv.h3_12':         { en: '4. Thermal Signature Spoofing (Active)', es: '4. Suplantación de firma térmica (activa)' },
+  'blog.surv.h3_13':         { en: '5. Integrated Multi-Spectrum Counter-Surveillance Garment', es: '5. Prenda integrada de contra-vigilancia multiespectro' },
+  'blog.surv.h3_14':         { en: '6. Adversarial Audio/Voice Masking Wearable', es: '6. Dispositivo portátil de enmascaramiento de voz/audio adversarial' },
+  'blog.surv.h3_15':         { en: '7. Digital Faceprint Poisoning Tools', es: '7. Herramientas de envenenamiento de huella facial digital' },
+  // Sources heading
+  'blog.surv.sources':       { en: 'Sources', es: 'Fuentes' },
   'blog.surv.subtitle':      { en: 'The proliferation of AI-powered surveillance has created an urgent need for counter-surveillance tools. Below is a comprehensive breakdown of existing countermeasures, their strengths and limitations, and concepts that could prove critical.',
                                es: 'La proliferación de la vigilancia con IA ha creado una necesidad urgente de herramientas contra la vigilancia. A continuación, un desglose de contramedidas existentes, sus fortalezas y limitaciones, y conceptos que podrían ser críticos.' },
   'blog.surv.p1':           { en: 'The proliferation of AI-powered surveillance—from urban CCTV networks to battlefield drones—has created an urgent need for counter-surveillance tools. In China alone, roughly 700 million cameras are installed (one for every two inhabitants), and Israel has deployed mass facial recognition at military checkpoints in Gaza using tools from Corsight AI and even Google Photos to identify individuals from drone footage and crowds. The AI video surveillance industry is projected to grow from $3.9 billion in 2024 to $12.46 billion by 2030. Below is a comprehensive breakdown of existing countermeasures, their strengths and limitations, and concepts that don\'t yet exist but could prove critical.',
