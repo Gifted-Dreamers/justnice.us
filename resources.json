@@ -348,5 +348,445 @@
     "phone": "",
     "url": "https://www.nlg.org/massdefenseprogram/los/",
     "description": "Established 1968 — legal observer training chapters nationwide"
+  },
+  {
+    "name": "NY Immigration Hotline",
+    "type": "hotline",
+    "lat": 42.6526,
+    "lng": -73.7562,
+    "address": "Albany, NY (Statewide)",
+    "phone": "1-800-566-7636",
+    "url": "",
+    "description": "New York State immigration hotline — Mon–Fri, 8 AM – 6 PM"
+  },
+  {
+    "name": "NYC Legal Aid Immigration",
+    "type": "hotline",
+    "lat": 40.7484,
+    "lng": -73.9955,
+    "address": "New York, NY",
+    "phone": "1-844-955-3425",
+    "url": "",
+    "description": "NYC legal aid immigration hotline"
+  },
+  {
+    "name": "Portland Immigrants Rights Coalition",
+    "type": "hotline",
+    "lat": 45.5152,
+    "lng": -122.6784,
+    "address": "Portland, OR",
+    "phone": "1-888-622-1510",
+    "url": "",
+    "description": "Portland-area immigration rapid response hotline"
+  },
+  {
+    "name": "Albuquerque Immigration Report Line",
+    "type": "hotline",
+    "lat": 35.0844,
+    "lng": -106.6504,
+    "address": "Albuquerque, NM",
+    "phone": "1-844-363-1423 ext. 102",
+    "url": "",
+    "description": "Immigration enforcement reporting and legal help — Albuquerque area"
+  },
+  {
+    "name": "NAKASEC (Korean/English Hotline)",
+    "type": "hotline",
+    "lat": 38.8048,
+    "lng": -77.0469,
+    "address": "Washington, DC area",
+    "phone": "1-844-500-3222",
+    "url": "",
+    "description": "24-hour national hotline — Korean and English"
+  },
+  {
+    "name": "SPLC Southeast Immigrant Freedom Initiative (SIFI)",
+    "type": "hotline",
+    "lat": 33.7490,
+    "lng": -84.3880,
+    "address": "Atlanta, GA",
+    "phone": "1-800-591-3656",
+    "url": "https://www.splcenter.org/our-issues/immigrant-justice/sifi",
+    "description": "Helpline for detained immigrants in the Southeast"
+  },
+  {
+    "name": "Colorado Immigrant Rights Coalition (CIRC)",
+    "type": "hotline",
+    "lat": 39.7392,
+    "lng": -105.0003,
+    "address": "Denver, CO",
+    "phone": "303-922-3344",
+    "url": "https://www.coloradoimmigrant.org",
+    "description": "Colorado statewide immigrant rights coalition and hotline"
+  },
+  {
+    "name": "Long Beach CA Rapid Response",
+    "type": "hotline",
+    "lat": 33.7701,
+    "lng": -118.1937,
+    "address": "Long Beach, CA",
+    "phone": "562-245-9575",
+    "url": "https://www.ccijustice.org/carrn",
+    "description": "Long Beach rapid response hotline for immigration enforcement"
+  },
+  {
+    "name": "Orange County CA Rapid Response",
+    "type": "hotline",
+    "lat": 33.7175,
+    "lng": -117.8311,
+    "address": "Orange County, CA",
+    "phone": "714-881-1558",
+    "url": "https://www.ccijustice.org/carrn",
+    "description": "Orange County rapid response hotline for immigration enforcement"
+  },
+  {
+    "name": "Sacramento CA Rapid Response",
+    "type": "hotline",
+    "lat": 38.5816,
+    "lng": -121.4944,
+    "address": "Sacramento, CA",
+    "phone": "916-382-0256",
+    "url": "https://www.ccijustice.org/carrn",
+    "description": "Sacramento rapid response hotline for immigration enforcement"
+  },
+  {
+    "name": "Alameda County CA Rapid Response",
+    "type": "hotline",
+    "lat": 37.8044,
+    "lng": -122.2712,
+    "address": "Oakland / Alameda County, CA",
+    "phone": "510-241-4011",
+    "url": "https://www.ccijustice.org/carrn",
+    "description": "Alameda County rapid response hotline for immigration enforcement"
+  },
+  {
+    "name": "San Mateo County CA Rapid Response",
+    "type": "hotline",
+    "lat": 37.5630,
+    "lng": -122.3255,
+    "address": "San Mateo County, CA",
+    "phone": "203-666-4472",
+    "url": "https://www.ccijustice.org/carrn",
+    "description": "San Mateo County rapid response hotline for immigration enforcement"
+  },
+  {
+    "name": "Santa Clara County CA Rapid Response",
+    "type": "hotline",
+    "lat": 37.3382,
+    "lng": -121.8863,
+    "address": "San Jose / Santa Clara County, CA",
+    "phone": "408-290-1144",
+    "url": "https://www.ccijustice.org/carrn",
+    "description": "Santa Clara County rapid response hotline for immigration enforcement"
+  },
+  {
+    "name": "Marin County CA Rapid Response",
+    "type": "hotline",
+    "lat": 37.9735,
+    "lng": -122.5311,
+    "address": "Marin County, CA",
+    "phone": "415-991-4545",
+    "url": "https://www.ccijustice.org/carrn",
+    "description": "Marin County rapid response hotline for immigration enforcement"
+  },
+  {
+    "name": "North Bay CA Rapid Response (Sonoma/Napa/Solano)",
+    "type": "hotline",
+    "lat": 38.2921,
+    "lng": -122.4580,
+    "address": "Sonoma / Napa / Solano County, CA",
+    "phone": "707-800-4544",
+    "url": "https://www.ccijustice.org/carrn",
+    "description": "North Bay rapid response hotline (Sonoma, Napa, Solano counties)"
+  },
+  {
+    "name": "Humboldt County CA Rapid Response (Central del Pueblo)",
+    "type": "hotline",
+    "lat": 40.7868,
+    "lng": -124.1630,
+    "address": "Humboldt County, CA",
+    "phone": "707-200-8091",
+    "url": "https://www.ccijustice.org/carrn",
+    "description": "Humboldt County rapid response hotline — Central del Pueblo"
+  },
+  {
+    "name": "Monterey County CA Rapid Response",
+    "type": "hotline",
+    "lat": 36.6002,
+    "lng": -121.8947,
+    "address": "Monterey County, CA",
+    "phone": "831-204-8082",
+    "url": "https://www.ccijustice.org/carrn",
+    "description": "Monterey County rapid response hotline for immigration enforcement"
+  },
+  {
+    "name": "Santa Cruz County CA Rapid Response",
+    "type": "hotline",
+    "lat": 36.9741,
+    "lng": -122.0308,
+    "address": "Santa Cruz County, CA",
+    "phone": "831-239-4289",
+    "url": "https://www.ccijustice.org/carrn",
+    "description": "Santa Cruz County rapid response hotline for immigration enforcement"
+  },
+  {
+    "name": "805 Network Rapid Response (Santa Barbara/Ventura/SLO)",
+    "type": "hotline",
+    "lat": 34.4208,
+    "lng": -119.6982,
+    "address": "Santa Barbara / Ventura / SLO, CA",
+    "phone": "805-870-8855",
+    "url": "https://www.ccijustice.org/carrn",
+    "description": "805 Network rapid response hotline (Santa Barbara, Ventura, SLO)"
+  },
+  {
+    "name": "Central Valley CA Rapid Response (Fresno/Kern/Merced)",
+    "type": "hotline",
+    "lat": 36.7378,
+    "lng": -119.7871,
+    "address": "Fresno / Central Valley, CA",
+    "phone": "559-206-0151",
+    "url": "https://www.ccijustice.org/carrn",
+    "description": "Central Valley rapid response hotline (Fresno, San Joaquin, Merced, Kern)"
+  },
+  {
+    "name": "San Bernardino & Riverside CA Rapid Response",
+    "type": "hotline",
+    "lat": 34.1083,
+    "lng": -117.2898,
+    "address": "San Bernardino / Riverside, CA",
+    "phone": "909-361-4588",
+    "url": "https://www.ccijustice.org/carrn",
+    "description": "Inland Empire rapid response hotline (San Bernardino & Riverside counties)"
+  },
+  {
+    "name": "National Immigration Law Center (NILC)",
+    "type": "legal",
+    "lat": 34.0522,
+    "lng": -118.2337,
+    "address": "Los Angeles, CA",
+    "phone": "",
+    "url": "https://www.nilc.org",
+    "description": "Policy advocacy and legal resources; guide to finding loved ones after ICE arrest"
+  },
+  {
+    "name": "American Immigration Council",
+    "type": "legal",
+    "lat": 38.9072,
+    "lng": -77.0269,
+    "address": "Washington, DC",
+    "phone": "",
+    "url": "https://www.americanimmigrationcouncil.org",
+    "description": "Legal resources, policy analysis, community guides for immigrant rights"
+  },
+  {
+    "name": "Asylum Seeker Advocacy Project (ASAP)",
+    "type": "legal",
+    "lat": 40.7328,
+    "lng": -73.9997,
+    "address": "New York, NY",
+    "phone": "",
+    "url": "https://www.asylumadvocacy.org",
+    "description": "Free membership for asylum seekers — access to expert immigration attorneys"
+  },
+  {
+    "name": "Citizenshipworks",
+    "type": "legal",
+    "lat": 37.7749,
+    "lng": -122.4094,
+    "address": "San Francisco, CA",
+    "phone": "",
+    "url": "https://www.citizenshipworks.org",
+    "description": "Free online legal help for the citizenship process"
+  },
+  {
+    "name": "CLINIC (Catholic Legal Immigration Network)",
+    "type": "legal",
+    "lat": 38.9907,
+    "lng": -77.0261,
+    "address": "Silver Spring, MD",
+    "phone": "",
+    "url": "https://www.cliniclegal.org",
+    "description": "Largest network of nonprofit immigration legal services — 50-state resource"
+  },
+  {
+    "name": "Florence Immigrant & Refugees Rights Project",
+    "type": "legal",
+    "lat": 33.0312,
+    "lng": -111.3873,
+    "address": "Florence, AZ",
+    "phone": "",
+    "url": "https://firrp.org",
+    "description": "Free legal services for detained immigrants in Arizona"
+  },
+  {
+    "name": "Northwest Immigrant Rights Project (NWIRP)",
+    "type": "legal",
+    "lat": 47.6062,
+    "lng": -122.3221,
+    "address": "Seattle, WA",
+    "phone": "",
+    "url": "https://www.nwirp.org",
+    "description": "Major Pacific Northwest legal services for immigrants and refugees"
+  },
+  {
+    "name": "Immigrant Legal Resource Center (ILRC)",
+    "type": "legal",
+    "lat": 37.7749,
+    "lng": -122.4294,
+    "address": "San Francisco, CA",
+    "phone": "",
+    "url": "https://www.ilrc.org",
+    "description": "Red Cards creator; legal training, policy analysis, community resources"
+  },
+  {
+    "name": "ACLU Immigrants' Rights Project",
+    "type": "legal",
+    "lat": 40.7128,
+    "lng": -74.0160,
+    "address": "New York, NY",
+    "phone": "",
+    "url": "https://www.aclu.org/issues/immigrants-rights",
+    "description": "Major national legal defender of immigrant rights through litigation and advocacy"
+  },
+  {
+    "name": "National Immigration Project (NIP)",
+    "type": "legal",
+    "lat": 42.3601,
+    "lng": -71.0589,
+    "address": "Boston, MA",
+    "phone": "",
+    "url": "https://nipnlg.org",
+    "description": "Litigation support for immigration lawyers; part of National Lawyers Guild"
+  },
+  {
+    "name": "Envision Freedom Fund",
+    "type": "bond_fund",
+    "lat": 40.6892,
+    "lng": -73.9542,
+    "address": "New York, NY",
+    "phone": "",
+    "url": "https://www.envisionfreedomfund.org",
+    "description": "Immigration bond fund serving New York area"
+  },
+  {
+    "name": "The Bail Project",
+    "type": "bond_fund",
+    "lat": 34.0522,
+    "lng": -118.2337,
+    "address": "Los Angeles, CA (national)",
+    "phone": "",
+    "url": "https://www.bailproject.org",
+    "description": "National bail fund combating mass incarceration — immigration and criminal"
+  },
+  {
+    "name": "Community Justice Exchange / NBFN",
+    "type": "bond_fund",
+    "lat": 40.6782,
+    "lng": -73.9542,
+    "address": "Brooklyn, NY (national network)",
+    "phone": "",
+    "url": "https://www.communityjusticeexchange.org/en/nbfn-directory",
+    "description": "National Bail Fund Network — umbrella directory of bond funds nationwide"
+  },
+  {
+    "name": "Bond Fund for Immigrants (Arizona)",
+    "type": "bond_fund",
+    "lat": 32.2226,
+    "lng": -110.9647,
+    "address": "Tucson, AZ",
+    "phone": "520-884-1776",
+    "url": "",
+    "description": "Arizona immigration bond assistance fund"
+  },
+  {
+    "name": "American Friends Service Committee (AFSC)",
+    "type": "mutual_aid",
+    "lat": 39.9526,
+    "lng": -75.1552,
+    "address": "Philadelphia, PA",
+    "phone": "",
+    "url": "https://afsc.org",
+    "description": "Mutual aid organizing, immigrant rights, and community defense"
+  },
+  {
+    "name": "National Network for Immigrant & Refugee Rights (NNIRR)",
+    "type": "mutual_aid",
+    "lat": 37.8044,
+    "lng": -122.2712,
+    "address": "Oakland, CA",
+    "phone": "",
+    "url": "https://nnirr.org",
+    "description": "National hotline aggregator and rapid response coordination"
+  },
+  {
+    "name": "Win Without War",
+    "type": "mutual_aid",
+    "lat": 38.9072,
+    "lng": -77.0569,
+    "address": "Washington, DC",
+    "phone": "",
+    "url": "https://winwithoutwar.org/policy/immigration-mutual-aid/",
+    "description": "Curated mutual aid and immigration resource hub"
+  },
+  {
+    "name": "Stand With Minnesota",
+    "type": "mutual_aid",
+    "lat": 44.9778,
+    "lng": -93.2550,
+    "address": "Minneapolis, MN",
+    "phone": "",
+    "url": "https://standwithminnesota.com",
+    "description": "Minnesota mutual aid and immigrant community defense"
+  },
+  {
+    "name": "MPLS Mutual Aid",
+    "type": "mutual_aid",
+    "lat": 44.9778,
+    "lng": -93.2850,
+    "address": "Minneapolis, MN",
+    "phone": "",
+    "url": "https://linktr.ee/mplsmutualaid",
+    "description": "Minneapolis mutual aid network"
+  },
+  {
+    "name": "Detention Watch Network",
+    "type": "mutual_aid",
+    "lat": 38.9072,
+    "lng": -77.0169,
+    "address": "Washington, DC",
+    "phone": "",
+    "url": "https://www.detentionwatchnetwork.org",
+    "description": "Monitors and advocates against immigration detention nationwide"
+  },
+  {
+    "name": "Church World Service (CWS)",
+    "type": "mutual_aid",
+    "lat": 40.7128,
+    "lng": -74.0360,
+    "address": "New York, NY",
+    "phone": "",
+    "url": "https://cwsglobal.org",
+    "description": "Major refugee resettlement and immigration services organization"
+  },
+  {
+    "name": "International Rescue Committee (IRC)",
+    "type": "legal",
+    "lat": 40.7484,
+    "lng": -73.9757,
+    "address": "New York, NY (offices in 25+ US cities)",
+    "phone": "",
+    "url": "https://www.rescue.org",
+    "description": "Refugee resettlement, legal services, and integration programs in 25+ US cities"
+  },
+  {
+    "name": "Lutheran Immigration and Refugee Service (LIRS)",
+    "type": "mutual_aid",
+    "lat": 39.2904,
+    "lng": -76.6222,
+    "address": "Baltimore, MD",
+    "phone": "",
+    "url": "https://www.lirs.org",
+    "description": "Refugee resettlement, legal services, and immigrant family services"
   }
 ]
