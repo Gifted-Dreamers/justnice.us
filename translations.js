@@ -576,6 +576,7 @@ var JUSTNICE_TRANSLATIONS = {
   'res.p1.cal.20.num':    { en: 'Text "Alianza" to 33733 (español) / "Alianza2" to 33733 (English)', es: 'Texto "Alianza" al 33733 (español) / "Alianza2" al 33733 (inglés)' },
   'res.p1.blockquote.1':  { en: 'Full list of Rapid Response hotlines (PDF):', es: 'Lista completa de líneas de respuesta rápida (PDF):' },
   'res.p1.blockquote.2':  { en: 'National Network for Immigrant & Refugee Rights hotlines:', es: 'Líneas de la Red Nacional por los Derechos del Inmigrante y Refugiado:' },
+  'res.p1.sources_intro': { en: 'Sources for hotline details and organization links:', es: 'Fuentes para detalles de líneas y enlaces de organizaciones:' },
 
   // Part 2 Legal Services
   'res.p2.national_dir':   { en: 'National Legal Directories', es: 'Directorios Legales Nacionales' },
@@ -673,6 +674,10 @@ var JUSTNICE_TRANSLATIONS = {
   'res.p3.state.wa.fund': { en: 'Fair Fight Immigrant Bond Fund; Northwest Community Bail Fund', es: 'Fair Fight Immigrant Bond Fund; Northwest Community Bail Fund' },
   'res.p3.state.wi':      { en: 'Wisconsin', es: 'Wisconsin' },
   'res.p3.state.wi.fund': { en: 'Community Justice Exchange affiliate', es: 'Afiliado de Community Justice Exchange' },
+  'res.p3.state.directory_intro_prefix':  { en: 'For website and contact information for the funds listed below, see the ', es: 'Para sitios web e información de contacto de los fondos abajo, consulta el ' },
+  'res.p3.state.directory_link':         { en: 'state-by-state directory', es: 'directorio por estado' },
+  'res.p3.state.directory_intro_suffix':  { en: ' at the bottom of this section.', es: ' al final de esta sección.' },
+  'res.p3.state.get_links':               { en: 'Get contact info & links', es: 'Obtener contacto y enlaces' },
 
   // Part 4: Finding a Detained Loved One
   'res.p4.intro':         { en: 'If someone you know has been arrested by ICE, follow these steps (from ', es: 'Si alguien que conoces ha sido arrestado por ICE, sigue estos pasos (de ' },
