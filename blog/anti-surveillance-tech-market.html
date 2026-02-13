@@ -323,28 +323,33 @@
     </div>
   </nav>
 
-  <!-- ============================================ -->
-  <!-- ARTICLE HEADER                               -->
-  <!-- ============================================ -->
-  <section class="bg-gradient-to-br from-maroon to-[#6B1420] py-12 md:py-16">
-    <div class="max-w-4xl mx-auto px-4">
-      <div class="mb-4">
-        <span class="inline-block bg-[#F5A623] text-white text-xs font-semibold px-3 py-1 rounded-full">Technology &amp; Privacy</span>
-      </div>
-      <h1 class="text-3xl md:text-4xl lg:text-5xl font-extrabold text-white leading-tight mb-4" data-i18n="blog.market.title">
-        Anti-Surveillance Technology &amp; Wearables: Threats, Countermeasures, and Market Opportunities
-      </h1>
-      <div class="flex items-center gap-4 text-white/80 text-sm">
-        <time datetime="2026-02-09">February 9, 2026</time>
-      </div>
-    </div>
-  </section>
+  <!-- ARTICLE -->
+  <main class="py-10 md:py-16">
+    <article class="max-w-4xl mx-auto px-4">
 
-  <!-- ============================================ -->
-  <!-- ARTICLE BODY                                 -->
-  <!-- ============================================ -->
-  <main class="py-12 md:py-16 bg-white">
-    <article class="max-w-4xl mx-auto px-4 content-area">
+      <header class="mb-10">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="inline-block bg-maroon/10 text-maroon text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wide">Technology &amp; Privacy</span>
+          <time datetime="2026-02-09" class="text-sm text-gray-500">February 9, 2026</time>
+        </div>
+        <h1 class="text-3xl md:text-4xl lg:text-5xl font-extrabold text-gray-900 leading-tight mb-6" data-i18n="blog.market.title">
+          Anti-Surveillance Technology &amp; Wearables: Threats, Countermeasures, and Market Opportunities
+        </h1>
+        <p class="text-lg md:text-xl text-gray-600 leading-relaxed" data-i18n="blog.market.subtitle">
+          An in-depth analysis of the surveillance landscape, market sizes, key players, regulatory impact, and strategic opportunities in the growing counter-surveillance industry.
+        </p>
+      </header>
+
+      <figure class="mb-10">
+        <picture>
+          <source srcset="/blog/hero-anti-surveillance-tech-market-640w.webp" media="(max-width: 768px)" type="image/webp">
+          <source srcset="/blog/hero-anti-surveillance-tech-market-1280w.webp" type="image/webp">
+          <img src="/blog/hero-anti-surveillance-tech-market.jpg" alt="Anti-surveillance technology and wearables market analysis" class="w-full rounded-lg shadow-md" width="1280" height="720" loading="eager">
+        </picture>
+      </figure>
+
+      <!-- Article Body -->
+      <div class="content-area prose prose-lg max-w-none text-gray-800 leading-relaxed">
 
       <!-- Section 1: The Surveillance Context -->
       <h2 id="section-1" data-i18n="blog.market.h2_1">1. The Surveillance Context</h2>
@@ -840,6 +845,7 @@
         </ol>
       </div>
 
+      </div><!-- /content-area -->
     </article>
   </main>
 
