@@ -1,0 +1,122 @@
+<!--
+  BACKUP: "Find Resources Near You" / Resource Map section
+  Removed from index.html on 2026-02-18 due to Google billing disabled.
+  To restore: paste this section back into index.html before the Key Reminders section,
+  re-add the nav links, and re-add the Google Maps scripts at the bottom.
+-->
+
+<!-- ============================================ -->
+<!-- RESOURCE MAP SECTION                         -->
+<!-- ============================================ -->
+<section id="resource-map" class="py-16 md:py-20 bg-white">
+  <div class="max-w-7xl mx-auto px-4">
+    <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-4" data-i18n="map.title">
+      Find Resources Near You
+    </h2>
+    <p class="text-center text-gray-600 max-w-3xl mx-auto mb-3" data-i18n="map.subtitle">
+      Legal aid offices, rapid response hotlines, mutual aid networks, bond funds, and training sessions across the United States.
+    </p>
+    <p class="text-center text-sm text-gray-600 mb-2" data-i18n="map.help.click">
+      Click a pin for details. Use the filters below to narrow by resource type.
+    </p>
+    <p class="text-center text-sm text-gray-500 mb-8">
+      <a href="#contact-form" class="text-[#F5A623] hover:text-[#D4911E] underline underline-offset-2 transition-colors" data-i18n="map.help.submit">Submit a new resource</a>
+      &nbsp;&middot;&nbsp; <span data-i18n="map.help.updated">Last updated:</span> February 11, 2026
+    </p>
+
+    <!-- Filter Buttons -->
+    <div class="flex flex-wrap justify-center gap-2 mb-6" role="group" aria-label="Filter resource types">
+      <button onclick="filterMarkers('all')" id="filter-all"
+              class="filter-btn px-4 py-2 rounded-full text-sm font-semibold text-white bg-maroon transition-all" data-i18n="map.filter.all">
+        All
+      </button>
+      <button onclick="filterMarkers('legal')" id="filter-legal"
+              class="filter-btn px-4 py-2 rounded-full text-sm font-semibold text-white bg-blue-600 opacity-60 hover:opacity-100 transition-all" data-i18n="map.filter.legal">
+        Legal
+      </button>
+      <button onclick="filterMarkers('hotline')" id="filter-hotline"
+              class="filter-btn px-4 py-2 rounded-full text-sm font-semibold text-white bg-red-600 opacity-60 hover:opacity-100 transition-all" data-i18n="map.filter.hotline">
+        Hotlines
+      </button>
+      <button onclick="filterMarkers('mutual_aid')" id="filter-mutual_aid"
+              class="filter-btn px-4 py-2 rounded-full text-sm font-semibold text-white bg-green-600 opacity-60 hover:opacity-100 transition-all" data-i18n="map.filter.mutual_aid">
+        Mutual Aid
+      </button>
+      <button onclick="filterMarkers('bond_fund')" id="filter-bond_fund"
+              class="filter-btn px-4 py-2 rounded-full text-sm font-semibold text-white bg-purple-600 opacity-60 hover:opacity-100 transition-all" data-i18n="map.filter.bond_fund">
+        Bond Funds
+      </button>
+      <button onclick="filterMarkers('training')" id="filter-training"
+              class="filter-btn px-4 py-2 rounded-full text-sm font-semibold text-white bg-orange-500 opacity-60 hover:opacity-100 transition-all" data-i18n="map.filter.training">
+        Training
+      </button>
+    </div>
+
+    <!-- Map Container -->
+    <div id="map" style="height: 500px; width: 100%;" class="rounded-lg shadow-lg bg-gray-200"></div>
+
+  </div>
+</section>
+
+<!-- ============================================ -->
+<!-- NAV LINKS (desktop + mobile) that were removed: -->
+<!-- ============================================ -->
+<!-- Desktop: <a href="#resource-map" class="text-white hover:text-[#D4911E] transition-colors font-medium" data-i18n="nav.map">Resource Map</a> -->
+<!-- Mobile:  <a href="#resource-map" class="text-white hover:text-[#D4911E] transition-colors font-medium py-2" data-i18n="nav.map">Resource Map</a> -->
+
+<!-- ============================================ -->
+<!-- GOOGLE MAPS SCRIPTS that were removed:       -->
+<!-- ============================================ -->
+<!-- MarkerClusterer CDN -->
+<!--
+<script src="https://unpkg.com/@googlemaps/markerclusterer@2.6.2/dist/index.min.js" integrity="sha384-EVwzhfwoZgEjEQ2ffmvGXq5cOevVMtRZTog22siWEV3jCmD0BahdPQHx8y/VIhbi" crossorigin="anonymous"></script>
+
+<script>
+  var map;
+  var markers = [];
+  ... (full map script was here - see git history for complete code)
+</script>
+
+<script src="/env.js"></script>
+<script>
+  (function() {
+    var cfg = window.JUSTNICE_CONFIG || {};
+    var key = cfg.GOOGLE_MAPS_API_KEY;
+    if (key && key !== 'YOUR_GOOGLE_MAPS_API_KEY_HERE') {
+      var s = document.createElement('script');
+      s.src = 'https://maps.googleapis.com/maps/api/js?key=' + key + '&callback=initMap';
+      s.async = true;
+      s.defer = true;
+      document.body.appendChild(s);
+    } else {
+      var el = document.getElementById('map');
+      if (el) {
+        el.textContent = '';
+        var msg = document.createElement('div');
+        msg.style.cssText = 'display:flex;align-items:center;justify-content:center;height:100%;color:#6b7280;font-size:1rem;';
+        msg.textContent = 'Map unavailable — API key not configured. See env.example.js';
+        el.appendChild(msg);
+      }
+    }
+  })();
+</script>
+-->
+
+<!-- ============================================ -->
+<!-- TRANSLATION KEYS (commented out in translations.js): -->
+<!-- ============================================ -->
+<!--
+  'nav.map':                { en: 'Resource Map',          es: 'Mapa de Recursos' },
+  'map.title':              { en: 'Find Resources Near You', es: 'Encuentra Recursos Cerca de Ti' },
+  'map.subtitle':           { en: '...', es: '...' },
+  'map.help.click':         { en: '...', es: '...' },
+  'map.help.submit':        { en: 'Submit a new resource', es: 'Enviar un nuevo recurso' },
+  'map.help.updated':       { en: 'Last updated:', es: 'Última actualización:' },
+  'map.filter.all':         { en: 'All',        es: 'Todos' },
+  'map.filter.hotline':     { en: 'Hotlines',   es: 'Líneas de Ayuda' },
+  'map.filter.legal':       { en: 'Legal Aid',  es: 'Asistencia Legal' },
+  'map.filter.mutual_aid':  { en: 'Mutual Aid', es: 'Ayuda Mutua' },
+  'map.filter.bond_fund':   { en: 'Bond Funds', es: 'Fondos de Fianza' },
+  'map.filter.training':    { en: 'Training',   es: 'Capacitación' },
+  'form.category.map':      { en: 'Resource Map', es: 'Mapa de Recursos' },
+-->

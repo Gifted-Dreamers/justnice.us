@@ -17,7 +17,7 @@ var JUSTNICE_TRANSLATIONS = {
   'nav.resources':          { en: 'Immigrant Resources',   es: 'Recursos para Inmigrantes' },
   'nav.kyr':                { en: 'Know Your Rights',      es: 'Conoce Tus Derechos' },
   'nav.blog':               { en: 'Blog',                  es: 'Blog' },
-  'nav.map':                { en: 'Resource Map',          es: 'Mapa de Recursos' },
+  // 'nav.map' — removed (Google Maps billing disabled 2026-02-18, see BACKUP-map-section.html)
   'nav.gear':               { en: 'NICE Gear',             es: 'Merch NICE' },
   'nav.downloads':          { en: 'Downloads',             es: 'Descargas' },
   'nav.contact':            { en: 'Contact',               es: 'Contacto' },
@@ -44,20 +44,7 @@ var JUSTNICE_TRANSLATIONS = {
   // ── Homepage: Cards section heading ─────────────────
   'home.cards.title':       { en: 'Comprehensive Resource Guides', es: 'Guías de Recursos Completas' },
 
-  // ── Resource Map ───────────────────────────────────
-  'map.title':              { en: 'Find Resources Near You', es: 'Encuentra Recursos Cerca de Ti' },
-  'map.subtitle':           { en: 'Legal aid offices, rapid response hotlines, mutual aid networks, bond funds, and training sessions across the United States.',
-                              es: 'Oficinas de asistencia legal, líneas de respuesta rápida, redes de ayuda mutua, fondos de fianza y sesiones de capacitación en todo Estados Unidos.' },
-  'map.help.click':         { en: 'Click a pin for details. Use the filters below to narrow by resource type.',
-                              es: 'Haz clic en un marcador para más detalles. Usa los filtros para buscar por tipo de recurso.' },
-  'map.help.submit':        { en: 'Submit a new resource', es: 'Enviar un nuevo recurso' },
-  'map.help.updated':       { en: 'Last updated:', es: 'Última actualización:' },
-  'map.filter.all':         { en: 'All',                   es: 'Todos' },
-  'map.filter.hotline':     { en: 'Hotlines',              es: 'Líneas de Ayuda' },
-  'map.filter.legal':       { en: 'Legal Aid',             es: 'Asistencia Legal' },
-  'map.filter.mutual_aid':  { en: 'Mutual Aid',            es: 'Ayuda Mutua' },
-  'map.filter.bond_fund':   { en: 'Bond Funds',            es: 'Fondos de Fianza' },
-  'map.filter.training':    { en: 'Training',              es: 'Capacitación' },
+  // ── Resource Map (removed 2026-02-18 — Google billing disabled, see BACKUP-map-section.html) ──
 
   // ── Key Reminders ──────────────────────────────────
   'reminders.title':        { en: 'Key Reminders',         es: 'Recordatorios Clave' },
