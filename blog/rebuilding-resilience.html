@@ -637,7 +637,7 @@
         <div>
           <h3 class="text-2xl font-bold mb-2" data-i18n="footer.contact.title">Share a Resource or Send a Message</h3>
           <p class="text-white/80 text-sm mb-6" data-i18n="footer.contact.desc">Only message is required. All other fields are optional.</p>
-          <form id="contact-form" onsubmit="submitContactForm(event)">
+          <form id="contact-form" onsubmit="submitContactForm(event)" data-source="justnice.us/blog/rebuilding-resilience">
             <textarea
               id="contact-message"
               rows="4"
@@ -788,58 +788,10 @@
   </script>
 
   <!-- Anonymous Contact Form Submission -->
-  <script>
-    function submitContactForm(event) {
-      event.preventDefault();
-      var messageEl = document.getElementById('contact-message');
-      var nameEl = document.getElementById('contact-name');
-      var emailEl = document.getElementById('contact-email');
-      var urlEl = document.getElementById('contact-url');
-      var categoryEl = document.getElementById('contact-category');
-      var statusEl = document.getElementById('form-status');
-      var message = messageEl.value.trim();
 
-      if (!message) return;
 
-      statusEl.textContent = 'Sending...';
-      statusEl.className = 'mt-3 text-sm text-gray-400';
-
-      var webhookUrl = 'https://n8n.cloudpublica.org/webhook/justnice-contact';
-
-      fetch(webhookUrl, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          message: message,
-          name: nameEl.value.trim(),
-          email: emailEl.value.trim(),
-          url: urlEl.value.trim(),
-          category: categoryEl.value,
-          source: 'justnice.us/blog/rebuilding-resilience',
-          page: window.location.pathname,
-          timestamp: new Date().toISOString()
-        })
-      })
-      .then(function (response) {
-        if (response.ok) {
-          statusEl.textContent = 'Thank you! Your message has been sent.';
-          statusEl.className = 'mt-3 text-sm text-green-400';
-          messageEl.value = '';
-          nameEl.value = '';
-          emailEl.value = '';
-          urlEl.value = '';
-          categoryEl.value = '';
-        } else {
-          throw new Error('Network response was not ok');
-        }
-      })
-      .catch(function () {
-        statusEl.textContent = 'Something went wrong. Please try again.';
-        statusEl.className = 'mt-3 text-sm text-red-400';
-      });
-    }
-  </script>
-
+  <script src="/env.js"></script>
+  <script src="/assets/contact.js"></script>
   <script src="/translations.js"></script>
   <script>document.addEventListener('DOMContentLoaded', initTranslation);</script>
 

@@ -1043,7 +1043,7 @@
         <div>
           <h3 class="text-2xl font-bold mb-2" data-i18n="footer.contact.title">Share a Resource or Send a Message</h3>
           <p class="text-white/80 text-sm mb-6" data-i18n="footer.contact.desc">Only message is required. All other fields are optional.</p>
-          <form id="contact-form" onsubmit="submitContactForm(event)">
+          <form id="contact-form" onsubmit="submitContactForm(event)" data-source="justnice.us">
             <textarea id="contact-message" rows="4" placeholder="Paste a URL, share a resource, or send a message..." required class="w-full rounded-lg bg-white/10 border border-white/20 text-white placeholder-gray-400 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#F5A623] focus:border-transparent resize-y" aria-label="Your message" data-i18n-placeholder="form.message.placeholder"></textarea>
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-3">
               <div>
@@ -1154,58 +1154,10 @@
   </script>
 
   <!-- Anonymous contact form -->
-  <script>
-    (function() {
-      var form = document.getElementById('contact-form');
-      var textarea = document.getElementById('contact-message');
-      var nameField = document.getElementById('contact-name');
-      var emailField = document.getElementById('contact-email');
-      var urlField = document.getElementById('contact-url');
-      var categoryField = document.getElementById('contact-category');
-      var status = document.getElementById('contact-status');
 
-      form.addEventListener('submit', function(e) {
-        e.preventDefault();
-        var message = textarea.value.trim();
-        if (!message) return;
 
-        status.className = 'text-center text-sm text-white/70';
-        status.textContent = 'Sending...';
-        status.classList.remove('hidden');
-
-        fetch('https://n8n.cloudpublica.org/webhook/justnice-contact', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            message: message,
-            name: nameField.value.trim(),
-            email: emailField.value.trim(),
-            url: urlField.value.trim(),
-            category: categoryField.value,
-            source: 'justnice.us',
-            page: window.location.pathname,
-            timestamp: new Date().toISOString()
-          })
-        })
-        .then(function(res) {
-          if (res.ok) {
-            status.className = 'text-center text-sm text-green-400';
-            status.textContent = 'Message sent. Thank you!';
-            status.classList.remove('hidden');
-            form.reset();
-          } else {
-            throw new Error('Server error');
-          }
-        })
-        .catch(function() {
-          status.className = 'text-center text-sm text-red-400';
-          status.textContent = 'Could not send. Please try again later.';
-          status.classList.remove('hidden');
-        });
-      });
-    })();
-  </script>
-
+  <script src="/env.js"></script>
+  <script src="/assets/contact.js"></script>
   <script src="/translations.js"></script>
   <script>document.addEventListener('DOMContentLoaded', initTranslation);</script>
 

@@ -1654,7 +1654,7 @@
             <h3 class="text-2xl font-bold mb-2" data-i18n="footer.contact.title">Share a Resource or Send a Message</h3>
             <p class="text-white/80 text-sm mb-6" data-i18n="footer.contact.desc">Only message is required. All other
               fields are optional.</p>
-            <form id="contact-form" onsubmit="submitContactForm(event)">
+            <form id="contact-form" onsubmit="submitContactForm(event)" data-source="justnice.us">
               <textarea id="contact-message" rows="4" placeholder="Paste a URL, share a resource, or send a message..."
                 required
                 class="w-full rounded-lg bg-white/10 border border-white/20 text-white placeholder-gray-400 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#F5A623] focus:border-transparent resize-y"
@@ -1850,58 +1850,10 @@
     })();
   </script>
 
-  <!-- Anonymous contact form submission -->
-  <script>
-    (function () {
-      var form = document.getElementById('contact-form');
-      var messageField = document.getElementById('contact-message');
-      var nameField = document.getElementById('contact-name');
-      var emailField = document.getElementById('contact-email');
-      var urlField = document.getElementById('contact-url');
-      var categoryField = document.getElementById('contact-category');
-      var statusDiv = document.getElementById('form-status');
 
-      form.addEventListener('submit', function (e) {
-        e.preventDefault();
-        var message = messageField.value.trim();
-        if (!message) return;
 
-        statusDiv.textContent = 'Sending...';
-        statusDiv.className = 'text-sm mt-2 text-gray-400';
-
-        var payload = {
-          message: message,
-          name: nameField.value.trim(),
-          email: emailField.value.trim(),
-          url: urlField.value.trim(),
-          category: categoryField.value,
-          source: 'justnice.us',
-          page: window.location.pathname,
-          timestamp: new Date().toISOString()
-        };
-
-        fetch('https://n8n.cloudpublica.org/webhook/justnice-contact', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(payload)
-        })
-          .then(function (res) {
-            if (res.ok) {
-              statusDiv.textContent = 'Thank you! Your message has been sent.';
-              statusDiv.className = 'text-sm mt-2 text-green-400';
-              form.reset();
-            } else {
-              throw new Error('Server error');
-            }
-          })
-          .catch(function () {
-            statusDiv.textContent = 'Something went wrong. Please try again.';
-            statusDiv.className = 'text-sm mt-2 text-red-400';
-          });
-      });
-    })();
-  </script>
-
+  <script src="/env.js"></script>
+  <script src="/assets/contact.js"></script>
   <script src="/translations.js"></script>
   <script>document.addEventListener('DOMContentLoaded', initTranslation);</script>
 
