@@ -137,6 +137,9 @@
       color: #4b5563;
       line-height: 1.7;
     }
+    .content-area p {
+      margin-bottom: 1.25rem;
+    }
     .pullquote {
       font-size: 1.5rem;
       font-weight: 300;
@@ -252,33 +255,33 @@
   </nav>
 
   <!-- ARTICLE -->
-  <main>
-    <article class="max-w-3xl mx-auto px-4 py-12 md:py-16">
+  <main class="py-10 md:py-16">
+    <article class="max-w-4xl mx-auto px-4">
 
-      <!-- Hero Image -->
-      <figure class="mb-8 rounded-xl overflow-hidden shadow-lg">
+      <!-- Article Header -->
+      <header class="mb-10">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="inline-block bg-maroon/10 text-maroon text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wide">Research &amp; Frameworks</span>
+          <time datetime="2026-03-07" class="text-sm text-gray-500">March 7, 2026</time>
+        </div>
+        <h1 class="text-3xl md:text-4xl lg:text-5xl font-extrabold text-gray-900 leading-tight mb-6">
+          How Isolated People Find Each Other
+        </h1>
+        <p class="text-lg md:text-xl text-gray-600 leading-relaxed">
+          You don't need a movement. You need two people who didn't know they needed each other.
+        </p>
+      </header>
+
+      <figure class="mb-10">
         <picture>
-          <source srcset="/blog/hero-connecting-isolated-voices-1280w.webp" type="image/webp" media="(min-width: 640px)">
-          <source srcset="/blog/hero-connecting-isolated-voices-640w.webp" type="image/webp">
-          <img src="/blog/hero-connecting-isolated-voices.jpg" alt="Threads of warm light connecting scattered windows across a dark landscape — each light a person who doesn't yet know the others are there" class="w-full" loading="eager" width="1280" height="720">
+          <source srcset="/blog/hero-connecting-isolated-voices-640w.webp" media="(max-width: 768px)" type="image/webp">
+          <source srcset="/blog/hero-connecting-isolated-voices-1280w.webp" type="image/webp">
+          <img src="/blog/hero-connecting-isolated-voices.jpg" alt="Threads of warm light connecting scattered windows across a dark landscape — each light a person who doesn't yet know the others are there" class="w-full rounded-lg shadow-md" width="1280" height="720" loading="eager">
         </picture>
       </figure>
 
-      <!-- Headline -->
-      <h1 class="text-3xl md:text-4xl lg:text-5xl font-extrabold text-gray-900 leading-tight mb-4">
-        How Isolated People Find Each Other
-      </h1>
-      <p class="text-lg text-gray-500 mb-2">
-        <time datetime="2026-03-07">March 7, 2026</time>
-      </p>
-      <p class="text-xl text-gray-600 leading-relaxed mb-8">
-        You don't need a movement. You need two people who didn't know they needed each other.
-      </p>
-
-      <hr>
-
-      <!-- ARTICLE CONTENT -->
-      <div class="content-area text-lg leading-relaxed text-gray-800">
+      <!-- Article Body -->
+      <div class="content-area prose prose-lg max-w-none text-gray-800 leading-relaxed">
 
         <!-- SECTION 1: THE PROBLEM -->
         <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-10 mb-4">The Loneliness That Isn't Personal</h2>
