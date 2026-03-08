@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Tools Already Exist to Make Power Visible &mdash; justNICE</title>
+
+  <!-- SEO Meta -->
+  <meta name="description" content="A curated list of 30+ free, open-source tools for transparency and accountability — from financial crime investigation to conflict monitoring, democratic oversight, and environmental justice.">
+  <meta name="keywords" content="OSINT, open source intelligence, transparency tools, accountability, investigation, conflict monitoring, democratic oversight, media literacy, environmental monitoring, Meadows leverage points, information flows">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="The Tools Already Exist to Make Power Visible">
+  <meta property="og:description" content="30+ free tools for investigation, conflict monitoring, democratic oversight, and accountability. The list nobody compiled — until now.">
+  <meta property="og:url" content="https://justnice.us/blog/open-source-transparency-tools.html">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="https://justnice.us/blog/hero-open-source-transparency-tools.jpg">
+  <meta property="article:published_time" content="2026-03-08">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="The Tools Already Exist to Make Power Visible">
+  <meta name="twitter:description" content="30+ free tools for investigation, conflict monitoring, democratic oversight, and accountability.">
+  <meta name="twitter:image" content="https://justnice.us/blog/hero-open-source-transparency-tools.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            maroon: '#8B1A2B',
+            gold: '#F5A623',
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts: Inter (async) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Custom styles for article content -->
+  <style>
+    .content-area table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.5rem 0;
+      font-size: 0.95rem;
+    }
+    .content-area table thead th {
+      background-color: #8B1A2B;
+      color: #fff;
+      padding: 0.75rem 1rem;
+      text-align: left;
+      font-weight: 600;
+    }
+    .content-area table tbody td {
+      padding: 0.75rem 1rem;
+      border-bottom: 1px solid #e5e7eb;
+    }
+    .content-area table tbody tr:nth-child(even) {
+      background-color: #fdf2f4;
+    }
+    .content-area table tbody tr:hover {
+      background-color: #fce7eb;
+    }
+    .content-area blockquote {
+      border-left: 4px solid #F5A623;
+      padding: 1rem 1.5rem;
+      margin: 1.5rem 0;
+      background-color: #f9fafb;
+      border-radius: 0 0.5rem 0.5rem 0;
+    }
+    .content-area a {
+      color: #F5A623;
+      text-decoration: none;
+    }
+    .content-area a:hover {
+      text-decoration: underline;
+      color: #F5A623;
+    }
+    .content-area ul, .content-area ol {
+      padding-left: 1.5rem;
+      margin: 1rem 0;
+    }
+    .content-area ul li {
+      list-style-type: disc;
+      margin-bottom: 0.5rem;
+      line-height: 1.7;
+    }
+    .content-area ol li {
+      list-style-type: decimal;
+      margin-bottom: 0.5rem;
+      line-height: 1.7;
+    }
+    .content-area hr {
+      border: none;
+      border-top: 2px solid #e5e7eb;
+      margin: 2.5rem 0;
+    }
+    .content-area p {
+      margin-bottom: 1.25rem;
+    }
+    .pullquote {
+      font-size: 1.5rem;
+      font-weight: 300;
+      color: #8B1A2B;
+      line-height: 1.5;
+      padding: 2rem 0;
+      text-align: center;
+      border-top: 2px solid #e5e7eb;
+      border-bottom: 2px solid #e5e7eb;
+      margin: 2.5rem 0;
+    }
+    .tool-card {
+      border-left: 4px solid #F5A623;
+      padding: 1rem 1.5rem;
+      margin: 1rem 0;
+      background: linear-gradient(135deg, #fdf2f4 0%, #f9fafb 100%);
+      border-radius: 0 0.75rem 0.75rem 0;
+    }
+    .tool-card .tool-name {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #8B1A2B;
+      margin-bottom: 0.25rem;
+    }
+    .tool-card .tool-url {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #F5A623;
+      margin-bottom: 0.5rem;
+    }
+    .tool-card .tool-desc {
+      font-size: 0.95rem;
+      color: #4b5563;
+      line-height: 1.7;
+    }
+    .category-header {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    .category-icon {
+      width: 2.5rem;
+      height: 2.5rem;
+      border-radius: 0.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.25rem;
+      flex-shrink: 0;
+    }
+    .table-wrap {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      margin: 1.5rem 0;
+    }
+  </style>
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "The Tools Already Exist to Make Power Visible",
+    "datePublished": "2026-03-08",
+    "author": {
+      "@type": "Organization",
+      "name": "justNICE"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Gifted Dreamers, Inc.",
+      "url": "https://gifteddreamers.org/GRUHP",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://justnice.us/assets/Bee-NICE-LOGO-360.png"
+      }
+    },
+    "description": "A curated list of 30+ free, open-source tools for transparency and accountability — from financial crime investigation to conflict monitoring, democratic oversight, and environmental justice.",
+    "mainEntityOfPage": "https://justnice.us/blog/open-source-transparency-tools.html"
+  }
+  </script>
+
+</head>
+
+<body class="font-sans text-gray-900 bg-white">
+
+  <!-- HEADER -->
+  <header class="sticky top-0 z-50 bg-maroon shadow-lg">
+    <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="/" class="flex items-center gap-3 group" aria-label="justNICE Home">
+        <picture>
+          <source srcset="/assets/BEE-ICON-64.webp" type="image/webp">
+          <img src="/assets/BEE-ICON-128.png" alt="justNICE Bee Logo" class="h-12 w-auto" width="128" height="128">
+        </picture>
+        <span class="text-white text-2xl font-bold tracking-tight group-hover:text-[#D4911E] transition-colors">justNICE</span>
+      </a>
+      <nav class="hidden md:flex items-center gap-3 lg:gap-5 text-sm" aria-label="Main navigation">
+        <a href="/immigrant-resources.html" class="text-white hover:text-[#D4911E] transition-colors font-medium">Immigrant Resources</a>
+        <a href="/kyr-ice-training.html" class="text-white hover:text-[#D4911E] transition-colors font-medium">Know Your Rights</a>
+        <a href="/blog.html" class="text-white hover:text-[#D4911E] transition-colors font-medium border-b-2 border-gold pb-0.5">Blog</a>
+        <a href="/downloads.html" class="text-white hover:text-[#D4911E] transition-colors font-medium">Downloads</a>
+        <a href="/#resource-map" class="text-white hover:text-[#D4911E] transition-colors font-medium">Resource Map</a>
+        <a href="https://www.bonfire.com/store/gifteddreamers/" target="_blank" rel="noopener noreferrer" class="text-white hover:text-[#D4911E] transition-colors font-medium">NICE Gear</a>
+        <a href="/#contact-form" class="text-white hover:text-[#D4911E] transition-colors font-medium">Contact</a>
+        <button class="lang-toggle-btn text-white hover:text-[#D4911E] transition-colors font-medium flex items-center gap-1" aria-label="Switch to Spanish">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/></svg>
+          <span class="lang-label">Espa&ntilde;ol</span>
+        </button>
+        <a href="https://givebutter.com/GRUHP" target="_blank" rel="noopener noreferrer"
+           class="bg-[#F5A623] text-white px-5 py-2 rounded-full font-semibold hover:bg-opacity-90 hover:shadow-md transition-all">
+          Donate
+        </a>
+      </nav>
+
+      <!-- Mobile Hamburger -->
+      <button id="mobile-menu-btn" class="md:hidden text-white focus:outline-none" aria-label="Toggle navigation menu" aria-expanded="false">
+        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <path id="hamburger-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          <path id="close-icon" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-maroon border-t border-white/20 px-4 pb-4">
+      <nav class="flex flex-col gap-3 pt-3" aria-label="Mobile navigation">
+        <a href="/immigrant-resources.html" class="text-white hover:text-[#D4911E] transition-colors font-medium py-2">Immigrant Resources</a>
+        <a href="/kyr-ice-training.html" class="text-white hover:text-[#D4911E] transition-colors font-medium py-2">Know Your Rights</a>
+        <a href="/blog.html" class="text-white hover:text-[#D4911E] transition-colors font-medium py-2 underline underline-offset-4">Blog</a>
+        <a href="/downloads.html" class="text-white hover:text-[#D4911E] transition-colors font-medium py-2">Downloads</a>
+        <a href="/#resource-map" class="text-white hover:text-[#D4911E] transition-colors font-medium py-2">Resource Map</a>
+        <a href="https://www.bonfire.com/store/gifteddreamers/" target="_blank" rel="noopener noreferrer" class="text-white hover:text-[#D4911E] transition-colors font-medium py-2">NICE Gear</a>
+        <a href="/#contact-form" class="text-white hover:text-[#D4911E] transition-colors font-medium py-2">Contact</a>
+        <button class="lang-toggle-btn text-white hover:text-[#D4911E] transition-colors font-medium py-2 flex items-center gap-1" aria-label="Switch to Spanish">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/></svg>
+          <span class="lang-label">Espa&ntilde;ol</span>
+        </button>
+        <a href="https://givebutter.com/GRUHP" target="_blank" rel="noopener noreferrer"
+           class="bg-[#F5A623] text-white px-5 py-2.5 rounded-full font-semibold text-center hover:bg-opacity-90 transition-all mt-1">
+          Donate
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Breadcrumb -->
+  <nav aria-label="Breadcrumb" class="sticky top-[72px] z-40 bg-gray-50 border-b border-gray-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2">
+      <ol class="flex items-center space-x-2 text-sm text-gray-500">
+        <li><a href="/" class="hover:text-[#F5A623] transition-colors">Home</a></li>
+        <li><span class="mx-1">/</span></li>
+        <li><a href="/blog.html" class="hover:text-[#F5A623] transition-colors">Blog</a></li>
+        <li><span class="mx-1">/</span></li>
+        <li class="text-gray-700 font-medium">The Tools Already Exist to Make Power Visible</li>
+      </ol>
+    </div>
+  </nav>
+
+  <!-- ARTICLE -->
+  <main class="py-10 md:py-16">
+    <article class="max-w-4xl mx-auto px-4">
+
+      <!-- Article Header -->
+      <header class="mb-10">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="inline-block bg-maroon/10 text-maroon text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wide">Research &amp; Frameworks</span>
+          <time datetime="2026-03-08" class="text-sm text-gray-500">March 8, 2026</time>
+        </div>
+        <h1 class="text-3xl md:text-4xl lg:text-5xl font-extrabold text-gray-900 leading-tight mb-6">
+          The Tools Already Exist to Make Power Visible
+        </h1>
+        <p class="text-lg md:text-xl text-gray-600 leading-relaxed">
+          30+ free, open-source tools for investigation, conflict monitoring, democratic oversight, media literacy, and environmental accountability. Nobody compiled the list &mdash; until now.
+        </p>
+      </header>
+
+      <figure class="mb-10">
+        <picture>
+          <source srcset="/blog/hero-open-source-transparency-tools-640w.webp" media="(max-width: 768px)" type="image/webp">
+          <source srcset="/blog/hero-open-source-transparency-tools-1280w.webp" type="image/webp">
+          <img src="/blog/hero-open-source-transparency-tools.jpg" alt="A dark control room illuminated by multiple screens displaying data visualizations, network graphs, and world maps — transparency tools making hidden information visible" class="w-full rounded-lg shadow-md" width="1280" height="720" loading="eager">
+        </picture>
+      </figure>
+
+      <figure class="mb-10">
+        <video autoplay muted loop playsinline class="w-full rounded-lg shadow-md" width="1280" height="720" aria-label="Animation of screens lighting up with data visualizations">
+          <source src="/blog/hero-open-source-transparency-tools.mp4" type="video/mp4">
+        </video>
+      </figure>
+
+      <!-- Article Body -->
+      <div class="content-area prose prose-lg max-w-none text-gray-800 leading-relaxed">
+
+        <!-- SECTION 1: THE FRAMEWORK -->
+        <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-10 mb-4">Why Information Changes Everything</h2>
+
+        <p>
+          Donella Meadows, the systems scientist who gave us the concept of <em>leverage points</em>, identified twelve places where you can intervene in a complex system. Most activism &mdash; most politics, most media &mdash; operates at the lowest-leverage points: arguing about numbers, tweaking parameters, fighting over budgets. The interventions that actually transform systems happen higher up.
+        </p>
+
+        <p>
+          Leverage point #6 is <strong>Information Flows</strong>: who knows what, who can see what, who can verify what.
+        </p>
+
+        <p>
+          Meadows' most powerful example: In 1986, the US government required companies to report what toxic chemicals they released into the environment. No fines. No new regulations. Just information &mdash; made public. Within years, toxic emissions dropped 40%.
+        </p>
+
+        <div class="pullquote">
+          Making power visible changes how power operates &mdash; even without enforcement. Sunlight is not just a disinfectant. It is a structural intervention.
+        </div>
+
+        <p>
+          This principle is why <a href="/blog/5gw-research.html">fifth-generation warfare targets information flows first</a>. It's why <a href="/blog/data-privacy-sovereignty-best-practices.html">data sovereignty matters</a>. It's why our <a href="/blog/atx-ice-activity.html">ICE activity tracking</a> follows the same logic as the Toxic Release Inventory: make the system's behavior visible so people can respond.
+        </p>
+
+        <p>
+          What follows is a curated list of tools that do exactly this. Every one is free, open-source, or community-maintained. Every one takes something that was previously opaque &mdash; financial networks, military operations, congressional votes, media framing, ecological damage, police conduct &mdash; and makes it publicly navigable.
+        </p>
+
+        <p>
+          Nobody had to pass a law requiring these tools to exist. Nobody had to get permission. People saw that power was hiding in opacity and built instruments of visibility.
+        </p>
+
+        <hr>
+
+        <!-- SECTION 2: INVESTIGATION TOOLS -->
+        <div class="category-header">
+          <div class="category-icon bg-red-100 text-red-700">&#128269;</div>
+          <h2 class="text-2xl md:text-3xl font-bold text-gray-900">Investigation &amp; Financial Network Analysis</h2>
+        </div>
+        <p>Tools for surfacing hidden relationships in financial crime, corporate ownership, and political money.</p>
+
+        <div class="tool-card">
+          <div class="tool-name">OpenPlanter</div>
+          <div class="tool-url"><a href="https://github.com/ShinMegamiBoson/OpenPlanter" target="_blank" rel="noopener noreferrer">github.com/ShinMegamiBoson/OpenPlanter</a></div>
+          <div class="tool-desc">Autonomous AI investigation agent that recursively analyzes corporate registries, campaign finance, lobbying disclosures, and sanctions data. Builds live knowledge graphs with transparent reasoning trails showing <em>why</em> two entities are connected, not just that they are. Open-source (Tauri + Python).</div>
+        </div>
+
+        <div class="tool-card">
+          <div class="tool-name">OCCRP Aleph / OpenAleph</div>
+          <div class="tool-url"><a href="https://aleph.occrp.org" target="_blank" rel="noopener noreferrer">aleph.occrp.org</a></div>
+          <div class="tool-desc">4.5 billion records across corporate registries, leaked documents, and government filings. Used by 24,000+ investigative journalists worldwide. The open-source fork (<a href="https://openaleph.org" target="_blank" rel="noopener noreferrer">OpenAleph</a>) is maintained by the Data and Research Center.</div>
+        </div>
+
+        <div class="tool-card">
+          <div class="tool-name">SomaliScan Epstein Index</div>
+          <div class="tool-url"><a href="https://www.somaliscan.com/investigation/epstein-index" target="_blank" rel="noopener noreferrer">somaliscan.com/investigation/epstein-index</a></div>
+          <div class="tool-desc">Graph database cross-referencing 3.5 million DOJ pages against PPP loans (11.4M records), FEC contributions (58M records), and federal grants (23.9M records). Its Pathfinder tool traces connection paths between any two entities &mdash; making the negative space between documents navigable.</div>
+        </div>
+
+        <div class="tool-card">
+          <div class="tool-name">Epstein Suite</div>
+          <div class="tool-url"><a href="https://epsteinsuite.com" target="_blank" rel="noopener noreferrer">epsteinsuite.com</a></div>
+          <div class="tool-desc">212,000+ documents with a "Six Degrees" tool that finds connection paths between any two people through emails, flights, and co-mentions. Financial forensics tracking $36 trillion in extracted transactions. Free, volunteer-maintained.</div>
+        </div>
+
+        <div class="tool-card">
+          <div class="tool-name">Epstein Exposed</div>
+          <div class="tool-url"><a href="https://epsteinexposed.com" target="_blank" rel="noopener noreferrer">epsteinexposed.com</a></div>
+          <div class="tool-desc">2.1 million documents, 51,254 mapped connections, interactive relationship network graphs. Community investigation boards for collaborative research. Maintained by a single developer, ad-free.</div>
+        </div>
+
+        <div class="tool-card">
+          <div class="tool-name">Jmail.world</div>
+          <div class="tool-url"><a href="https://jmail.world" target="_blank" rel="noopener noreferrer">jmail.world</a></div>
+          <div class="tool-desc">Epstein's released emails in a Gmail-like interface, flight manifests, Amazon orders, and an AI-generated wiki grounding each article in primary source documents. Also includes <a href="https://jmail.world/wiki" target="_blank" rel="noopener noreferrer">JWiki</a> and <a href="https://jmail.world/jefftube" target="_blank" rel="noopener noreferrer">JeffTube</a>.</div>
+        </div>
+
+        <div class="tool-card">
+          <div class="tool-name">EpsteinSearch.info</div>
+          <div class="tool-url"><a href="https://epsteinsearch.info" target="_blank" rel="noopener noreferrer">epsteinsearch.info</a></div>
+          <div class="tool-desc">Full-text search across 2.5 million declassified documents with connection mapping. Independent, free, ad-free, open-source.</div>
+        </div>
+
+        <div class="tool-card">
+          <div class="tool-name">JeffreyOS</div>
+          <div class="tool-url"><a href="https://jeffreyos.pages.dev" target="_blank" rel="noopener noreferrer">jeffreyos.pages.dev</a> &middot; <a href="https://github.com/muneebwanee/JeffreyOS" target="_blank" rel="noopener noreferrer">source</a></div>
+          <div class="tool-desc">Open-source browser-based OS simulation that presents Epstein documents as an interactive narrative. An experiment in making archives experientially navigable rather than just searchable. AGPL-3.0 license.</div>
+        </div>
+
+        <div class="tool-card">
+          <div class="tool-name">LittleSis</div>
+          <div class="tool-url"><a href="https://littlesis.org" target="_blank" rel="noopener noreferrer">littlesis.org</a></div>
+          <div class="tool-desc">Community-maintained database mapping relationships between powerful people and organizations &mdash; politicians, executives, lobbyists, and their financial ties. A "reverse Who's Who" for tracking elite networks.</div>
+        </div>
+
+        <div class="tool-card">
+          <div class="tool-name">OpenSecrets</div>
+          <div class="tool-url"><a href="https://opensecrets.org" target="_blank" rel="noopener noreferrer">opensecrets.org</a></div>
+          <div class="tool-desc">Tracks campaign finance, lobbying, and dark money in US politics. Organization profiles compile contribution and lobbying history for thousands of corporations, trade associations, and advocacy groups.</div>
+        </div>
+
+        <div class="tool-card">
+          <div class="tool-name">FollowTheMoney</div>
+          <div class="tool-url"><a href="https://followthemoney.org" target="_blank" rel="noopener noreferrer">followthemoney.org</a></div>
+          <div class="tool-desc">State-level campaign finance data across all 50 US states. Search by donor, candidate, or industry to see who funds state politics.</div>
+        </div>
+
+        <div class="tool-card">
+          <div class="tool-name">OpenCorporates</div>
+          <div class="tool-url"><a href="https://opencorporates.com" target="_blank" rel="noopener noreferrer">opencorporates.com</a></div>
+          <div class="tool-desc">The largest open database of corporate information in the world: 200+ million companies from 145+ jurisdictions. Free API for querying corporate registries, officer data, and filings.</div>
+        </div>
+
+        <hr>
+
+        <!-- SECTION 3: CONFLICT MONITORING -->
+        <div class="category-header">
+          <div class="category-icon bg-orange-100 text-orange-700">&#127758;</div>
+          <h2 class="text-2xl md:text-3xl font-bold text-gray-900">Conflict Monitoring &amp; Military Accountability</h2>
+        </div>
+        <p>Tools for making military operations, their costs, and their consequences visible in real time.</p>
+
+        <div class="tool-card">
+          <div class="tool-name">World Monitor</div>
+          <div class="tool-url"><a href="https://www.worldmonitor.app" target="_blank" rel="noopener noreferrer">worldmonitor.app</a></div>
+          <div class="tool-desc">Open-source real-time OSINT dashboard aggregating 435+ sources across 45 map layers: military aviation, maritime surveillance, earthquakes, protests, power outages, markets. Used by 2M+ people in 190+ countries. Free. <a href="https://github.com/" target="_blank" rel="noopener noreferrer">Open source on GitHub</a>.</div>
+        </div>
+
+        <div class="tool-card">
+          <div class="tool-name">Bamqam (formerly UsvsIran)</div>
+          <div class="tool-url"><a href="https://bamqam.com" target="_blank" rel="noopener noreferrer">bamqam.com</a></div>
+          <div class="tool-desc">Real-time CENTCOM theater dashboard tracking satellites, aircraft (ADS-B), vessels (AIS), GPS jamming, SAM rings, and military bases. Live situational awareness for the Middle East theater.</div>
+        </div>
+
+        <div class="tool-card">
+          <div class="tool-name">World in Conflict</div>
+          <div class="tool-url"><a href="https://www.glideslope.ai/worldinconflict/" target="_blank" rel="noopener noreferrer">glideslope.ai/worldinconflict</a></div>
+          <div class="tool-desc">AI-powered geopolitical intelligence map with severity-rated conflict and economic events, filterable by type and time window. Connected to market analysis briefings.</div>
+        </div>
+
+        <div class="tool-card">
+          <div class="tool-name">Iran Cost Ticker</div>
+          <div class="tool-url"><a href="https://iran-cost-ticker.com" target="_blank" rel="noopener noreferrer">iran-cost-ticker.com</a></div>
+          <div class="tool-desc">Live counter of US taxpayer spending on Iran operations (est. $1B/day since Feb 28, 2026). Includes munitions cost analysis, stockpile depletion projections, casualty figures, and gas price impact. Makes the financial reality of war impossible to abstract away.</div>
+        </div>
+
+        <div class="tool-card">
+          <div class="tool-name">WorldView / Spatial Intelligence</div>
+          <div class="tool-url"><a href="https://www.spatialintelligence.ai/p/i-built-a-spy-satellite-simulator" target="_blank" rel="noopener noreferrer">spatialintelligence.ai</a></div>
+          <div class="tool-desc">Browser-based satellite simulator with night vision, thermal imaging, live aircraft tracking, and satellite orbits. The creator, Bilawal Sidhu, frames public data access as "sousveillance" &mdash; turning surveillance tools around as instruments of democratic accountability.</div>
+        </div>
+
+        <div class="tool-card">
+          <div class="tool-name">Iran Battle Map</div>
+          <div class="tool-url"><a href="https://iranbattlemap.com" target="_blank" rel="noopener noreferrer">iranbattlemap.com</a></div>
+          <div class="tool-desc">Interactive tactical mapping with strike tracking, flight path visualization, event timelines, and organizational charts. Retro military display aesthetic.</div>
+        </div>
+
+        <hr>
+
+        <!-- SECTION 4: DEMOCRATIC TRANSPARENCY -->
+        <div class="category-header">
+          <div class="category-icon bg-blue-100 text-blue-700">&#127963;</div>
+          <h2 class="text-2xl md:text-3xl font-bold text-gray-900">Democratic Transparency</h2>
+        </div>
+        <p>Tools for making the behavior of elected officials and government institutions visible.</p>
+
+        <div class="tool-card">
+          <div class="tool-name">Suffragium</div>
+          <div class="tool-url"><a href="https://suffragium.com" target="_blank" rel="noopener noreferrer">suffragium.com</a></div>
+          <div class="tool-desc">Congressional transparency platform: bill tracking, AI-generated daily Congressional Record summaries, voting statistics and party loyalty metrics for all 535 members of the 119th Congress (2025&ndash;2026).</div>
+        </div>
+
+        <div class="tool-card">
+          <div class="tool-name">MuckRock</div>
+          <div class="tool-url"><a href="https://www.muckrock.com" target="_blank" rel="noopener noreferrer">muckrock.com</a></div>
+          <div class="tool-desc">Files, tracks, and publishes FOIA and public records requests at federal, state, and local levels. Also maintains <strong>DocumentCloud</strong> for analyzing and publishing primary source documents. Open source.</div>
+        </div>
+
+        <div class="tool-card">
+          <div class="tool-name">USAspending.gov</div>
+          <div class="tool-url"><a href="https://www.usaspending.gov" target="_blank" rel="noopener noreferrer">usaspending.gov</a></div>
+          <div class="tool-desc">Official federal spending open data portal. Tracks every contract, grant, loan, and federal financial transaction under the DATA Act. Fully open-source on GitHub.</div>
+        </div>
+
+        <div class="tool-card">
+          <div class="tool-name">OpenSpending</div>
+          <div class="tool-url"><a href="https://www.openspending.org" target="_blank" rel="noopener noreferrer">openspending.org</a></div>
+          <div class="tool-desc">Global platform from the Open Knowledge Foundation for searching, visualizing, and analyzing government fiscal data from countries worldwide.</div>
+        </div>
+
+        <div class="tool-card">
+          <div class="tool-name">Alaveteli</div>
+          <div class="tool-url"><a href="https://alaveteli.org" target="_blank" rel="noopener noreferrer">alaveteli.org</a></div>
+          <div class="tool-desc">Open-source platform for running Freedom of Information request sites in any country and language. Deployed in 25+ countries. Powers <a href="https://www.whatdotheyknow.com" target="_blank" rel="noopener noreferrer">WhatDoTheyKnow.com</a> in the UK.</div>
+        </div>
+
+        <hr>
+
+        <!-- SECTION 5: MEDIA LITERACY -->
+        <div class="category-header">
+          <div class="category-icon bg-purple-100 text-purple-700">&#128240;</div>
+          <h2 class="text-2xl md:text-3xl font-bold text-gray-900">Media Literacy &amp; Disinformation Detection</h2>
+        </div>
+        <p>Tools for making narrative manipulation visible &mdash; essential in an era of <a href="/blog/5gw-research.html">fifth-generation warfare</a>.</p>
+
+        <div class="tool-card">
+          <div class="tool-name">Ground News</div>
+          <div class="tool-url"><a href="https://ground.news" target="_blank" rel="noopener noreferrer">ground.news</a></div>
+          <div class="tool-desc">Shows how different outlets frame the same story, with media bias ratings, ownership/factuality data, and a "Blindspot" feature for underreported stories. Browser extension and mobile apps available.</div>
+        </div>
+
+        <div class="tool-card">
+          <div class="tool-name">GDELT Project</div>
+          <div class="tool-url"><a href="https://www.gdeltproject.org" target="_blank" rel="noopener noreferrer">gdeltproject.org</a></div>
+          <div class="tool-desc">Monitors world news in 100+ languages every 15 minutes, with archives back to 1979. Used for tracking narrative spread, contested imagery, and coordinated influence campaigns. Free on Google BigQuery.</div>
+        </div>
+
+        <div class="tool-card">
+          <div class="tool-name">Bellingcat Online Investigation Toolkit</div>
+          <div class="tool-url"><a href="https://bellingcat.gitbook.io/toolkit" target="_blank" rel="noopener noreferrer">bellingcat.gitbook.io/toolkit</a></div>
+          <div class="tool-desc">Community-maintained catalog of OSINT tools organized by category: satellite imagery, social media, transportation, archiving, verification. The starting point for any open-source investigation.</div>
+        </div>
+
+        <div class="tool-card">
+          <div class="tool-name">BotSlayer &amp; OSoMe Tools</div>
+          <div class="tool-url"><a href="https://osome.iu.edu/resources/open-source" target="_blank" rel="noopener noreferrer">osome.iu.edu</a></div>
+          <div class="tool-desc">Indiana University's Observatory on Social Media maintains open-source tools for detecting coordinated bot-driven manipulation, including <strong>BotSlayer-CE</strong> and <strong>Coordiscope</strong> for visualizing inauthentic coordinated behavior.</div>
+        </div>
+
+        <hr>
+
+        <!-- SECTION 6: ENVIRONMENTAL -->
+        <div class="category-header">
+          <div class="category-icon bg-green-100 text-green-700">&#127793;</div>
+          <h2 class="text-2xl md:text-3xl font-bold text-gray-900">Environmental Monitoring</h2>
+        </div>
+        <p>Tools for making ecological damage visible &mdash; following the exact principle of the Toxic Release Inventory.</p>
+
+        <div class="tool-card">
+          <div class="tool-name">Global Forest Watch</div>
+          <div class="tool-url"><a href="https://www.globalforestwatch.org" target="_blank" rel="noopener noreferrer">globalforestwatch.org</a></div>
+          <div class="tool-desc">Real-time deforestation alerts with 20+ years of tree cover loss data and fire alerts updated daily via satellite. Free, from the World Resources Institute.</div>
+        </div>
+
+        <div class="tool-card">
+          <div class="tool-name">OpenAQ</div>
+          <div class="tool-url"><a href="https://openaq.org" target="_blank" rel="noopener noreferrer">openaq.org</a></div>
+          <div class="tool-desc">Real-time and historical air quality data from 30,000+ government monitoring stations worldwide. Free REST API covering PM2.5, PM10, SO2, NO2, and ozone.</div>
+        </div>
+
+        <div class="tool-card">
+          <div class="tool-name">Climate Watch</div>
+          <div class="tool-url"><a href="https://www.climatewatchdata.org" target="_blank" rel="noopener noreferrer">climatewatchdata.org</a></div>
+          <div class="tool-desc">150 years of greenhouse gas emissions by country, sector, and gas. Tracks national climate commitments and net-zero targets. Open-source on GitHub.</div>
+        </div>
+
+        <hr>
+
+        <!-- SECTION 7: ACCOUNTABILITY -->
+        <div class="category-header">
+          <div class="category-icon bg-gray-200 text-gray-700">&#128737;</div>
+          <h2 class="text-2xl md:text-3xl font-bold text-gray-900">Police &amp; Government Accountability</h2>
+        </div>
+
+        <div class="tool-card">
+          <div class="tool-name">OpenOversight</div>
+          <div class="tool-url"><a href="https://openoversight.lucyparsonslabs.com" target="_blank" rel="noopener noreferrer">openoversight.lucyparsonslabs.com</a></div>
+          <div class="tool-desc">Searchable database of law enforcement officers built from FOIA requests, public records, and crowdsourced photos. Currently covers departments in Chicago, NYC, and the San Francisco Bay Area. Open-source.</div>
+        </div>
+
+        <div class="tool-card">
+          <div class="tool-name">Open Supply Hub</div>
+          <div class="tool-url"><a href="https://opensupplyhub.org" target="_blank" rel="noopener noreferrer">opensupplyhub.org</a></div>
+          <div class="tool-desc">Maps 100,000+ production facilities across global supply chains. Used by unions, brands, and NGOs to identify labor rights violations and forced labor risks. Free and open data.</div>
+        </div>
+
+        <hr>
+
+        <!-- SECTION 8: START HERE -->
+        <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-10 mb-4">Where to Start</h2>
+
+        <p>Thirty tools is overwhelming. Here's how to pick based on what you care about:</p>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>If you want to...</th>
+                <th>Start here</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Follow the money</strong> in politics</td>
+                <td><a href="https://opensecrets.org" target="_blank" rel="noopener noreferrer">OpenSecrets</a> + <a href="https://littlesis.org" target="_blank" rel="noopener noreferrer">LittleSis</a></td>
+              </tr>
+              <tr>
+                <td><strong>Investigate corporate networks</strong></td>
+                <td><a href="https://aleph.occrp.org" target="_blank" rel="noopener noreferrer">OCCRP Aleph</a> + <a href="https://opencorporates.com" target="_blank" rel="noopener noreferrer">OpenCorporates</a></td>
+              </tr>
+              <tr>
+                <td><strong>Track conflicts</strong> in real time</td>
+                <td><a href="https://www.worldmonitor.app" target="_blank" rel="noopener noreferrer">World Monitor</a></td>
+              </tr>
+              <tr>
+                <td><strong>Understand media bias</strong></td>
+                <td><a href="https://ground.news" target="_blank" rel="noopener noreferrer">Ground News</a></td>
+              </tr>
+              <tr>
+                <td><strong>File public records requests</strong></td>
+                <td><a href="https://www.muckrock.com" target="_blank" rel="noopener noreferrer">MuckRock</a></td>
+              </tr>
+              <tr>
+                <td><strong>Monitor deforestation or air quality</strong></td>
+                <td><a href="https://www.globalforestwatch.org" target="_blank" rel="noopener noreferrer">Global Forest Watch</a> + <a href="https://openaq.org" target="_blank" rel="noopener noreferrer">OpenAQ</a></td>
+              </tr>
+              <tr>
+                <td><strong>Track congressional votes</strong></td>
+                <td><a href="https://suffragium.com" target="_blank" rel="noopener noreferrer">Suffragium</a></td>
+              </tr>
+              <tr>
+                <td><strong>Learn OSINT investigation</strong></td>
+                <td><a href="https://bellingcat.gitbook.io/toolkit" target="_blank" rel="noopener noreferrer">Bellingcat Toolkit</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <hr>
+
+        <!-- SECTION 9: THE PRINCIPLE -->
+        <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-10 mb-4">The Principle Behind the Tools</h2>
+
+        <p>
+          Every tool on this list follows the same logic: <strong>information flow as structural intervention.</strong> Nobody had to pass a law requiring them to exist. Nobody had to get permission. People saw that power was hiding in opacity and built instruments of visibility.
+        </p>
+
+        <p>
+          This is the same principle behind our <a href="/blog/atx-ice-activity.html">ICE activity tracking for Austin</a> and <a href="/blog/mn-ice-activity.html">Minneapolis</a>. The same principle behind our <a href="/blog/ai-surveillance-countermeasures.html">surveillance countermeasures research</a>. The same principle behind our <a href="/blog/data-privacy-sovereignty-best-practices.html">data sovereignty guides</a>: when you make the system's behavior visible, people can respond. When you keep it hidden, they can't.
+        </p>
+
+        <p>
+          Meadows understood something that most activists miss: you don't always need to <em>fight</em> a system to change it. Sometimes you just need to make it visible. The rest follows.
+        </p>
+
+        <blockquote>
+          <p>"There is a systematic tendency on the part of human beings to avoid accountability for their own decisions. That's why there are so few feedback loops in the structures of most systems."</p>
+          <p>&mdash; Donella Meadows, <em>Leverage Points: Places to Intervene in a System</em> (1999)</p>
+        </blockquote>
+
+        <p>
+          These tools are the feedback loops that were missing. They exist because people built them. They work because information, once visible, changes how everyone behaves &mdash; the watched and the watchers alike.
+        </p>
+
+        <p>
+          If you know of tools we've missed &mdash; especially for supply chain transparency, labor rights monitoring, or environmental justice &mdash; <a href="/#contact-form">send them our way</a>. This list should be as complete as we can make it.
+        </p>
+
+        <hr>
+
+        <section class="mt-10 p-6 bg-gray-50 rounded-lg border border-gray-200">
+          <h3 class="text-lg font-bold text-gray-900 mb-2">Related Reading</h3>
+          <ul>
+            <li><a href="/blog/5gw-research.html">Fifth-Generation Warfare: The Invisible War Already Underway</a></li>
+            <li><a href="/blog/data-privacy-sovereignty-best-practices.html">Data Privacy &amp; Sovereignty Best Practices (Feb 2026)</a></li>
+            <li><a href="/blog/ai-surveillance-countermeasures.html">Defeating Facial Recognition in an AI Surveillance Era</a></li>
+            <li><a href="/blog/connecting-isolated-voices.html">How Isolated People Find Each Other</a></li>
+            <li><a href="/blog/atx-ice-activity.html">ICE Activity Within a 2-Hour Radius of Austin, TX</a></li>
+          </ul>
+        </section>
+
+      </div><!-- /.content-area -->
+    </article>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="text-white">
+    <div class="bg-[#3D2B1F]">
+      <div class="max-w-7xl mx-auto px-4 py-16">
+        <div class="max-w-3xl mx-auto text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Support Our Community</h2>
+          <p class="text-white/90 text-base mb-8">All donations go 100% to mutual aid through Gifted Dreamers, Inc., an Austin, Texas-based 501(c)(3).</p>
+          <div class="flex justify-center">
+            <a href="https://givebutter.com/GRUHP" target="_blank" rel="noopener noreferrer" class="inline-block px-8 py-4 bg-[#F5A623] hover:bg-[#D4911E] text-[#1A1A1A] text-lg font-bold rounded-lg transition-colors shadow-lg">Donate Now</a>
+          </div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+        <div>
+          <h3 class="text-2xl font-bold mb-2">Share a Resource or Send a Message</h3>
+          <p class="text-white/80 text-sm mb-6">Only message is required. All other fields are optional.</p>
+          <form id="contact-form" onsubmit="submitContactForm(event)">
+            <textarea id="contact-message" rows="4" placeholder="Know a transparency tool we missed? Paste the URL here..." required class="w-full rounded-lg bg-white/10 border border-white/20 text-white placeholder-gray-400 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#F5A623] focus:border-transparent resize-y" aria-label="Your message"></textarea>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-3">
+              <div>
+                <label for="contact-name" class="text-white/80 text-sm">Name <span class="text-white/60">(optional)</span></label>
+                <input type="text" id="contact-name" placeholder="Your name" class="w-full mt-1 bg-white/10 border border-white/20 text-white placeholder-gray-400 px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#F5A623] focus:border-transparent" aria-label="Your name (optional)" />
+              </div>
+              <div>
+                <label for="contact-email" class="text-white/80 text-sm">Email <span class="text-white/60">(optional)</span></label>
+                <input type="email" id="contact-email" placeholder="Your email" class="w-full mt-1 bg-white/10 border border-white/20 text-white placeholder-gray-400 px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#F5A623] focus:border-transparent" aria-label="Your email (optional)" />
+              </div>
+            </div>
+            <div class="mt-3">
+              <label for="contact-url" class="text-white/80 text-sm">URL <span class="text-white/60">(optional)</span></label>
+              <input type="url" id="contact-url" placeholder="URL to submit for addition" class="w-full mt-1 bg-white/10 border border-white/20 text-white placeholder-gray-400 px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#F5A623] focus:border-transparent" aria-label="URL to submit (optional)" />
+            </div>
+            <div class="mt-3">
+              <label for="contact-category" class="text-white/80 text-sm">Category / Section <span class="text-white/60">(optional)</span></label>
+              <select id="contact-category" class="w-full mt-1 bg-white/10 border border-white/20 text-white placeholder-gray-400 px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#F5A623] focus:border-transparent" aria-label="Category or section (optional)">
+                <option value="" class="bg-[#3D2B1F]">Select a category...</option>
+                <option value="General" class="bg-[#3D2B1F]">General</option>
+                <option value="Immigrant Resources" class="bg-[#3D2B1F]">Immigrant Resources</option>
+                <option value="Know Your Rights" class="bg-[#3D2B1F]">Know Your Rights</option>
+                <option value="Blog" class="bg-[#3D2B1F]">Blog</option>
+                <option value="Resource Map" class="bg-[#3D2B1F]">Resource Map</option>
+                <option value="Other" class="bg-[#3D2B1F]">Other</option>
+              </select>
+            </div>
+            <button type="submit" class="mt-3 bg-[#F5A623] text-white px-6 py-2.5 rounded-full font-semibold hover:bg-[#D4911E] hover:shadow-md transition-all">Submit</button>
+            <div id="form-status" class="mt-3 text-sm" role="status" aria-live="polite"></div>
+          </form>
+        </div>
+        <div class="flex flex-col justify-between">
+          <div>
+            <h3 class="text-2xl font-bold mb-4">About justNICE</h3>
+            <p class="text-white/80 leading-relaxed mb-6">justNICE provides free, community-sourced immigrant resources and Know Your Rights training guides. We believe preparation is power and that every person deserves access to information that protects their rights.</p>
+            <div class="flex items-center gap-4 flex-wrap">
+              <a href="/immigrant-resources.html" class="text-[#F5A623] hover:text-[#D4911E] transition-colors font-medium">Resources</a>
+              <span class="text-white/30">|</span>
+              <a href="/kyr-ice-training.html" class="text-[#F5A623] hover:text-[#D4911E] transition-colors font-medium">KYR Training</a>
+              <span class="text-white/30">|</span>
+              <a href="/blog.html" class="text-[#F5A623] hover:text-[#D4911E] transition-colors font-medium">Blog</a>
+              <span class="text-white/30">|</span>
+              <a href="/downloads.html" class="text-[#F5A623] hover:text-[#D4911E] transition-colors font-medium">Downloads</a>
+              <span class="text-white/30">|</span>
+              <a href="https://www.bonfire.com/store/gifteddreamers/" target="_blank" rel="noopener noreferrer" class="text-[#F5A623] hover:text-[#D4911E] transition-colors font-medium">NICE Gear</a>
+              <span class="text-white/30">|</span>
+              <a href="/#contact-form" class="text-[#F5A623] hover:text-[#D4911E] transition-colors font-medium">Contact</a>
+              <span class="text-white/30">|</span>
+              <a href="https://givebutter.com/GRUHP" target="_blank" rel="noopener noreferrer" class="text-[#F5A623] hover:text-[#D4911E] transition-colors font-medium">Donate</a>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+    <div class="bg-maroon">
+      <div class="max-w-7xl mx-auto px-4 py-6 text-center">
+        <div class="flex items-center justify-center gap-4 mb-3">
+          <a href="https://justnice.us" class="text-white/80 hover:text-white text-sm transition-colors">justnice.us</a>
+          <span class="text-white/30">|</span>
+          <a href="mailto:BEE@justNICE.us" class="text-white/80 hover:text-white text-sm transition-colors">BEE@justNICE.us</a>
+          <span class="text-white/30">|</span>
+          <a href="https://github.com/Gifted-Dreamers/justnice.us" target="_blank" rel="noopener noreferrer" class="text-white/80 hover:text-white transition-colors" aria-label="View source on GitHub">
+            <svg class="w-5 h-5 inline-block" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+            <span class="text-sm ml-1">Open Source</span>
+          </a>
+        </div>
+        <p class="text-white/80 text-sm">
+          Made with care by
+          <a href="https://gifteddreamers.org/GRUHP" target="_blank" rel="noopener noreferrer" class="text-[#F5A623] hover:text-[#D4911E] transition-colors"><img src="/assets/gifted-dreamers-icon.png" alt="Gifted Dreamers" class="inline-block w-5 h-5 mr-1 align-text-bottom" loading="lazy" width="20" height="20"> Gifted Dreamers, Inc.</a>
+          &middot; Austin, Texas-based 501(c)(3) EIN 39-3863796 &middot;
+          <a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank" rel="noopener noreferrer" class="text-white/60 hover:text-white transition-colors underline underline-offset-2">CC0 1.0 Public Domain</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- SCRIPTS -->
+  <script>
+    const menuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const hamburgerIcon = document.getElementById('hamburger-icon');
+    const closeIcon = document.getElementById('close-icon');
+
+    menuBtn.addEventListener('click', function () {
+      const isOpen = !mobileMenu.classList.contains('hidden');
+      mobileMenu.classList.toggle('hidden');
+      hamburgerIcon.classList.toggle('hidden');
+      closeIcon.classList.toggle('hidden');
+      menuBtn.setAttribute('aria-expanded', !isOpen);
+    });
+
+    mobileMenu.querySelectorAll('a[href^="#"]').forEach(function (link) {
+      link.addEventListener('click', function () {
+        mobileMenu.classList.add('hidden');
+        hamburgerIcon.classList.remove('hidden');
+        closeIcon.classList.add('hidden');
+        menuBtn.setAttribute('aria-expanded', 'false');
+      });
+    });
+  </script>
+
+  <script>
+    function submitContactForm(event) {
+      event.preventDefault();
+      var messageEl = document.getElementById('contact-message');
+      var nameEl = document.getElementById('contact-name');
+      var emailEl = document.getElementById('contact-email');
+      var urlEl = document.getElementById('contact-url');
+      var categoryEl = document.getElementById('contact-category');
+      var statusEl = document.getElementById('form-status');
+      var message = messageEl.value.trim();
+
+      if (!message) return;
+
+      statusEl.textContent = 'Sending...';
+      statusEl.className = 'mt-3 text-sm text-gray-400';
+
+      var webhookUrl = 'https://n8n.cloudpublica.org/webhook/justnice-contact';
+
+      fetch(webhookUrl, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          message: message,
+          name: nameEl.value.trim(),
+          email: emailEl.value.trim(),
+          url: urlEl.value.trim(),
+          category: categoryEl.value,
+          source: 'justnice.us/blog/open-source-transparency-tools',
+          page: window.location.pathname,
+          timestamp: new Date().toISOString()
+        })
+      })
+      .then(function (response) {
+        if (response.ok) {
+          statusEl.textContent = 'Thank you! Your message has been sent.';
+          statusEl.className = 'mt-3 text-sm text-green-400';
+          messageEl.value = '';
+          nameEl.value = '';
+          emailEl.value = '';
+          urlEl.value = '';
+          categoryEl.value = '';
+        } else {
+          throw new Error('Network response was not ok');
+        }
+      })
+      .catch(function () {
+        statusEl.textContent = 'Something went wrong. Please try again.';
+        statusEl.className = 'mt-3 text-sm text-red-400';
+      });
+    }
+  </script>
+
+  <script src="/translations.js"></script>
+  <script>document.addEventListener('DOMContentLoaded', initTranslation);</script>
+
+</body>
+</html>
