@@ -17,11 +17,20 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Deploy static files
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Build static site
+        run: node build.js
+
+      - name: Deploy built files
         uses: appleboy/scp-action@v0.1.7
         with:
           host: ${{ secrets.AWS_HOST }}
           username: ${{ secrets.AWS_USER }}
           key: ${{ secrets.AWS_SSH_KEY }}
-          source: "index.html,immigrant-resources.html,kyr-ice-training.html,blog.html,blog/*,downloads.html,downloads/*,resources.json,translations.js,assets/*,robots.txt,sitemap.xml,nginx.conf,env.example.js,CONTRIBUTING.md"
+          source: "dist/*"
           target: "/home/admin/commoncloud/sites/justnice.us"
+          strip_components: 1

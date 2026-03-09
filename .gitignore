@@ -12,6 +12,9 @@ env.js
 # ProtonDrive edit conflict files
 *Edit conflict*
 
+# Build output (deployed via CI)
+/dist/
+
 # Local docs — planning, source images, markdown sources
 /docs/
 

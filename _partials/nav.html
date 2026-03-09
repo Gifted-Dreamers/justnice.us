@@ -1,0 +1,61 @@
+  <!-- HEADER (sticky, maroon bg) — shared partial -->
+  <header class="sticky top-0 z-50 bg-maroon shadow-lg">
+    <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+      <!-- Logo + Site Name -->
+      <a href="/" class="flex items-center gap-3 group" aria-label="justNICE Home">
+        <picture>
+          <source srcset="/assets/BEE-ICON-64.webp" type="image/webp">
+          <img src="/assets/BEE-ICON-128.png" alt="justNICE Bee Logo" class="h-12 w-auto" width="128" height="128">
+        </picture>
+        <span class="text-white text-2xl font-bold tracking-tight group-hover:text-[#D4911E] transition-colors">justNICE</span>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex items-center gap-3 lg:gap-5 text-sm" aria-label="Main navigation">
+        <a href="/immigrant-resources.html" class="text-white hover:text-[#D4911E] transition-colors font-medium {{ACTIVE:resources}}" data-i18n="nav.resources">Immigrant Resources</a>
+        <a href="/kyr-ice-training.html" class="text-white hover:text-[#D4911E] transition-colors font-medium {{ACTIVE:kyr}}" data-i18n="nav.kyr">Know Your Rights</a>
+        <a href="/ice-activity/" class="text-white hover:text-[#D4911E] transition-colors font-medium {{ACTIVE:tracker}}" data-i18n="nav.tracker">ICE Tracker</a>
+        <a href="/blog.html" class="text-white hover:text-[#D4911E] transition-colors font-medium {{ACTIVE:blog}}" data-i18n="nav.blog">Blog</a>
+        <a href="/downloads.html" class="text-white hover:text-[#D4911E] transition-colors font-medium {{ACTIVE:downloads}}" data-i18n="nav.downloads">Downloads</a>
+        <a href="https://www.bonfire.com/store/gifteddreamers/" target="_blank" rel="noopener noreferrer" class="text-white hover:text-[#D4911E] transition-colors font-medium" data-i18n="nav.gear">NICE Gear</a>
+        <a href="/#contact-form" class="text-white hover:text-[#D4911E] transition-colors font-medium" data-i18n="nav.contact">Contact</a>
+        <button class="lang-toggle-btn text-white hover:text-[#D4911E] transition-colors font-medium flex items-center gap-1" aria-label="Switch to Spanish">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/></svg>
+          <span class="lang-label">Espa&ntilde;ol</span>
+        </button>
+        <a href="https://givebutter.com/GRUHP" target="_blank" rel="noopener noreferrer"
+           class="bg-[#F5A623] text-white px-5 py-2 rounded-full font-semibold hover:bg-[#D4911E] hover:shadow-md transition-all">
+          <span data-i18n="nav.donate">Donate</span>
+        </a>
+      </nav>
+
+      <!-- Mobile Hamburger Button -->
+      <button id="mobile-menu-btn" class="md:hidden text-white focus:outline-none" aria-label="Toggle navigation menu" aria-expanded="false">
+        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <path id="hamburger-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          <path id="close-icon" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-maroon border-t border-white/20 px-4 pb-4">
+      <nav class="flex flex-col gap-3 pt-3" aria-label="Mobile navigation">
+        <a href="/immigrant-resources.html" class="text-white hover:text-[#D4911E] transition-colors font-medium py-2 {{ACTIVE:resources}}" data-i18n="nav.resources">Immigrant Resources</a>
+        <a href="/kyr-ice-training.html" class="text-white hover:text-[#D4911E] transition-colors font-medium py-2 {{ACTIVE:kyr}}" data-i18n="nav.kyr">Know Your Rights</a>
+        <a href="/ice-activity/" class="text-white hover:text-[#D4911E] transition-colors font-medium py-2 {{ACTIVE:tracker}}" data-i18n="nav.tracker">ICE Tracker</a>
+        <a href="/blog.html" class="text-white hover:text-[#D4911E] transition-colors font-medium py-2 {{ACTIVE:blog}}" data-i18n="nav.blog">Blog</a>
+        <a href="/downloads.html" class="text-white hover:text-[#D4911E] transition-colors font-medium py-2 {{ACTIVE:downloads}}" data-i18n="nav.downloads">Downloads</a>
+        <a href="https://www.bonfire.com/store/gifteddreamers/" target="_blank" rel="noopener noreferrer" class="text-white hover:text-[#D4911E] transition-colors font-medium py-2" data-i18n="nav.gear">NICE Gear</a>
+        <a href="/#contact-form" class="text-white hover:text-[#D4911E] transition-colors font-medium py-2" data-i18n="nav.contact">Contact</a>
+        <button class="lang-toggle-btn text-white hover:text-[#D4911E] transition-colors font-medium py-2 flex items-center gap-1" aria-label="Switch to Spanish">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/></svg>
+          <span class="lang-label">Espa&ntilde;ol</span>
+        </button>
+        <a href="https://givebutter.com/GRUHP" target="_blank" rel="noopener noreferrer"
+           class="bg-[#F5A623] text-white px-5 py-2.5 rounded-full font-semibold text-center hover:bg-[#D4911E] transition-all mt-1">
+          <span data-i18n="nav.donate">Donate</span>
+        </a>
+      </nav>
+    </div>
+  </header>

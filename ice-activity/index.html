@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ICE Activity Tracker &mdash; 50-State Immigration Enforcement Monitor &mdash; justNICE</title>
+
+  <!-- SEO Meta -->
+  <meta name="description" content="Track ICE enforcement operations across all 50 states. Sourced, timestamped reports of immigration raids, arrests, detentions, deportation flights, and community responses.">
+  <meta name="keywords" content="ICE activity tracker, immigration enforcement, ICE raids, deportation, detention, 287g, sanctuary cities, know your rights, immigration news">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="ICE Activity Tracker — 50-State Immigration Enforcement Monitor — justNICE">
+  <meta property="og:description" content="Track ICE enforcement operations across all 50 states. Sourced, timestamped reports of raids, arrests, detentions, and community responses.">
+  <meta property="og:url" content="https://justnice.us/ice-activity/">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://justnice.us/assets/Bee-NICE-LOGO-360.png">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ICE Activity Tracker — 50-State Monitor — justNICE">
+  <meta name="twitter:description" content="Track ICE enforcement operations across all 50 states. Sourced reports of raids, arrests, detentions, and community responses.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            maroon: '#8B1A2B',
+            gold: '#F5A623',
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts: Inter (async) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    .state-card {
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+    .state-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(139, 26, 43, 0.15);
+    }
+    .region-section:target {
+      scroll-margin-top: 140px;
+    }
+    .content-area a {
+      color: #F5A623;
+      text-decoration: none;
+    }
+    .content-area a:hover {
+      text-decoration: underline;
+    }
+    .pulse-dot {
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.4; }
+    }
+    .resource-link {
+      transition: background-color 0.15s ease;
+    }
+    .resource-link:hover {
+      background-color: rgba(139, 26, 43, 0.05);
+    }
+  </style>
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "ICE Activity Tracker — 50-State Immigration Enforcement Monitor",
+    "description": "Track ICE enforcement operations across all 50 states with sourced, timestamped reports.",
+    "url": "https://justnice.us/ice-activity/",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Gifted Dreamers, Inc.",
+      "url": "https://gifteddreamers.org/GRUHP",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://justnice.us/assets/Bee-NICE-LOGO-360.png"
+      }
+    }
+  }
+  </script>
+</head>
+
+<body class="font-sans text-gray-900 bg-white">
+<!-- build:config {"nav": "tracker", "footer": "full"} -->
+
+<!-- build:nav -->
+
+
+  <!-- Breadcrumb -->
+  <nav aria-label="Breadcrumb" class="sticky top-[72px] z-40 bg-gray-50 border-b border-gray-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2">
+      <ol class="flex items-center space-x-2 text-sm text-gray-500">
+        <li><a href="/" class="hover:text-[#F5A623] transition-colors">Home</a></li>
+        <li><span class="mx-1">/</span></li>
+        <li class="text-gray-700 font-medium">ICE Activity Tracker</li>
+      </ol>
+    </div>
+  </nav>
+
+  <!-- MAIN CONTENT -->
+  <main class="py-10 md:py-16">
+    <div class="max-w-6xl mx-auto px-4">
+
+      <!-- Page Header -->
+      <header class="mb-12">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="inline-block bg-maroon/10 text-maroon text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wide">Community &amp; Policy</span>
+          <span class="inline-flex items-center gap-1.5 text-xs font-medium text-green-700 bg-green-50 px-2.5 py-1 rounded-full">
+            <span class="pulse-dot w-1.5 h-1.5 bg-green-500 rounded-full inline-block"></span>
+            Actively Updated
+          </span>
+        </div>
+        <h1 class="text-3xl md:text-4xl lg:text-5xl font-extrabold text-gray-900 leading-tight mb-6">
+          ICE Activity Tracker
+        </h1>
+        <p class="text-lg md:text-xl text-gray-600 leading-relaxed max-w-3xl">
+          A community-maintained, sourced tracker of Immigration and Customs Enforcement operations across the United States. Each state page includes reported incidents, policy context, 287(g) agreements, sanctuary status, and local resources.
+        </p>
+      </header>
+
+      <!-- Report an Incident Callout -->
+      <div class="bg-maroon/5 border-l-4 border-maroon rounded-r-lg p-6 mb-12">
+        <div class="flex items-start gap-4">
+          <div class="flex-shrink-0 w-10 h-10 bg-maroon/10 rounded-full flex items-center justify-center">
+            <svg class="w-5 h-5 text-maroon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L4.082 16.5c-.77.833.192 2.5 1.732 2.5z"/>
+            </svg>
+          </div>
+          <div>
+            <h2 class="text-lg font-bold text-gray-900 mb-1">Report ICE Activity in Your Area</h2>
+            <p class="text-gray-600 mb-3">If you witness or experience ICE enforcement activity, you can report it anonymously. Your information helps communities stay informed and prepared.</p>
+            <div class="flex flex-wrap gap-3">
+              <a href="/#contact-form" class="inline-flex items-center gap-2 bg-maroon text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-maroon/90 transition-colors">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                Submit a Report
+              </a>
+              <a href="/kyr-ice-training.html" class="inline-flex items-center gap-2 border border-maroon text-maroon px-4 py-2 rounded-lg text-sm font-semibold hover:bg-maroon/5 transition-colors">
+                Know Your Rights
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Jump Navigation -->
+      <div class="bg-gray-50 rounded-xl p-6 mb-12">
+        <h2 class="text-sm font-bold text-gray-500 uppercase tracking-wider mb-4">Jump to Region</h2>
+        <div class="flex flex-wrap gap-2">
+          <a href="#south" class="px-3 py-1.5 bg-white border border-gray-200 rounded-full text-sm font-medium text-gray-700 hover:border-maroon hover:text-maroon transition-colors">South</a>
+          <a href="#west" class="px-3 py-1.5 bg-white border border-gray-200 rounded-full text-sm font-medium text-gray-700 hover:border-maroon hover:text-maroon transition-colors">West</a>
+          <a href="#northeast" class="px-3 py-1.5 bg-white border border-gray-200 rounded-full text-sm font-medium text-gray-700 hover:border-maroon hover:text-maroon transition-colors">Northeast</a>
+          <a href="#midwest" class="px-3 py-1.5 bg-white border border-gray-200 rounded-full text-sm font-medium text-gray-700 hover:border-maroon hover:text-maroon transition-colors">Midwest</a>
+          <a href="#territories" class="px-3 py-1.5 bg-white border border-gray-200 rounded-full text-sm font-medium text-gray-700 hover:border-maroon hover:text-maroon transition-colors">Territories</a>
+          <a href="#resources" class="px-3 py-1.5 bg-gold/10 border border-gold/30 rounded-full text-sm font-medium text-gold hover:bg-gold/20 transition-colors">Resources &amp; Tools</a>
+        </div>
+      </div>
+
+      <!-- Two-column layout: States + Resources sidebar -->
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
+
+        <!-- Main column: State listings -->
+        <div class="lg:col-span-2">
+
+          <!-- ====== SOUTH ====== -->
+          <section id="south" class="region-section mb-12">
+            <h2 class="text-2xl font-bold text-gray-900 mb-1 flex items-center gap-3">
+              <span class="w-8 h-8 bg-maroon/10 rounded-lg flex items-center justify-center text-maroon text-sm font-bold">S</span>
+              South
+            </h2>
+            <p class="text-sm text-gray-500 mb-6">AL, AR, FL, GA, KY, LA, MS, NC, OK, SC, TN, TX, VA, WV</p>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <a href="/ice-activity/alabama.html" class="state-card block bg-white border border-gray-200 rounded-lg p-4 hover:border-maroon/30">
+                <div class="flex items-center justify-between">
+                  <h3 class="font-semibold text-gray-900">Alabama</h3>
+                  <span class="text-xs text-gray-400">AL</span>
+                </div>
+                <p class="text-xs text-gray-500 mt-1">2 active 287(g) agreements</p>
+              </a>
+              <a href="/ice-activity/arkansas.html" class="state-card block bg-white border border-gray-200 rounded-lg p-4 hover:border-maroon/30">
+                <div class="flex items-center justify-between">
+                  <h3 class="font-semibold text-gray-900">Arkansas</h3>
+                  <span class="text-xs text-gray-400">AR</span>
+                </div>
+                <p class="text-xs text-gray-500 mt-1">Anti-sanctuary state</p>
+              </a>
+              <a href="/ice-activity/florida.html" class="state-card block bg-white border border-gray-200 rounded-lg p-4 hover:border-maroon/30">
+                <div class="flex items-center justify-between">
+                  <h3 class="font-semibold text-gray-900">Florida</h3>
+                  <span class="text-xs text-gray-400">FL</span>
+                </div>
+                <p class="text-xs text-gray-500 mt-1">SB 1718 &middot; Multiple 287(g)</p>
+              </a>
+              <a href="/ice-activity/georgia.html" class="state-card block bg-white border border-gray-200 rounded-lg p-4 hover:border-maroon/30">
+                <div class="flex items-center justify-between">
+                  <h3 class="font-semibold text-gray-900">Georgia</h3>
+                  <span class="text-xs text-gray-400">GA</span>
+                </div>
+                <p class="text-xs text-gray-500 mt-1">Atlanta ICE field office</p>
+              </a>
+              <a href="/ice-activity/kentucky.html" class="state-card block bg-white border border-gray-200 rounded-lg p-4 hover:border-maroon/30">
+                <div class="flex items-center justify-between">
+                  <h3 class="font-semibold text-gray-900">Kentucky</h3>
+                  <span class="text-xs text-gray-400">KY</span>
+                </div>
+                <p class="text-xs text-gray-500 mt-1">Louisville sub-office</p>
+              </a>
+              <a href="/ice-activity/louisiana.html" class="state-card block bg-white border border-gray-200 rounded-lg p-4 hover:border-maroon/30">
+                <div class="flex items-center justify-between">
+                  <h3 class="font-semibold text-gray-900">Louisiana</h3>
+                  <span class="text-xs text-gray-400">LA</span>
+                </div>
+                <p class="text-xs text-gray-500 mt-1">New Orleans field office</p>
+              </a>
+              <a href="/ice-activity/mississippi.html" class="state-card block bg-white border border-gray-200 rounded-lg p-4 hover:border-maroon/30">
+                <div class="flex items-center justify-between">
+                  <h3 class="font-semibold text-gray-900">Mississippi</h3>
+                  <span class="text-xs text-gray-400">MS</span>
+                </div>
+                <p class="text-xs text-gray-500 mt-1">Anti-sanctuary state</p>
+              </a>
+              <a href="/ice-activity/north-carolina.html" class="state-card block bg-white border border-gray-200 rounded-lg p-4 hover:border-maroon/30">
+                <div class="flex items-center justify-between">
+                  <h3 class="font-semibold text-gray-900">North Carolina</h3>
+                  <span class="text-xs text-gray-400">NC</span>
+                </div>
+                <p class="text-xs text-gray-500 mt-1">Multiple 287(g) counties</p>
+              </a>
+              <a href="/ice-activity/oklahoma.html" class="state-card block bg-white border border-gray-200 rounded-lg p-4 hover:border-maroon/30">
+                <div class="flex items-center justify-between">
+                  <h3 class="font-semibold text-gray-900">Oklahoma</h3>
+                  <span class="text-xs text-gray-400">OK</span>
+                </div>
+                <p class="text-xs text-gray-500 mt-1">Anti-sanctuary state</p>
+              </a>
+              <a href="/ice-activity/south-carolina.html" class="state-card block bg-white border border-gray-200 rounded-lg p-4 hover:border-maroon/30">
+                <div class="flex items-center justify-between">
+                  <h3 class="font-semibold text-gray-900">South Carolina</h3>
+                  <span class="text-xs text-gray-400">SC</span>
+                </div>
+                <p class="text-xs text-gray-500 mt-1">Anti-sanctuary state &middot; 287(g)</p>
+              </a>
+              <a href="/ice-activity/tennessee.html" class="state-card block bg-white border border-gray-200 rounded-lg p-4 hover:border-maroon/30">
+                <div class="flex items-center justify-between">
+                  <h3 class="font-semibold text-gray-900">Tennessee</h3>
+                  <span class="text-xs text-gray-400">TN</span>
+                </div>
+                <p class="text-xs text-gray-500 mt-1">Anti-sanctuary state &middot; Multiple 287(g)</p>
+              </a>
+              <a href="/ice-activity/texas.html" class="state-card block bg-white border-2 border-maroon/40 rounded-lg p-4 hover:border-maroon bg-maroon/5">
+                <div class="flex items-center justify-between">
+                  <h3 class="font-bold text-maroon">Texas</h3>
+                  <span class="inline-flex items-center gap-1 text-xs font-semibold text-maroon">
+                    <span class="pulse-dot w-1.5 h-1.5 bg-maroon rounded-full inline-block"></span>
+                    Active
+                  </span>
+                </div>
+                <p class="text-xs text-maroon/70 mt-1">SB 8 &middot; 7 regional pages &middot; Statewide hub</p>
+              </a>
+              <a href="/ice-activity/virginia.html" class="state-card block bg-white border border-gray-200 rounded-lg p-4 hover:border-maroon/30">
+                <div class="flex items-center justify-between">
+                  <h3 class="font-semibold text-gray-900">Virginia</h3>
+                  <span class="text-xs text-gray-400">VA</span>
+                </div>
+                <p class="text-xs text-gray-500 mt-1">Multiple 287(g) counties</p>
+              </a>
+              <a href="/ice-activity/west-virginia.html" class="state-card block bg-white border border-gray-200 rounded-lg p-4 hover:border-maroon/30">
+                <div class="flex items-center justify-between">
+                  <h3 class="font-semibold text-gray-900">West Virginia</h3>
+                  <span class="text-xs text-gray-400">WV</span>
+                </div>
+                <p class="text-xs text-gray-500 mt-1">Limited ICE presence</p>
+              </a>
+            </div>
+          </section>
+
+          <!-- ====== WEST ====== -->
+          <section id="west" class="region-section mb-12">
+            <h2 class="text-2xl font-bold text-gray-900 mb-1 flex items-center gap-3">
+              <span class="w-8 h-8 bg-maroon/10 rounded-lg flex items-center justify-center text-maroon text-sm font-bold">W</span>
+              West
+            </h2>
+            <p class="text-sm text-gray-500 mb-6">AK, AZ, CA, CO, HI, ID, MT, NM, NV, OR, UT, WA, WY</p>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <a href="/ice-activity/alaska.html" class="state-card block bg-white border border-gray-200 rounded-lg p-4 hover:border-maroon/30">
+                <div class="flex items-center justify-between">
+                  <h3 class="font-semibold text-gray-900">Alaska</h3>
+                  <span class="text-xs text-gray-400">AK</span>
+                </div>
+                <p class="text-xs text-gray-500 mt-1">Minimal ICE presence</p>
+              </a>
+              <a href="/ice-activity/arizona.html" class="state-card block bg-white border border-gray-200 rounded-lg p-4 hover:border-maroon/30">
+                <div class="flex items-center justify-between">
+                  <h3 class="font-semibold text-gray-900">Arizona</h3>
+                  <span class="text-xs text-gray-400">AZ</span>
+                </div>
+                <p class="text-xs text-gray-500 mt-1">Phoenix field office &middot; Border region</p>
+              </a>
+              <a href="/ice-activity/california.html" class="state-card block bg-white border border-gray-200 rounded-lg p-4 hover:border-maroon/30">
+                <div class="flex items-center justify-between">
+                  <h3 class="font-semibold text-gray-900">California</h3>
+                  <span class="text-xs text-gray-400">CA</span>
+                </div>
+                <p class="text-xs text-gray-500 mt-1">SB 54 sanctuary state &middot; 3 field offices</p>
+              </a>
+              <a href="/ice-activity/colorado.html" class="state-card block bg-white border border-gray-200 rounded-lg p-4 hover:border-maroon/30">
+                <div class="flex items-center justify-between">
+                  <h3 class="font-semibold text-gray-900">Colorado</h3>
+                  <span class="text-xs text-gray-400">CO</span>
+                </div>
+                <p class="text-xs text-gray-500 mt-1">Denver field office &middot; HB 1090 limits</p>
+              </a>
+              <a href="/ice-activity/hawaii.html" class="state-card block bg-white border border-gray-200 rounded-lg p-4 hover:border-maroon/30">
+                <div class="flex items-center justify-between">
+                  <h3 class="font-semibold text-gray-900">Hawaii</h3>
+                  <span class="text-xs text-gray-400">HI</span>
+                </div>
+                <p class="text-xs text-gray-500 mt-1">Limited ICE presence</p>
+              </a>
+              <a href="/ice-activity/idaho.html" class="state-card block bg-white border border-gray-200 rounded-lg p-4 hover:border-maroon/30">
+                <div class="flex items-center justify-between">
+                  <h3 class="font-semibold text-gray-900">Idaho</h3>
+                  <span class="text-xs text-gray-400">ID</span>
+                </div>
+                <p class="text-xs text-gray-500 mt-1">Anti-sanctuary state</p>
+              </a>
+              <a href="/ice-activity/montana.html" class="state-card block bg-white border border-gray-200 rounded-lg p-4 hover:border-maroon/30">
+                <div class="flex items-center justify-between">
+                  <h3 class="font-semibold text-gray-900">Montana</h3>
+                  <span class="text-xs text-gray-400">MT</span>
+                </div>
+                <p class="text-xs text-gray-500 mt-1">Northern border region</p>
+              </a>
+              <a href="/ice-activity/nevada.html" class="state-card block bg-white border border-gray-200 rounded-lg p-4 hover:border-maroon/30">
+                <div class="flex items-center justify-between">
+                  <h3 class="font-semibold text-gray-900">Nevada</h3>
+                  <span class="text-xs text-gray-400">NV</span>
+                </div>
+                <p class="text-xs text-gray-500 mt-1">Las Vegas sub-office</p>
+              </a>
+              <a href="/ice-activity/new-mexico.html" class="state-card block bg-white border border-gray-200 rounded-lg p-4 hover:border-maroon/30">
+                <div class="flex items-center justify-between">
+                  <h3 class="font-semibold text-gray-900">New Mexico</h3>
+                  <span class="text-xs text-gray-400">NM</span>
+                </div>
+                <p class="text-xs text-gray-500 mt-1">El Paso AOR &middot; Border region</p>
+              </a>
+              <a href="/ice-activity/oregon.html" class="state-card block bg-white border border-gray-200 rounded-lg p-4 hover:border-maroon/30">
+                <div class="flex items-center justify-between">
+                  <h3 class="font-semibold text-gray-900">Oregon</h3>
+                  <span class="text-xs text-gray-400">OR</span>
+                </div>
+                <p class="text-xs text-gray-500 mt-1">Sanctuary state &middot; ORS 181A.820</p>
+              </a>
+              <a href="/ice-activity/utah.html" class="state-card block bg-white border border-gray-200 rounded-lg p-4 hover:border-maroon/30">
+                <div class="flex items-center justify-between">
+                  <h3 class="font-semibold text-gray-900">Utah</h3>
+                  <span class="text-xs text-gray-400">UT</span>
+                </div>
+                <p class="text-xs text-gray-500 mt-1">Salt Lake City field office</p>
+              </a>
+              <a href="/ice-activity/washington.html" class="state-card block bg-white border border-gray-200 rounded-lg p-4 hover:border-maroon/30">
+                <div class="flex items-center justify-between">
+                  <h3 class="font-semibold text-gray-900">Washington</h3>
+                  <span class="text-xs text-gray-400">WA</span>
+                </div>
+                <p class="text-xs text-gray-500 mt-1">Seattle field office &middot; Keep WA Working Act</p>
+              </a>
+              <a href="/ice-activity/wyoming.html" class="state-card block bg-white border border-gray-200 rounded-lg p-4 hover:border-maroon/30">
+                <div class="flex items-center justify-between">
+                  <h3 class="font-semibold text-gray-900">Wyoming</h3>
+                  <span class="text-xs text-gray-400">WY</span>
+                </div>
+                <p class="text-xs text-gray-500 mt-1">Minimal ICE presence</p>
+              </a>
+            </div>
+          </section>
+
+          <!-- ====== NORTHEAST ====== -->
+          <section id="northeast" class="region-section mb-12">
+            <h2 class="text-2xl font-bold text-gray-900 mb-1 flex items-center gap-3">
+              <span class="w-8 h-8 bg-maroon/10 rounded-lg flex items-center justify-center text-maroon text-sm font-bold">NE</span>
+              Northeast
+            </h2>
+            <p class="text-sm text-gray-500 mb-6">CT, DC, DE, MA, MD, ME, NH, NJ, NY, PA, RI, VT</p>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <a href="/ice-activity/connecticut.html" class="state-card block bg-white border border-gray-200 rounded-lg p-4 hover:border-maroon/30">
+                <div class="flex items-center justify-between">
+                  <h3 class="font-semibold text-gray-900">Connecticut</h3>
+                  <span class="text-xs text-gray-400">CT</span>
+                </div>
+                <p class="text-xs text-gray-500 mt-1">TRUST Act limits cooperation</p>
+              </a>
+              <a href="/ice-activity/delaware.html" class="state-card block bg-white border border-gray-200 rounded-lg p-4 hover:border-maroon/30">
+                <div class="flex items-center justify-between">
+                  <h3 class="font-semibold text-gray-900">Delaware</h3>
+                  <span class="text-xs text-gray-400">DE</span>
+                </div>
+                <p class="text-xs text-gray-500 mt-1">Philadelphia AOR</p>
+              </a>
+              <a href="/ice-activity/district-of-columbia.html" class="state-card block bg-white border border-gray-200 rounded-lg p-4 hover:border-maroon/30">
+                <div class="flex items-center justify-between">
+                  <h3 class="font-semibold text-gray-900">District of Columbia</h3>
+                  <span class="text-xs text-gray-400">DC</span>
+                </div>
+                <p class="text-xs text-gray-500 mt-1">Sanctuary city &middot; ICE HQ</p>
+              </a>
+              <a href="/ice-activity/maine.html" class="state-card block bg-white border border-gray-200 rounded-lg p-4 hover:border-maroon/30">
+                <div class="flex items-center justify-between">
+                  <h3 class="font-semibold text-gray-900">Maine</h3>
+                  <span class="text-xs text-gray-400">ME</span>
+                </div>
+                <p class="text-xs text-gray-500 mt-1">Boston AOR &middot; Northern border</p>
+              </a>
+              <a href="/ice-activity/maryland.html" class="state-card block bg-white border border-gray-200 rounded-lg p-4 hover:border-maroon/30">
+                <div class="flex items-center justify-between">
+                  <h3 class="font-semibold text-gray-900">Maryland</h3>
+                  <span class="text-xs text-gray-400">MD</span>
+                </div>
+                <p class="text-xs text-gray-500 mt-1">Baltimore field office &middot; TRUST Act</p>
+              </a>
+              <a href="/ice-activity/massachusetts.html" class="state-card block bg-white border border-gray-200 rounded-lg p-4 hover:border-maroon/30">
+                <div class="flex items-center justify-between">
+                  <h3 class="font-semibold text-gray-900">Massachusetts</h3>
+                  <span class="text-xs text-gray-400">MA</span>
+                </div>
+                <p class="text-xs text-gray-500 mt-1">Boston field office &middot; Safe Communities Act</p>
+              </a>
+              <a href="/ice-activity/new-hampshire.html" class="state-card block bg-white border border-gray-200 rounded-lg p-4 hover:border-maroon/30">
+                <div class="flex items-center justify-between">
+                  <h3 class="font-semibold text-gray-900">New Hampshire</h3>
+                  <span class="text-xs text-gray-400">NH</span>
+                </div>
+                <p class="text-xs text-gray-500 mt-1">Boston AOR</p>
+              </a>
+              <a href="/ice-activity/new-jersey.html" class="state-card block bg-white border border-gray-200 rounded-lg p-4 hover:border-maroon/30">
+                <div class="flex items-center justify-between">
+                  <h3 class="font-semibold text-gray-900">New Jersey</h3>
+                  <span class="text-xs text-gray-400">NJ</span>
+                </div>
+                <p class="text-xs text-gray-500 mt-1">Newark field office &middot; Immigrant Trust Directive</p>
+              </a>
+              <a href="/ice-activity/new-york.html" class="state-card block bg-white border border-gray-200 rounded-lg p-4 hover:border-maroon/30">
+                <div class="flex items-center justify-between">
+                  <h3 class="font-semibold text-gray-900">New York</h3>
+                  <span class="text-xs text-gray-400">NY</span>
+                </div>
+                <p class="text-xs text-gray-500 mt-1">NYC field office &middot; Sanctuary city</p>
+              </a>
+              <a href="/ice-activity/pennsylvania.html" class="state-card block bg-white border border-gray-200 rounded-lg p-4 hover:border-maroon/30">
+                <div class="flex items-center justify-between">
+                  <h3 class="font-semibold text-gray-900">Pennsylvania</h3>
+                  <span class="text-xs text-gray-400">PA</span>
+                </div>
+                <p class="text-xs text-gray-500 mt-1">Philadelphia field office</p>
+              </a>
+              <a href="/ice-activity/rhode-island.html" class="state-card block bg-white border border-gray-200 rounded-lg p-4 hover:border-maroon/30">
+                <div class="flex items-center justify-between">
+                  <h3 class="font-semibold text-gray-900">Rhode Island</h3>
+                  <span class="text-xs text-gray-400">RI</span>
+                </div>
+                <p class="text-xs text-gray-500 mt-1">Boston AOR</p>
+              </a>
+              <a href="/ice-activity/vermont.html" class="state-card block bg-white border border-gray-200 rounded-lg p-4 hover:border-maroon/30">
+                <div class="flex items-center justify-between">
+                  <h3 class="font-semibold text-gray-900">Vermont</h3>
+                  <span class="text-xs text-gray-400">VT</span>
+                </div>
+                <p class="text-xs text-gray-500 mt-1">Fair &amp; Impartial Policing policy</p>
+              </a>
+            </div>
+          </section>
+
+          <!-- ====== MIDWEST ====== -->
+          <section id="midwest" class="region-section mb-12">
+            <h2 class="text-2xl font-bold text-gray-900 mb-1 flex items-center gap-3">
+              <span class="w-8 h-8 bg-maroon/10 rounded-lg flex items-center justify-center text-maroon text-sm font-bold">MW</span>
+              Midwest
+            </h2>
+            <p class="text-sm text-gray-500 mb-6">IA, IL, IN, KS, MI, MN, MO, ND, NE, OH, SD, WI</p>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <a href="/ice-activity/illinois.html" class="state-card block bg-white border border-gray-200 rounded-lg p-4 hover:border-maroon/30">
+                <div class="flex items-center justify-between">
+                  <h3 class="font-semibold text-gray-900">Illinois</h3>
+                  <span class="text-xs text-gray-400">IL</span>
+                </div>
+                <p class="text-xs text-gray-500 mt-1">Chicago field office &middot; TRUST Act &middot; Sanctuary</p>
+              </a>
+              <a href="/ice-activity/indiana.html" class="state-card block bg-white border border-gray-200 rounded-lg p-4 hover:border-maroon/30">
+                <div class="flex items-center justify-between">
+                  <h3 class="font-semibold text-gray-900">Indiana</h3>
+                  <span class="text-xs text-gray-400">IN</span>
+                </div>
+                <p class="text-xs text-gray-500 mt-1">Anti-sanctuary state &middot; Chicago AOR</p>
+              </a>
+              <a href="/ice-activity/iowa.html" class="state-card block bg-white border border-gray-200 rounded-lg p-4 hover:border-maroon/30">
+                <div class="flex items-center justify-between">
+                  <h3 class="font-semibold text-gray-900">Iowa</h3>
+                  <span class="text-xs text-gray-400">IA</span>
+                </div>
+                <p class="text-xs text-gray-500 mt-1">SF 2340 &middot; State immigration law</p>
+              </a>
+              <a href="/ice-activity/kansas.html" class="state-card block bg-white border border-gray-200 rounded-lg p-4 hover:border-maroon/30">
+                <div class="flex items-center justify-between">
+                  <h3 class="font-semibold text-gray-900">Kansas</h3>
+                  <span class="text-xs text-gray-400">KS</span>
+                </div>
+                <p class="text-xs text-gray-500 mt-1">Anti-sanctuary state</p>
+              </a>
+              <a href="/ice-activity/michigan.html" class="state-card block bg-white border border-gray-200 rounded-lg p-4 hover:border-maroon/30">
+                <div class="flex items-center justify-between">
+                  <h3 class="font-semibold text-gray-900">Michigan</h3>
+                  <span class="text-xs text-gray-400">MI</span>
+                </div>
+                <p class="text-xs text-gray-500 mt-1">Detroit field office</p>
+              </a>
+              <a href="/ice-activity/minnesota.html" class="state-card block bg-white border-2 border-maroon/40 rounded-lg p-4 hover:border-maroon bg-maroon/5">
+                <div class="flex items-center justify-between">
+                  <h3 class="font-bold text-maroon">Minnesota</h3>
+                  <span class="inline-flex items-center gap-1 text-xs font-semibold text-maroon">
+                    <span class="pulse-dot w-1.5 h-1.5 bg-maroon rounded-full inline-block"></span>
+                    Active
+                  </span>
+                </div>
+                <p class="text-xs text-maroon/70 mt-1">Operation Metro Surge &middot; Detailed coverage</p>
+              </a>
+              <a href="/ice-activity/missouri.html" class="state-card block bg-white border border-gray-200 rounded-lg p-4 hover:border-maroon/30">
+                <div class="flex items-center justify-between">
+                  <h3 class="font-semibold text-gray-900">Missouri</h3>
+                  <span class="text-xs text-gray-400">MO</span>
+                </div>
+                <p class="text-xs text-gray-500 mt-1">Anti-sanctuary state</p>
+              </a>
+              <a href="/ice-activity/nebraska.html" class="state-card block bg-white border border-gray-200 rounded-lg p-4 hover:border-maroon/30">
+                <div class="flex items-center justify-between">
+                  <h3 class="font-semibold text-gray-900">Nebraska</h3>
+                  <span class="text-xs text-gray-400">NE</span>
+                </div>
+                <p class="text-xs text-gray-500 mt-1">Anti-sanctuary state</p>
+              </a>
+              <a href="/ice-activity/north-dakota.html" class="state-card block bg-white border border-gray-200 rounded-lg p-4 hover:border-maroon/30">
+                <div class="flex items-center justify-between">
+                  <h3 class="font-semibold text-gray-900">North Dakota</h3>
+                  <span class="text-xs text-gray-400">ND</span>
+                </div>
+                <p class="text-xs text-gray-500 mt-1">Northern border region</p>
+              </a>
+              <a href="/ice-activity/ohio.html" class="state-card block bg-white border border-gray-200 rounded-lg p-4 hover:border-maroon/30">
+                <div class="flex items-center justify-between">
+                  <h3 class="font-semibold text-gray-900">Ohio</h3>
+                  <span class="text-xs text-gray-400">OH</span>
+                </div>
+                <p class="text-xs text-gray-500 mt-1">Multiple 287(g) &middot; Anti-sanctuary</p>
+              </a>
+              <a href="/ice-activity/south-dakota.html" class="state-card block bg-white border border-gray-200 rounded-lg p-4 hover:border-maroon/30">
+                <div class="flex items-center justify-between">
+                  <h3 class="font-semibold text-gray-900">South Dakota</h3>
+                  <span class="text-xs text-gray-400">SD</span>
+                </div>
+                <p class="text-xs text-gray-500 mt-1">Anti-sanctuary state</p>
+              </a>
+              <a href="/ice-activity/wisconsin.html" class="state-card block bg-white border border-gray-200 rounded-lg p-4 hover:border-maroon/30">
+                <div class="flex items-center justify-between">
+                  <h3 class="font-semibold text-gray-900">Wisconsin</h3>
+                  <span class="text-xs text-gray-400">WI</span>
+                </div>
+                <p class="text-xs text-gray-500 mt-1">Chicago AOR</p>
+              </a>
+            </div>
+          </section>
+
+          <!-- ====== TERRITORIES ====== -->
+          <section id="territories" class="region-section mb-12">
+            <h2 class="text-2xl font-bold text-gray-900 mb-1 flex items-center gap-3">
+              <span class="w-8 h-8 bg-maroon/10 rounded-lg flex items-center justify-center text-maroon text-sm font-bold">T</span>
+              U.S. Territories
+            </h2>
+            <p class="text-sm text-gray-500 mb-6">PR, GU, VI, AS, MP</p>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <a href="/ice-activity/puerto-rico.html" class="state-card block bg-white border border-gray-200 rounded-lg p-4 hover:border-maroon/30">
+                <div class="flex items-center justify-between">
+                  <h3 class="font-semibold text-gray-900">Puerto Rico</h3>
+                  <span class="text-xs text-gray-400">PR</span>
+                </div>
+                <p class="text-xs text-gray-500 mt-1">San Juan sub-office</p>
+              </a>
+              <a href="/ice-activity/guam.html" class="state-card block bg-white border border-gray-200 rounded-lg p-4 hover:border-maroon/30">
+                <div class="flex items-center justify-between">
+                  <h3 class="font-semibold text-gray-900">Guam</h3>
+                  <span class="text-xs text-gray-400">GU</span>
+                </div>
+                <p class="text-xs text-gray-500 mt-1">Pacific region</p>
+              </a>
+              <a href="/ice-activity/us-virgin-islands.html" class="state-card block bg-white border border-gray-200 rounded-lg p-4 hover:border-maroon/30">
+                <div class="flex items-center justify-between">
+                  <h3 class="font-semibold text-gray-900">U.S. Virgin Islands</h3>
+                  <span class="text-xs text-gray-400">VI</span>
+                </div>
+                <p class="text-xs text-gray-500 mt-1">Caribbean region</p>
+              </a>
+            </div>
+          </section>
+
+          <!-- Also See: Existing Detailed Coverage -->
+          <section class="mb-12 bg-gray-50 rounded-xl p-6">
+            <h2 class="text-lg font-bold text-gray-900 mb-4">Detailed Coverage</h2>
+            <p class="text-sm text-gray-600 mb-4">These states have in-depth reporting with full timelines, sourced incidents, and regional breakdowns:</p>
+            <div class="space-y-3">
+              <a href="/ice-activity/texas.html" class="block bg-white border border-gray-200 rounded-lg p-4 hover:border-maroon/30 transition-colors">
+                <div class="flex items-center justify-between">
+                  <div>
+                    <h3 class="font-bold text-gray-900">Texas &mdash; Statewide Hub</h3>
+                    <p class="text-sm text-gray-500 mt-1">SB 8, Operation Lone Star, 7 regional pages covering Austin, DFW, Houston, San Antonio, RGV, El Paso, and more</p>
+                  </div>
+                  <svg class="w-5 h-5 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                </div>
+              </a>
+              <a href="/blog/mn-ice-activity.html" class="block bg-white border border-gray-200 rounded-lg p-4 hover:border-maroon/30 transition-colors">
+                <div class="flex items-center justify-between">
+                  <div>
+                    <h3 class="font-bold text-gray-900">Minnesota &mdash; Operation Metro Surge</h3>
+                    <p class="text-sm text-gray-500 mt-1">Detailed timeline of ICE operations in Minneapolis-St. Paul metro area</p>
+                  </div>
+                  <svg class="w-5 h-5 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                </div>
+              </a>
+              <a href="/blog/atx-ice-activity.html" class="block bg-white border border-gray-200 rounded-lg p-4 hover:border-maroon/30 transition-colors">
+                <div class="flex items-center justify-between">
+                  <div>
+                    <h3 class="font-bold text-gray-900">Austin, TX &mdash; Original Report</h3>
+                    <p class="text-sm text-gray-500 mt-1">ICE Activity Within a 2-Hour Radius of Austin, TX (Jan 10 &ndash; Feb 10, 2026)</p>
+                  </div>
+                  <svg class="w-5 h-5 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                </div>
+              </a>
+            </div>
+          </section>
+
+        </div><!-- /main column -->
+
+        <!-- ====== RESOURCES SIDEBAR ====== -->
+        <aside id="resources" class="lg:col-span-1">
+          <div class="lg:sticky lg:top-[120px]">
+
+            <!-- Resources Card -->
+            <div class="bg-gray-50 rounded-xl p-6 mb-6">
+              <h2 class="text-lg font-bold text-gray-900 mb-4 flex items-center gap-2">
+                <svg class="w-5 h-5 text-maroon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/></svg>
+                Tracking Tools &amp; Data
+              </h2>
+
+              <h3 class="text-xs font-bold text-gray-500 uppercase tracking-wider mt-4 mb-2">Structured Data</h3>
+              <div class="space-y-1">
+                <a href="https://deportationdata.org" target="_blank" rel="noopener noreferrer" class="resource-link block px-3 py-2 rounded-lg text-sm">
+                  <span class="font-medium text-gray-900">Deportation Data Project</span>
+                  <span class="block text-xs text-gray-500">Downloadable enforcement datasets</span>
+                </a>
+                <a href="https://tracreports.org" target="_blank" rel="noopener noreferrer" class="resource-link block px-3 py-2 rounded-lg text-sm">
+                  <span class="font-medium text-gray-900">TRAC Immigration</span>
+                  <span class="block text-xs text-gray-500">Queryable court &amp; enforcement data</span>
+                </a>
+                <a href="https://www.courtlistener.com" target="_blank" rel="noopener noreferrer" class="resource-link block px-3 py-2 rounded-lg text-sm">
+                  <span class="font-medium text-gray-900">CourtListener</span>
+                  <span class="block text-xs text-gray-500">Federal court opinions &amp; filings API</span>
+                </a>
+                <a href="https://flightaware.com/live/fleet/RPN" target="_blank" rel="noopener noreferrer" class="resource-link block px-3 py-2 rounded-lg text-sm">
+                  <span class="font-medium text-gray-900">FlightAware ICE Fleet</span>
+                  <span class="block text-xs text-gray-500">Live deportation flight tracking (fleet code RPN)</span>
+                </a>
+              </div>
+
+              <h3 class="text-xs font-bold text-gray-500 uppercase tracking-wider mt-5 mb-2">Maps &amp; Alerts</h3>
+              <div class="space-y-1">
+                <a href="https://detentionreports.com" target="_blank" rel="noopener noreferrer" class="resource-link block px-3 py-2 rounded-lg text-sm">
+                  <span class="font-medium text-gray-900">DetentionReports.com</span>
+                  <span class="block text-xs text-gray-500">Facility-level detention data</span>
+                </a>
+                <a href="https://icelist.is" target="_blank" rel="noopener noreferrer" class="resource-link block px-3 py-2 rounded-lg text-sm">
+                  <span class="font-medium text-gray-900">ICE List</span>
+                  <span class="block text-xs text-gray-500">Wiki of incidents, agents, facilities</span>
+                </a>
+                <a href="https://resistmap.com" target="_blank" rel="noopener noreferrer" class="resource-link block px-3 py-2 rounded-lg text-sm">
+                  <span class="font-medium text-gray-900">ResistMap</span>
+                  <span class="block text-xs text-gray-500">Crowdsourced ICE sighting map</span>
+                </a>
+                <a href="https://deflock.me" target="_blank" rel="noopener noreferrer" class="resource-link block px-3 py-2 rounded-lg text-sm">
+                  <span class="font-medium text-gray-900">DeFlock.me</span>
+                  <span class="block text-xs text-gray-500">ALPR camera location map</span>
+                </a>
+                <a href="https://haveibeenflocked.com" target="_blank" rel="noopener noreferrer" class="resource-link block px-3 py-2 rounded-lg text-sm">
+                  <span class="font-medium text-gray-900">HaveIBeenFlocked.com</span>
+                  <span class="block text-xs text-gray-500">License plate reader lookup</span>
+                </a>
+                <a href="https://iceinmyarea.org" target="_blank" rel="noopener noreferrer" class="resource-link block px-3 py-2 rounded-lg text-sm">
+                  <span class="font-medium text-gray-900">ICE in My Area</span>
+                  <span class="block text-xs text-gray-500">SMS alerts for ICE sightings</span>
+                </a>
+                <a href="https://deportationtracker.live" target="_blank" rel="noopener noreferrer" class="resource-link block px-3 py-2 rounded-lg text-sm">
+                  <span class="font-medium text-gray-900">Deportation Tracker Live</span>
+                  <span class="block text-xs text-gray-500">Real-time deportation tracker</span>
+                </a>
+              </div>
+
+              <h3 class="text-xs font-bold text-gray-500 uppercase tracking-wider mt-5 mb-2">Journalism</h3>
+              <div class="space-y-1">
+                <a href="https://www.dropsitenews.com" target="_blank" rel="noopener noreferrer" class="resource-link block px-3 py-2 rounded-lg text-sm">
+                  <span class="font-medium text-gray-900">Drop Site News</span>
+                  <span class="block text-xs text-gray-500">Independent immigration reporting</span>
+                </a>
+                <a href="https://www.propublica.org/topics/immigration" target="_blank" rel="noopener noreferrer" class="resource-link block px-3 py-2 rounded-lg text-sm">
+                  <span class="font-medium text-gray-900">ProPublica Immigration</span>
+                  <span class="block text-xs text-gray-500">Investigative reporting</span>
+                </a>
+                <a href="https://humanrightsfirst.org" target="_blank" rel="noopener noreferrer" class="resource-link block px-3 py-2 rounded-lg text-sm">
+                  <span class="font-medium text-gray-900">Human Rights First</span>
+                  <span class="block text-xs text-gray-500">ICE flight monitor &amp; reports</span>
+                </a>
+              </div>
+
+              <h3 class="text-xs font-bold text-gray-500 uppercase tracking-wider mt-5 mb-2">Legal &amp; Policy</h3>
+              <div class="space-y-1">
+                <a href="https://immpolicytracking.org" target="_blank" rel="noopener noreferrer" class="resource-link block px-3 py-2 rounded-lg text-sm">
+                  <span class="font-medium text-gray-900">Immigration Policy Tracking</span>
+                  <span class="block text-xs text-gray-500">Stanford/Yale executive action tracker</span>
+                </a>
+                <a href="https://www.aclu.org" target="_blank" rel="noopener noreferrer" class="resource-link block px-3 py-2 rounded-lg text-sm">
+                  <span class="font-medium text-gray-900">ACLU ICE Tracking</span>
+                  <span class="block text-xs text-gray-500">FOIA documents &amp; legal challenges</span>
+                </a>
+                <a href="https://www.americanimmigrationcouncil.org" target="_blank" rel="noopener noreferrer" class="resource-link block px-3 py-2 rounded-lg text-sm">
+                  <span class="font-medium text-gray-900">American Immigration Council</span>
+                  <span class="block text-xs text-gray-500">Map the Impact tool &amp; reports</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Know Your Rights Quick Card -->
+            <div class="bg-maroon/5 border border-maroon/20 rounded-xl p-6">
+              <h2 class="text-lg font-bold text-maroon mb-3">Know Your Rights</h2>
+              <ul class="space-y-2 text-sm text-gray-700">
+                <li class="flex items-start gap-2">
+                  <span class="text-maroon font-bold mt-0.5">&bull;</span>
+                  You have the right to remain silent
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-maroon font-bold mt-0.5">&bull;</span>
+                  You do not have to open your door
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-maroon font-bold mt-0.5">&bull;</span>
+                  Ask if you are free to leave
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-maroon font-bold mt-0.5">&bull;</span>
+                  Do not sign anything you don&rsquo;t understand
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-maroon font-bold mt-0.5">&bull;</span>
+                  You have the right to an attorney
+                </li>
+              </ul>
+              <a href="/kyr-ice-training.html" class="inline-block mt-4 text-sm font-semibold text-maroon hover:text-gold transition-colors">
+                Full KYR Training Guide &rarr;
+              </a>
+            </div>
+
+          </div>
+        </aside>
+
+      </div><!-- /grid -->
+
+      <!-- About This Tracker -->
+      <section class="mt-16 border-t border-gray-200 pt-10">
+        <div class="max-w-3xl">
+          <h2 class="text-xl font-bold text-gray-900 mb-4">About This Tracker</h2>
+          <div class="text-gray-600 leading-relaxed space-y-3 text-sm">
+            <p>
+              The ICE Activity Tracker is a community-maintained resource that documents Immigration and Customs Enforcement operations across the United States. Every entry is sourced from news reports, court filings, official press releases, or verified community reports.
+            </p>
+            <p>
+              This tracker does not provide legal advice. If you or someone you know is facing immigration enforcement, contact a qualified immigration attorney or call the <strong>National Immigration Legal Services Hotline</strong> at <a href="tel:+18003543330" class="text-gold hover:underline">1-800-354-0365</a>.
+            </p>
+            <p>
+              justNICE is a project of <a href="https://gifteddreamers.org/GRUHP" target="_blank" rel="noopener noreferrer" class="text-gold hover:underline">Gifted Dreamers, Inc.</a>, an Austin, Texas-based 501(c)(3) nonprofit. All content is released under <a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank" rel="noopener noreferrer" class="text-gold hover:underline">CC0 Public Domain</a>.
+            </p>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+<!-- build:footer -->
+<!-- build:scripts -->
+</body>
+</html>

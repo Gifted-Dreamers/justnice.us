@@ -49,21 +49,11 @@
   </script>
 </head>
 <body class="font-sans text-gray-900 bg-white">
-  <header class="sticky top-0 z-50 bg-maroon shadow-lg">
-    <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
-      <a href="/" class="flex items-center gap-3 group"><picture><source srcset="/assets/BEE-ICON-64.webp" type="image/webp"><img src="/assets/BEE-ICON-128.png" alt="justNICE" class="h-12"></picture><span class="text-white text-2xl font-bold">justNICE</span></a>
-      <nav class="hidden md:flex items-center gap-3 lg:gap-5 text-sm">
-        <a href="/immigrant-resources.html" class="text-white hover:text-[#D4911E]" data-i18n="nav.resources">Immigrant Resources</a>
-        <a href="/kyr-ice-training.html" class="text-white hover:text-[#D4911E]" data-i18n="nav.kyr">Know Your Rights</a>
-        <a href="/blog/ice-activity/" class="text-white hover:text-[#D4911E] transition-colors font-medium">ICE Tracker</a>
-        <a href="/blog.html" class="text-white hover:text-[#D4911E] border-b-2 border-gold" data-i18n="nav.blog">Blog</a>
-        <a href="/#resource-map" class="text-white hover:text-[#D4911E]" data-i18n="nav.map">Resource Map</a>
-        <a href="/#contact-form" class="text-white hover:text-[#D4911E]" data-i18n="nav.contact">Contact</a>
-        <a href="https://givebutter.com/GRUHP" target="_blank" rel="noopener noreferrer" class="bg-[#F5A623] text-white px-5 py-2 rounded-full" data-i18n="nav.donate">Donate</a>
-      </nav>
-    </div>
-  </header>
-  <nav class="sticky top-[72px] z-40 bg-gray-50 border-b border-gray-200">
+<!-- build:config {"nav": "blog", "footer": "full"} -->
+
+<!-- build:nav -->
+
+<nav class="sticky top-[72px] z-40 bg-gray-50 border-b border-gray-200">
     <div class="max-w-7xl mx-auto px-4 py-2">
       <ol class="flex items-center space-x-2 text-sm text-gray-500">
         <li><a href="/" data-i18n="breadcrumb.home">Home</a></li><li>/</li><li><a href="/blog.html" data-i18n="breadcrumb.blog">Blog</a></li><li>/</li><li class="text-gray-700">AI Chat Legal Risks</li>
@@ -362,7 +352,8 @@
       </div>
     </article>
   </main>
-  <script src="/translations.js"></script>
-  <script>document.addEventListener('DOMContentLoaded', initTranslation);</script>
+
+<!-- build:footer -->
+<!-- build:scripts -->
 </body>
 </html>
