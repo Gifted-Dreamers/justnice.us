@@ -18,6 +18,9 @@ env.js
 # Generated Tailwind CSS (built at deploy time)
 /assets/css/style.css
 
+# PDFs served from R2 (dl.justnice.us), not from repo
+/downloads/*.pdf
+
 # Local docs — planning, source images, markdown sources
 /docs/
 

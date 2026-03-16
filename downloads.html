@@ -125,7 +125,7 @@
       var container = document.getElementById('download-cards');
       if (!container) return;
 
-      var baseUrl = '/downloads/';
+      var baseUrl = 'https://dl.justnice.us/';
       downloads.forEach(function (item) {
         var url = baseUrl + encodeURIComponent(item.file);
         var card = document.createElement('div');
