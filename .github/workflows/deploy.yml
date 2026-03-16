@@ -1,4 +1,4 @@
-name: Deploy to AWS Lightsail
+name: Deploy to Cloudflare Pages
 
 on:
   push:
@@ -28,12 +28,12 @@ jobs:
       - name: Build static site
         run: npm run build
 
-      - name: Deploy built files
-        uses: appleboy/scp-action@v0.1.7
+      - name: Remove files over 25MB (CF Pages limit)
+        run: find dist -size +25M -type f -delete
+
+      - name: Deploy to Cloudflare Pages
+        uses: cloudflare/wrangler-action@v3
         with:
-          host: ${{ secrets.AWS_HOST }}
-          username: ${{ secrets.AWS_USER }}
-          key: ${{ secrets.AWS_SSH_KEY }}
-          source: "dist/*"
-          target: "/home/admin/commoncloud/sites/justnice.us"
-          strip_components: 1
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy dist --project-name justnice --branch main --commit-dirty=true
