@@ -15,6 +15,9 @@ env.js
 # Build output (deployed via CI)
 /dist/
 
+# Generated Tailwind CSS (built at deploy time)
+/assets/css/style.css
+
 # Local docs — planning, source images, markdown sources
 /docs/
 
