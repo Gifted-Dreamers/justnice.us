@@ -1402,6 +1402,43 @@ function initTranslation() {
   });
 }
 
+function sanitizeHTML(str) {
+  var parser = new DOMParser();
+  var doc = parser.parseFromString(str, 'text/html');
+  var allowedTags = ['A', 'STRONG', 'EM', 'SUP', 'BR', 'P', 'SPAN'];
+  var allowedAttrs = ['href', 'target', 'rel', 'id', 'class'];
+
+  function clean(node) {
+    var children = Array.from(node.childNodes);
+    children.forEach(function(child) {
+      if (child.nodeType === 1) { // Element node
+        if (allowedTags.indexOf(child.tagName) === -1) {
+          child.remove();
+        } else {
+          // Filter attributes
+          var attrs = Array.from(child.attributes);
+          attrs.forEach(function(attr) {
+            if (allowedAttrs.indexOf(attr.name) === -1) {
+              child.removeAttribute(attr.name);
+            } else if (attr.name === 'href') {
+              // Block javascript: URLs
+              if (attr.value.trim().toLowerCase().indexOf('javascript:') === 0) {
+                child.removeAttribute('href');
+              }
+            }
+          });
+          clean(child);
+        }
+      } else if (child.nodeType !== 3) { // Remove non-element, non-text nodes
+        child.remove();
+      }
+    });
+  }
+
+  clean(doc.body);
+  return doc.body.innerHTML;
+}
+
 function applyLanguage(lang) {
   // Update document lang attribute
   document.documentElement.lang = lang;
@@ -1425,7 +1462,7 @@ function applyLanguage(lang) {
           textNodes[textNodes.length - 1].textContent = ' ' + t[lang];
         }
       } else {
-        el.innerHTML = t[lang];
+        el.innerHTML = sanitizeHTML(t[lang]);
       }
     }
   });
